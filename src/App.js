@@ -8,8 +8,6 @@ const redirect = (url) => {
   if (url !== '' && url.slice(0, 4) === 'http') {
     window.location.href = url;
   }
-
-  var g = 'https://www.google.com';
 };
 
 function App() {
