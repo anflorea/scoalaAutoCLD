@@ -1,0 +1,49 @@
+.App {
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.App-header {
+  background-color: #282c34aa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+img {
+  height: 85vw;
+  max-height: 850px;
+}
+
+.description {
+  max-width: 600px;
+  font-size: calc(12px + 2vmin);
+  color: white;
+  padding-right: 1vh;
+  padding-left: 1vh;
+}
+
+.button {
+  display: block;
+  margin: 25px auto;
+  width: calc(175px + 3vmin);
+  height: calc(43.75px + 0.75vmin);
+  background-color: #f8961d;
+  border: none;
+  color: white;
+  font-size: calc(20px + 0.75vmin);
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+}
+
+.button:hover {
+  background-color: #1d3c56;
+  transform: scale(1.1);
+}
