@@ -1,14 +1,14 @@
-import React from "react";
-import { useState } from "react";
-import { Tooltip } from "./Tooltip";
-import { Link } from "react-scroll";
+import React from 'react';
+import { useState } from 'react';
+import { Tooltip } from './Tooltip';
+import { Link } from 'react-scroll';
 
 const ClassicHeader = ({ handleNavClick }) => {
   const [stickyHeader, setStickyHeader] = useState(false);
   const [isNavModalClose, setIsNavModalClose] = useState(true);
 
   const checkScrollTop = () => {
-    let header = document.getElementsByClassName("primary-menu");
+    let header = document.getElementsByClassName('primary-menu');
 
     if (header) {
       if (
@@ -22,8 +22,8 @@ const ClassicHeader = ({ handleNavClick }) => {
     }
   };
 
-  if (typeof window !== "undefined") {
-    window.addEventListener("scroll", checkScrollTop);
+  if (typeof window !== 'undefined') {
+    window.addEventListener('scroll', checkScrollTop);
   }
 
   return (
@@ -31,8 +31,8 @@ const ClassicHeader = ({ handleNavClick }) => {
       {/* Navbar */}
       <nav
         className={
-          "primary-menu navbar navbar-expand-lg navbar-dark bg-transparent border-bottom-0 sticky-top " +
-          (stickyHeader ? "sticky-on" : "")
+          'primary-menu navbar navbar-expand-lg navbar-dark bg-transparent border-bottom-0 sticky-top ' +
+          (stickyHeader ? 'sticky-on' : '')
         }
       >
         <div className="container-fluid position-relative g-lg-4">
@@ -41,7 +41,7 @@ const ClassicHeader = ({ handleNavClick }) => {
             <Link
               smooth
               duration={500}
-              style={{ cursor: "pointer" }}
+              style={{ cursor: 'pointer' }}
               className="logo"
               to="home"
               title="Simone"
@@ -50,8 +50,12 @@ const ClassicHeader = ({ handleNavClick }) => {
                 setIsNavModalClose(true);
               }}
             >
-              {" "}
-              <img src="images/logo-light.png" alt="Simone" />{" "}
+              {' '}
+              <img
+                src="images/logo-light.png"
+                alt="Școala Auto CLD"
+                width={175}
+              />{' '}
             </Link>
             {/* Logo End */}
           </div>
@@ -62,8 +66,8 @@ const ClassicHeader = ({ handleNavClick }) => {
               }}
               className={
                 isNavModalClose
-                  ? "navbar-toggler ms-auto"
-                  : "navbar-toggler ms-auto show"
+                  ? 'navbar-toggler ms-auto'
+                  : 'navbar-toggler ms-auto show'
               }
               id="navbar-toggler"
               type="button"
@@ -76,8 +80,8 @@ const ClassicHeader = ({ handleNavClick }) => {
               id="header-nav"
               className={
                 isNavModalClose
-                  ? "collapse navbar-collapse justify-content-center "
-                  : "show navbar-collapse justify-content-center"
+                  ? 'collapse navbar-collapse justify-content-center '
+                  : 'show navbar-collapse justify-content-center'
               }
             >
               <ul className="navbar-nav">
@@ -85,7 +89,7 @@ const ClassicHeader = ({ handleNavClick }) => {
                   <Link
                     smooth
                     duration={500}
-                    style={{ cursor: "pointer" }}
+                    style={{ cursor: 'pointer' }}
                     spy
                     activeClass="active"
                     className="nav-link"
@@ -102,7 +106,7 @@ const ClassicHeader = ({ handleNavClick }) => {
                   <Link
                     smooth
                     duration={500}
-                    style={{ cursor: "pointer" }}
+                    style={{ cursor: 'pointer' }}
                     spy
                     activeClass="active"
                     className="nav-link"
@@ -119,7 +123,7 @@ const ClassicHeader = ({ handleNavClick }) => {
                   <Link
                     smooth
                     duration={500}
-                    style={{ cursor: "pointer" }}
+                    style={{ cursor: 'pointer' }}
                     spy
                     activeClass="active"
                     className="nav-link"
@@ -136,7 +140,7 @@ const ClassicHeader = ({ handleNavClick }) => {
                   <Link
                     smooth
                     duration={500}
-                    style={{ cursor: "pointer" }}
+                    style={{ cursor: 'pointer' }}
                     spy
                     activeClass="active"
                     className="nav-link"
@@ -153,7 +157,7 @@ const ClassicHeader = ({ handleNavClick }) => {
                   <Link
                     smooth
                     duration={500}
-                    style={{ cursor: "pointer" }}
+                    style={{ cursor: 'pointer' }}
                     spy
                     activeClass="active"
                     className="nav-link"
@@ -170,7 +174,7 @@ const ClassicHeader = ({ handleNavClick }) => {
                   <Link
                     smooth
                     duration={500}
-                    style={{ cursor: "pointer" }}
+                    style={{ cursor: 'pointer' }}
                     spy
                     activeClass="active"
                     className="nav-link"
@@ -187,7 +191,7 @@ const ClassicHeader = ({ handleNavClick }) => {
                   <Link
                     smooth
                     duration={500}
-                    style={{ cursor: "pointer" }}
+                    style={{ cursor: 'pointer' }}
                     spy
                     activeClass="active"
                     className="nav-link"
