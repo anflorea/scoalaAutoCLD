@@ -196,6 +196,23 @@ const ClassicHeader = ({ handleNavClick }) => {
                     spy
                     activeClass="active"
                     className="nav-link"
+                    to="register"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setIsNavModalClose(true);
+                    }}
+                  >
+                    Register
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    smooth
+                    duration={500}
+                    style={{ cursor: 'pointer' }}
+                    spy
+                    activeClass="active"
+                    className="nav-link"
                     to="contact"
                     onClick={(e) => {
                       e.preventDefault();

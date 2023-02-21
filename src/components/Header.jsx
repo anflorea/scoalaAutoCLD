@@ -154,6 +154,23 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
                   style={{ cursor: "pointer" }}
                   activeClass="active"
                   spy
+                  to="register"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsNavModalClose(true);
+                  }}
+                >
+                  Register
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  className="nav-link "
+                  smooth
+                  duration={500}
+                  style={{ cursor: "pointer" }}
+                  activeClass="active"
+                  spy
                   to="contact"
                   onClick={(e) => {
                     e.preventDefault();
