@@ -1,30 +1,33 @@
-@import "bootstrap/functions";
-@import "bootstrap/variables";
+@import 'bootstrap/functions';
+@import 'bootstrap/variables';
 
 /*============================
 		COLOR Orange
 ==============================*/
 
-$primary-color: 			$orange;
-$primary-color-hover: 		darken($primary-color, 7%);
+$primary-color: #f8961d;
+$primary-color-hover: darken($primary-color, 7%);
 
 ::selection {
-    background: $primary-color;
+  background: $primary-color;
 }
 
-a, a:focus {
+a,
+a:focus {
   color: $primary-color;
 }
-a:hover, a:active {
-    color: $primary-color-hover;
+a:hover,
+a:active {
+  color: $primary-color-hover;
 }
 
 .primary-menu {
   ul.navbar-nav > li {
-    &:hover > a:not(.btn), & > a.active:not(.btn) {
+    &:hover > a:not(.btn),
+    & > a.active:not(.btn) {
       color: $primary-color;
     }
-	&.dropdown {
+    &.dropdown {
       .dropdown-menu li {
         &:hover > a:not(.btn) {
           color: $primary-color;
@@ -33,10 +36,10 @@ a:hover, a:active {
     }
   }
   &.navbar-line-under-text ul.navbar-nav > li {
-	> a:not(.btn):after {
-		border-color: $primary-color;
-		}
-	}
+    > a:not(.btn):after {
+      border-color: $primary-color;
+    }
+  }
 }
 
 /*== Secondary Nav ==*/
@@ -70,16 +73,19 @@ a:hover, a:active {
 }
 
 /* Nav */
-.nav:not(.nav-pills) .nav-item .nav-link.active, .nav:not(.nav-pills) .nav-item .nav-link:hover{color: $primary-color;}
+.nav:not(.nav-pills) .nav-item .nav-link.active,
+.nav:not(.nav-pills) .nav-item .nav-link:hover {
+  color: $primary-color;
+}
 .nav-tabs {
   .nav-item .nav-link {
     &.active {
       &:after {
         background-color: $primary-color;
       }
-      color: #0c2f55;
+      color: #1e3c56;
     }
-	&:not(.active):hover {
+    &:not(.active):hover {
       color: $primary-color;
     }
   }
@@ -91,13 +97,15 @@ a:hover, a:active {
     }
   }
 }
-.nav-pills .nav-link:not(.active):hover{color: $primary-color;}
+.nav-pills .nav-link:not(.active):hover {
+  color: $primary-color;
+}
 
 /* Brands Grid */
 .brands-grid {
   > .row > div a {
     &:hover {
-	  color:$primary-color;
+      color: $primary-color;
     }
   }
 }
@@ -132,31 +140,39 @@ a:hover, a:active {
 }
 
 /* Extras */
-.bg-primary{
-	background-color: $primary-color !important;
+.bg-primary {
+  background-color: $primary-color !important;
 }
-.text-primary, .btn-light, .btn-outline-light:hover, .btn-link, .btn-outline-light:not(:disabled):not(.disabled).active, .btn-outline-light:not(:disabled):not(.disabled):active {
-	color: $primary-color !important;
+.text-primary,
+.btn-light,
+.btn-outline-light:hover,
+.btn-link,
+.btn-outline-light:not(:disabled):not(.disabled).active,
+.btn-outline-light:not(:disabled):not(.disabled):active {
+  color: $primary-color !important;
 }
 .btn-link:hover {
-	color: $primary-color-hover !important;
+  color: $primary-color-hover !important;
 }
 
-.text-muted{
-	color:#8e9a9d!important;
+.text-muted {
+  color: #8e9a9d !important;
 }
-.text-light{
-	color:#dee3e4!important;
+.text-light {
+  color: #dee3e4 !important;
 }
 
-a.bg-primary:focus, a.bg-primary:hover, button.bg-primary:focus, button.bg-primary:hover{
-	background-color: $primary-color-hover!important;
+a.bg-primary:focus,
+a.bg-primary:hover,
+button.bg-primary:focus,
+button.bg-primary:hover {
+  background-color: $primary-color-hover !important;
 }
 .border-primary {
-	border-color: $primary-color !important;
+  border-color: $primary-color !important;
 }
 
-.btn-primary{
+.btn-primary {
   background-color: $primary-color;
   border-color: $primary-color;
   &:hover {
@@ -165,42 +181,48 @@ a.bg-primary:focus, a.bg-primary:hover, button.bg-primary:focus, button.bg-prima
   }
 }
 
-.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active{
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active {
   background-color: $primary-color-hover;
   border-color: $primary-color-hover;
-  
 }
 
-.btn-primary.focus, .btn-primary:focus{
-	background-color: $primary-color-hover;
-    border-color: $primary-color-hover;
+.btn-primary.focus,
+.btn-primary:focus {
+  background-color: $primary-color-hover;
+  border-color: $primary-color-hover;
 }
 
-.btn-outline-primary, .btn-outline-primary:not(:disabled):not(.disabled).active, .btn-outline-primary:not(:disabled):not(.disabled):active{
+.btn-outline-primary,
+.btn-outline-primary:not(:disabled):not(.disabled).active,
+.btn-outline-primary:not(:disabled):not(.disabled):active {
   color: $primary-color;
   border-color: $primary-color;
   &:hover {
     background-color: $primary-color;
     border-color: $primary-color;
-	color: #fff;
+    color: #fff;
   }
 }
 
 .progress-bar,
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link, .dropdown-item.active, .dropdown-item:active{
-	background-color: $primary-color;
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link,
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: $primary-color;
 }
 .page-item.active .page-link,
 .custom-radio .custom-control-input:checked ~ .custom-control-label:before,
 .custom-control-input:checked ~ .custom-control-label::before,
 .custom-checkbox .custom-control-input:checked ~ .custom-control-label:before,
-.custom-control-input:checked ~ .custom-control-label:before{
-	background-color: $primary-color;
-	border-color: $primary-color;
+.custom-control-input:checked ~ .custom-control-label:before {
+  background-color: $primary-color;
+  border-color: $primary-color;
 }
-.list-group-item.active{
-	background-color: $primary-color;
-	border-color: $primary-color;
+.list-group-item.active {
+  background-color: $primary-color;
+  border-color: $primary-color;
 }
 .page-link {
   color: $primary-color;
@@ -209,13 +231,15 @@ a.bg-primary:focus, a.bg-primary:hover, button.bg-primary:focus, button.bg-prima
   }
 }
 
-.slick-dots{
-	li{
-		&.slick-active button, li:hover button {
-		  border-color: $primary-color;
-		}
-		&.slick-active button:before, li:hover button:before{
-			background-color: $primary-color;
-		}
-	}
+.slick-dots {
+  li {
+    &.slick-active button,
+    li:hover button {
+      border-color: $primary-color;
+    }
+    &.slick-active button:before,
+    li:hover button:before {
+      background-color: $primary-color;
+    }
+  }
 }
