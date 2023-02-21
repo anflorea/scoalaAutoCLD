@@ -43,39 +43,39 @@ const Contact = ({ classicHeader, darkTheme }) => {
                 'mb-3 text-5 text-uppercase ' + (darkTheme ? 'text-white' : '')
               }
             >
-              Address
+              {Strings.contact.address}
             </h2>
-            <p className={'text-3 mb-4 ' + (darkTheme ? 'text-light' : '')}>
-              4th Floor, Plot No.22,
+            <p className={'text-3 mb-3 ' + (darkTheme ? 'text-light' : '')}>
+              {Strings.contact.info.streetAndNumber}
               <br />
-              145 Murphy Canyon Rd.
+              {Strings.contact.info.cityAndRegion}
               <br />
-              San Diego CA 2028
+              {Strings.contact.info.postalCode}
             </p>
             <p className={'text-3 mb-1 ' + (darkTheme ? 'text-light' : '')}>
+              <span className="text-primary text-4 me-2">
+                <i className="fas fa-mobile" />
+              </span>
+              {Strings.contact.info.mainPhoneNumber}
+            </p>
+            <p className={'text-3 mb-4 ' + (darkTheme ? 'text-light' : '')}>
               <span className="text-primary text-4 me-2">
                 <i className="fas fa-phone" />
               </span>
-              (060) 444 434 444
+              {Strings.contact.info.secondaryPhoneNumber}
             </p>
-            <p className={'text-3 mb-1 ' + (darkTheme ? 'text-light' : '')}>
-              <span className="text-primary text-4 me-2">
-                <i className="fas fa-fax" />
-              </span>
-              (060) 555 545 555
-            </p>
-            <p className={'text-3 mb-4 ' + (darkTheme ? 'text-light' : '')}>
+            {/* <p className={'text-3 mb-4 ' + (darkTheme ? 'text-light' : '')}>
               <span className="text-primary text-4 me-2">
                 <i className="fas fa-envelope" />
               </span>
               chat@simone.com
-            </p>
+            </p> */}
             <h2
               className={
                 'mb-3 text-5 text-uppercase ' + (darkTheme ? 'text-white' : '')
               }
             >
-              Follow Me
+              {Strings.contact.followUs}
             </h2>
             <ul
               className={
@@ -83,7 +83,7 @@ const Contact = ({ classicHeader, darkTheme }) => {
                 (darkTheme ? 'social-icons-muted' : '')
               }
             >
-              <li className="social-icons-dribbble">
+              {/* <li className="social-icons-dribbble">
                 <Tooltip text="Dribbble" placement="top">
                   <a
                     href="http://www.dribbble.com/harnishdesign/"
@@ -104,11 +104,11 @@ const Contact = ({ classicHeader, darkTheme }) => {
                     <i className="fab fa-twitter" />
                   </a>
                 </Tooltip>
-              </li>
+              </li> */}
               <li className="social-icons-facebook">
                 <Tooltip text="Facebook" placement="top">
                   <a
-                    href="http://www.facebook.com/harnishdesign/"
+                    href={Strings.socialMediaAccunts.facebookURL}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -116,7 +116,7 @@ const Contact = ({ classicHeader, darkTheme }) => {
                   </a>
                 </Tooltip>
               </li>
-              <li className="social-icons-google">
+              {/* <li className="social-icons-google">
                 <Tooltip text="Google" placement="top">
                   <a
                     href="http://www.google.com/"
@@ -137,7 +137,7 @@ const Contact = ({ classicHeader, darkTheme }) => {
                     <i className="fab fa-github" />
                   </a>
                 </Tooltip>
-              </li>
+              </li> */}
             </ul>
           </div>
           {/* map integration */}
