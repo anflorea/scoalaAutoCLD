@@ -22,8 +22,29 @@ export const Strings = {
     motto: 'Cel mai scurt drum spre un condus în siguranță',
     callToAction: 'Înscrie-te acum',
   },
+  about: {
+    mainTitle: 'Echipa noastră',
+    backgroundTitle: 'Despre noi',
+  },
+  whatWeDo: {
+    mainTitle: 'Oferta noastră',
+    backgroundTitle: 'Servicii',
+  },
+  resume: {
+    mainTitle: 'Competențele instructorilor noștrii',
+    backgroundTitle: 'Expertiză',
+  },
+  portfolio: {
+    mainTitle: 'Tipuri de permise auto ',
+    backgroundTitle: 'Curriculum',
+  },
+  testimonials: {
+    mainTitle: 'Ce spun elevii noștri',
+    backgroundTitle: 'Experiența',
+  },
   register: {
-    mutedText: 'Contact',
+    mainTitle: 'Învățați să conduceți acum',
+    backgroundTitle: 'Înregistrare',
   },
   contact: {
     mapSource:
