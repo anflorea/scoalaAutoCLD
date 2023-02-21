@@ -1,27 +1,28 @@
-import "./App.scss";
-import Header from "./components/Header";
-import Home from "./components/Home";
-import AboutUs from "./components/About";
-import Services from "./components/Services";
-import Resume from "./components/Resume";
-import Portfolio from "./components/Portfolio";
-import Testimonials from "./components/Testimonials";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import { useEffect, useState } from "react";
-import ClassicHeader from "./components/ClassicHeader";
-import { commonConfig } from "./config/commonConfig";
-import TermsAndConditions from "./components/TermsAndConditions";
-import Disclaimer from "./components/Disclaimer";
-import PreLoader from "./components/Preloader";
-import { Tooltip } from "./components/Tooltip";
+import '~/App.scss';
+import Header from '~/components/Header';
+import Home from '~/components/Home';
+import AboutUs from '~/components/About';
+import Services from '~/components/Services';
+import Resume from '~/components/Resume';
+import Portfolio from '~/components/Portfolio';
+import Testimonials from '~/components/Testimonials';
+import Contact from '~/components/Contact';
+import Footer from '~/components/Footer';
+import { useEffect, useState } from 'react';
+import ClassicHeader from '~/components/ClassicHeader';
+import { commonConfig } from '~/config/commonConfig';
+import TermsAndConditions from '~/components/TermsAndConditions';
+import Disclaimer from '~/components/Disclaimer';
+import PreLoader from '~/components/Preloader';
+import { Tooltip } from '~/components/Tooltip';
+import Register from '~/components/Register';
 
 function App() {
   const classicHeader = commonConfig.classicHeader;
   const darkTheme = commonConfig.darkTheme;
 
   const handleNavClick = (section) => {
-    document.getElementById(section).scrollIntoView({ behavior: "smooth" });
+    document.getElementById(section).scrollIntoView({ behavior: 'smooth' });
   };
 
   const [scrollTopVisible, setScrollTopVisible] = useState(false);
@@ -36,7 +37,7 @@ function App() {
   }, []);
 
   const checkScrollTop = () => {
-    let scrollTopBtn = document.getElementById("back-to-top");
+    let scrollTopBtn = document.getElementById('back-to-top');
 
     if (scrollTopBtn) {
       if (
@@ -50,15 +51,15 @@ function App() {
     }
   };
 
-  if (typeof window !== "undefined") {
-    window.addEventListener("scroll", checkScrollTop);
+  if (typeof window !== 'undefined') {
+    window.addEventListener('scroll', checkScrollTop);
   }
 
   return (
     <>
       <div
-        style={{ position: "relative" }}
-        className={classicHeader ? "" : "side-header"}
+        style={{ position: 'relative' }}
+        className={classicHeader ? '' : 'side-header'}
       >
         {isLoading && <PreLoader></PreLoader>}
 
@@ -95,6 +96,10 @@ function App() {
               classicHeader={classicHeader}
               darkTheme={darkTheme}
             ></Testimonials>
+            <Register
+              classicHeader={classicHeader}
+              darkTheme={darkTheme}
+            ></Register>
             <Contact
               classicHeader={classicHeader}
               darkTheme={darkTheme}
@@ -111,9 +116,9 @@ function App() {
           <span
             id="back-to-top"
             className="rounded-circle"
-            style={{ display: scrollTopVisible ? "inline" : "none" }}
+            style={{ display: scrollTopVisible ? 'inline' : 'none' }}
             onClick={() => {
-              window.scrollTo({ top: 0, behavior: "smooth" });
+              window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
           >
             <i className="fa fa-chevron-up"></i>
