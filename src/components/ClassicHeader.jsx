@@ -135,7 +135,7 @@ const ClassicHeader = ({ handleNavClick }) => {
                       setIsNavModalClose(true);
                     }}
                   >
-                    {Strings.header.whatWeDo}
+                    {Strings.header.services}
                   </Link>
                 </li>
                 <li className="nav-item">

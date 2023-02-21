@@ -5,11 +5,11 @@ export const Strings = {
   header: {
     home: 'Acasă',
     about: 'Despre noi',
-    services: 'Activitatea noastră',
-    resume: 'Calificări',
-    portfolio: 'Categorii',
+    services: 'Servicii',
+    resume: 'Expertiză',
+    portfolio: 'Curriculum',
     testimonials: 'Testimoniale',
-    register: 'Inregistrează-te',
+    register: 'Înregistrare',
     contact: 'Contact',
   },
   home: {
@@ -40,7 +40,7 @@ export const Strings = {
   },
   testimonials: {
     mainTitle: 'Ce spun elevii noștri',
-    backgroundTitle: 'Feedback',
+    backgroundTitle: 'Testimoniale',
   },
   register: {
     mainTitle: 'Învățați să conduceți acum',
