@@ -55,6 +55,7 @@ const ClassicHeader = ({ handleNavClick }) => {
                 src="images/logo-light.png"
                 alt="Școala Auto CLD"
                 width={175}
+                style={{ margin: 15 }}
               />{' '}
             </Link>
             {/* Logo End */}
