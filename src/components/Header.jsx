@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import { Tooltip } from "./Tooltip";
-import { Link } from "react-scroll";
+import React, { useState } from 'react';
+import { Tooltip } from './Tooltip';
+import { Link } from 'react-scroll';
+import { Strings } from '~/config/Strings';
 
 const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
   const [isNavModalClose, setIsNavModalClose] = useState(true);
@@ -13,7 +14,7 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
           <Link
             smooth
             duration={500}
-            style={{ cursor: "pointer" }}
+            style={{ cursor: 'pointer' }}
             to="home"
             className="mb-lg-auto mt-lg-4"
             onClick={(e) => {
@@ -38,8 +39,8 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
             id="header-nav"
             className={
               isNavModalClose
-                ? "collapse navbar-collapse w-100 my-lg-auto "
-                : "show navbar-collapse w-100 my-lg-auto"
+                ? 'collapse navbar-collapse w-100 my-lg-auto '
+                : 'show navbar-collapse w-100 my-lg-auto'
             }
           >
             <ul className="navbar-nav text-lg-center my-lg-auto py-lg-3">
@@ -49,7 +50,7 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
                   className="nav-link "
                   smooth
                   duration={500}
-                  style={{ cursor: "pointer" }}
+                  style={{ cursor: 'pointer' }}
                   activeClass="active"
                   spy
                   to="home"
@@ -58,7 +59,7 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
                     setIsNavModalClose(true);
                   }}
                 >
-                  Home
+                  {Strings.header.home}
                 </Link>
               </li>
               <li className="nav-item">
@@ -66,7 +67,7 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
                   className="nav-link "
                   smooth
                   duration={500}
-                  style={{ cursor: "pointer" }}
+                  style={{ cursor: 'pointer' }}
                   activeClass="active"
                   spy
                   to="about"
@@ -75,7 +76,7 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
                     setIsNavModalClose(true);
                   }}
                 >
-                  About Me
+                  {Strings.header.about}
                 </Link>
               </li>
               <li className="nav-item">
@@ -83,7 +84,7 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
                   className="nav-link "
                   smooth
                   duration={500}
-                  style={{ cursor: "pointer" }}
+                  style={{ cursor: 'pointer' }}
                   activeClass="active"
                   spy
                   to="services"
@@ -92,7 +93,7 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
                     setIsNavModalClose(true);
                   }}
                 >
-                  What I Do
+                  {Strings.header.whatWeDo}
                 </Link>
               </li>
               <li className="nav-item">
@@ -100,7 +101,7 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
                   className="nav-link "
                   smooth
                   duration={500}
-                  style={{ cursor: "pointer" }}
+                  style={{ cursor: 'pointer' }}
                   activeClass="active"
                   spy
                   to="resume"
@@ -109,7 +110,7 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
                     setIsNavModalClose(true);
                   }}
                 >
-                  Resume
+                  {Strings.header.resume}
                 </Link>
               </li>
               <li className="nav-item">
@@ -117,7 +118,7 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
                   className="nav-link "
                   smooth
                   duration={500}
-                  style={{ cursor: "pointer" }}
+                  style={{ cursor: 'pointer' }}
                   activeClass="active"
                   spy
                   to="portfolio"
@@ -126,7 +127,7 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
                     setIsNavModalClose(true);
                   }}
                 >
-                  Portfolio
+                  {Strings.header.portfolio}
                 </Link>
               </li>
               <li className="nav-item">
@@ -134,7 +135,7 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
                   className="nav-link "
                   smooth
                   duration={500}
-                  style={{ cursor: "pointer" }}
+                  style={{ cursor: 'pointer' }}
                   activeClass="active"
                   spy
                   to="testimonial"
@@ -143,7 +144,7 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
                     setIsNavModalClose(true);
                   }}
                 >
-                  Testimonial
+                  {Strings.header.testimonials}
                 </Link>
               </li>
               <li className="nav-item">
@@ -151,7 +152,7 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
                   className="nav-link "
                   smooth
                   duration={500}
-                  style={{ cursor: "pointer" }}
+                  style={{ cursor: 'pointer' }}
                   activeClass="active"
                   spy
                   to="register"
@@ -160,7 +161,7 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
                     setIsNavModalClose(true);
                   }}
                 >
-                  Register
+                  {Strings.header.register}
                 </Link>
               </li>
               <li className="nav-item">
@@ -168,7 +169,7 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
                   className="nav-link "
                   smooth
                   duration={500}
-                  style={{ cursor: "pointer" }}
+                  style={{ cursor: 'pointer' }}
                   activeClass="active"
                   spy
                   to="contact"
@@ -177,7 +178,7 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
                     setIsNavModalClose(true);
                   }}
                 >
-                  Contact
+                  {Strings.header.contact}
                 </Link>
               </li>
             </ul>
@@ -233,7 +234,7 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
               setIsNavModalClose(!isNavModalClose);
             }}
             className={
-              isNavModalClose ? "navbar-toggler" : "navbar-toggler show"
+              isNavModalClose ? 'navbar-toggler' : 'navbar-toggler show'
             }
             id="navbar-toggler"
             type="button"

@@ -2,6 +2,16 @@ export const Strings = {
   index: {
     title: 'Școala Auto CLD',
   },
+  header: {
+    home: 'Acasă',
+    about: 'Despre noi',
+    whatWeDo: 'Activitatea noastră',
+    resume: 'Calificări',
+    portfolio: 'Categorii',
+    testimonials: 'Testimoniale',
+    register: 'Inregistrează-te',
+    contact: 'Contact',
+  },
   home: {
     rollingStrings: [
       'Suntem profesioniști.',

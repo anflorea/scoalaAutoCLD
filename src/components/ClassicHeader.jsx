@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { Tooltip } from './Tooltip';
 import { Link } from 'react-scroll';
+import { Strings } from '~/config/Strings';
 
 const ClassicHeader = ({ handleNavClick }) => {
   const [stickyHeader, setStickyHeader] = useState(false);
@@ -44,7 +45,7 @@ const ClassicHeader = ({ handleNavClick }) => {
               style={{ cursor: 'pointer' }}
               className="logo"
               to="home"
-              title="Simone"
+              title="scoala-auto-cld"
               onClick={(e) => {
                 e.preventDefault();
                 setIsNavModalClose(true);
@@ -100,7 +101,7 @@ const ClassicHeader = ({ handleNavClick }) => {
                       setIsNavModalClose(true);
                     }}
                   >
-                    Home
+                    {Strings.header.home}
                   </Link>
                 </li>
                 <li className="nav-item">
@@ -117,7 +118,7 @@ const ClassicHeader = ({ handleNavClick }) => {
                       setIsNavModalClose(true);
                     }}
                   >
-                    About
+                    {Strings.header.about}
                   </Link>
                 </li>
                 <li className="nav-item">
@@ -134,7 +135,7 @@ const ClassicHeader = ({ handleNavClick }) => {
                       setIsNavModalClose(true);
                     }}
                   >
-                    What I Do
+                    {Strings.header.whatWeDo}
                   </Link>
                 </li>
                 <li className="nav-item">
@@ -151,7 +152,7 @@ const ClassicHeader = ({ handleNavClick }) => {
                       setIsNavModalClose(true);
                     }}
                   >
-                    Resume
+                    {Strings.header.resume}
                   </Link>
                 </li>
                 <li className="nav-item">
@@ -168,7 +169,7 @@ const ClassicHeader = ({ handleNavClick }) => {
                       setIsNavModalClose(true);
                     }}
                   >
-                    Portfolio
+                    {Strings.header.portfolio}
                   </Link>
                 </li>
                 <li className="nav-item">
@@ -185,7 +186,7 @@ const ClassicHeader = ({ handleNavClick }) => {
                       setIsNavModalClose(true);
                     }}
                   >
-                    Client
+                    {Strings.header.testimonials}
                   </Link>
                 </li>
                 <li className="nav-item">
@@ -202,7 +203,7 @@ const ClassicHeader = ({ handleNavClick }) => {
                       setIsNavModalClose(true);
                     }}
                   >
-                    Register
+                    {Strings.header.register}
                   </Link>
                 </li>
                 <li className="nav-item">
@@ -219,7 +220,7 @@ const ClassicHeader = ({ handleNavClick }) => {
                       setIsNavModalClose(true);
                     }}
                   >
-                    Contact
+                    {Strings.header.contact}
                   </Link>
                 </li>
               </ul>
