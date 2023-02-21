@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Slider from 'react-slick';
+import { Strings } from '~/config/Strings';
 
 const Testimonials = ({ classicHeader, darkTheme }) => {
   const reviews = [
@@ -66,7 +67,7 @@ const Testimonials = ({ classicHeader, darkTheme }) => {
               (darkTheme ? 'text-muted opacity-1' : 'text-light opacity-4')
             }
           >
-            Testimonial
+            {Strings.testimonials.backgroundTitle}
           </h2>
           <p
             className={
@@ -75,7 +76,7 @@ const Testimonials = ({ classicHeader, darkTheme }) => {
             }
           >
             {' '}
-            Client Speak
+            {Strings.testimonials.mainTitle}
             <span className="heading-separator-line border-bottom border-3 border-primary d-block mx-auto" />
           </p>
         </div>

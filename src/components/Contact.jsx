@@ -21,7 +21,7 @@ const Contact = ({ classicHeader, darkTheme }) => {
               (darkTheme ? 'text-muted opacity-1' : 'text-light opacity-4')
             }
           >
-            {Strings.register.mutedText}
+            {Strings.contact.backgroundTitle}
           </h2>
           <p
             className={
@@ -30,7 +30,7 @@ const Contact = ({ classicHeader, darkTheme }) => {
             }
           >
             {' '}
-            Get in Touch
+            {Strings.contact.mainTitle}
             <span className="heading-separator-line border-bottom border-3 border-primary d-block mx-auto" />
           </p>
         </div>

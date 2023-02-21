@@ -66,7 +66,7 @@ const Register = ({ classicHeader, darkTheme }) => {
               (darkTheme ? 'text-muted opacity-1' : 'text-light opacity-4')
             }
           >
-            Register
+            {Strings.register.backgroundTitle}
           </h2>
           <p
             className={
@@ -75,7 +75,7 @@ const Register = ({ classicHeader, darkTheme }) => {
             }
           >
             {' '}
-            Start your journey
+            {Strings.register.mainTitle}
             <span className="heading-separator-line border-bottom border-3 border-primary d-block mx-auto" />
           </p>
         </div>
@@ -89,7 +89,7 @@ const Register = ({ classicHeader, darkTheme }) => {
                 (darkTheme ? 'text-white' : '')
               }
             >
-              Send us a note
+              {Strings.register.formTitle}
             </h2>
             <form
               className={darkTheme ? 'form-dark' : ''}

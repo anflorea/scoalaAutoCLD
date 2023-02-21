@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Isotope from 'isotope-layout';
 import ProjectDetailsModal from './ProjectDetailsModal';
+import { Strings } from '~/config/Strings';
 const Portfolio = ({ classicHeader, darkTheme }) => {
   // init one ref to store the future isotope object
   const isotope = useRef();
@@ -239,7 +240,7 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
                 (darkTheme ? 'text-muted opacity-1' : 'text-light opacity-4')
               }
             >
-              Portfolio
+              {Strings.portfolio.backgroundTitle}
             </h2>
             <p
               className={
@@ -248,7 +249,7 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
               }
             >
               {' '}
-              My Work
+              {Strings.portfolio.mainTitle}
               <span className="heading-separator-line border-bottom border-3 border-primary d-block mx-auto" />
             </p>
           </div>
