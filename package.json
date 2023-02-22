@@ -23,11 +23,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "craco start",
+    "build": "craco build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "test": "react-scripts test",
+    "test": "craco test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -49,6 +49,7 @@
     ]
   },
   "devDependencies": {
+    "@craco/craco": "^7.0.0",
     "gh-pages": "^5.0.0"
   }
 }
