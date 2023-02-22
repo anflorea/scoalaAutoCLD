@@ -5,6 +5,7 @@ import { Strings } from '~/config/Strings';
 
 import 'react-toastify/dist/ReactToastify.css';
 import { Tooltip } from './Tooltip';
+import { commonConfig } from '~/config/commonConfig';
 
 const Contact = ({ classicHeader, darkTheme }) => {
   return (
@@ -108,7 +109,7 @@ const Contact = ({ classicHeader, darkTheme }) => {
               <li className="social-icons-facebook">
                 <Tooltip text="Facebook" placement="top">
                   <a
-                    href={Strings.socialMediaAccunts.facebookURL}
+                    href={commonConfig.socialMediaAccunts.facebookURL}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -154,7 +155,7 @@ const Contact = ({ classicHeader, darkTheme }) => {
                   marginwidth="0"
                   loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade"
-                  src={Strings.contact.mapSource}
+                  src={commonConfig.mapSource}
                 ></iframe>
               </div>
             </div>
