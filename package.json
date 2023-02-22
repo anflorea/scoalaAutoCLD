@@ -1,5 +1,6 @@
 {
   "name": "scoala-auto-cld",
+  "homepage": "https://github.com/linca-tudor/scoalaAutoCLD",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
