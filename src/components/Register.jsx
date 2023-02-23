@@ -9,47 +9,75 @@ const Register = ({ classicHeader, darkTheme }) => {
   const form = useRef();
   const [sendingMail, setSendingMail] = useState(false);
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  const sendEmail = (event) => {
+    event.preventDefault();
     setSendingMail(true);
-    emailjs
-      .sendForm(
-        'service_i86k3ms',
-        'template_si6cin9',
-        form.current,
-        'c9HsDgGF0tvWyVnAL'
-      )
-      .then(
-        (result) => {
-          document.getElementById('contact-form').reset();
-          toast.success('Message sent successfully!', {
-            position: 'top-right',
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: darkTheme ? 'dark' : 'light',
-          });
-          console.log(result.text);
-          setSendingMail(false);
-        },
-        (error) => {
-          toast.error('Something went wrong!', {
-            position: 'top-right',
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: darkTheme ? 'dark' : 'light',
-          });
-          console.log(error.text);
-          setSendingMail(false);
-        }
-      );
+    // emailjs
+    //   .sendForm(
+    //     'service_i86k3ms',
+    //     'template_si6cin9',
+    //     form.current,
+    //     'c9HsDgGF0tvWyVnAL'
+    //   )
+    //   .then(
+    //     (result) => {
+    //       document.getElementById('contact-form').reset();
+    //       toast.success('Message sent successfully!', {
+    //         position: 'top-right',
+    //         autoClose: 5000,
+    //         hideProgressBar: false,
+    //         closeOnClick: true,
+    //         pauseOnHover: true,
+    //         draggable: true,
+    //         progress: undefined,
+    //         theme: darkTheme ? 'dark' : 'light',
+    //       });
+    //       console.log(result.text);
+    //       setSendingMail(false);
+    //     },
+    //     (error) => {
+    //       toast.error('Something went wrong!', {
+    //         position: 'top-right',
+    //         autoClose: 5000,
+    //         hideProgressBar: false,
+    //         closeOnClick: true,
+    //         pauseOnHover: true,
+    //         draggable: true,
+    //         progress: undefined,
+    //         theme: darkTheme ? 'dark' : 'light',
+    //       });
+    //       console.log(error.text);
+    //       setSendingMail(false);
+    //     }
+    //   );
+
+    const data = {
+      name: event.target.name.value,
+      email: event.target.email.value,
+      phoneNumber: event.target.phoneNumber.value,
+      message: event.target.message.value,
+    };
+
+    document.getElementById('contact-form').reset();
+
+    toast.success(
+      `Message sent successfully! The form contains: ${JSON.stringify(
+        data,
+        0,
+        2
+      )}`,
+      {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: darkTheme ? 'dark' : 'light',
+      }
+    );
+    setSendingMail(false);
   };
 
   return (
@@ -94,28 +122,40 @@ const Register = ({ classicHeader, darkTheme }) => {
             <form
               className={darkTheme ? 'form-dark' : ''}
               id="contact-form"
-              action="php/mail.php"
-              method="post"
+              // action="php/mail.php"
+              // method="post"
               ref={form}
               onSubmit={sendEmail}
             >
               <div className="row g-4">
-                <div className="col-xl-6">
+                <div className="row-xl-6">
                   <input
-                    name="user_name"
+                    name="name"
                     type="text"
                     className="form-control"
                     required
-                    placeholder="Name"
+                    placeholder={Strings.register.placeholders.name}
+                    defaultValue={''}
                   />
                 </div>
                 <div className="col-xl-6">
                   <input
-                    name="user_email"
+                    name="email"
                     type="email"
                     className="form-control"
                     required
-                    placeholder="Email"
+                    placeholder={Strings.register.placeholders.email}
+                    defaultValue={''}
+                  />
+                </div>
+                <div className="col-xl-6">
+                  <input
+                    name="phoneNumber"
+                    type="text"
+                    className="form-control"
+                    required
+                    placeholder={Strings.register.placeholders.phoneNumber}
+                    defaultValue={''}
                   />
                 </div>
                 <div className="col">
@@ -124,10 +164,32 @@ const Register = ({ classicHeader, darkTheme }) => {
                     className="form-control"
                     rows={5}
                     required
-                    placeholder="Tell us more about your needs........"
+                    placeholder={Strings.register.placeholders.message}
                     defaultValue={''}
                   />
                 </div>
+              </div>
+              <div className="form-check mt-3">
+                <input
+                  required
+                  className="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="gdpr-checkbox"
+                />
+                <label class="form-check-label" for="gdpr-checkbox">
+                  <p className="mb-3 mb-lg-0">
+                    Sunt de acord cu politica{' '}
+                    <a
+                      className="fw-500"
+                      data-bs-toggle="modal"
+                      data-bs-target="#terms-policy"
+                      href="#terms-policy"
+                    >
+                      GDPR
+                    </a>
+                  </p>
+                </label>
               </div>
               <p className="text-center mt-4 mb-0">
                 <button
