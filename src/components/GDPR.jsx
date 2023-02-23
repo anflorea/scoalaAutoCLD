@@ -1,9 +1,10 @@
-import React from "react";
+import React from 'react';
+import { Strings } from '~/config/Strings';
 
 const Disclaimer = ({ darkTheme }) => {
   return (
     <div
-      id="disclaimer"
+      id="gdpr-policy"
       className="modal fade"
       role="dialog"
       aria-hidden="true"
@@ -14,16 +15,16 @@ const Disclaimer = ({ darkTheme }) => {
       >
         <div
           className={
-            "modal-content " + (darkTheme ? "bg-dark-2 text-light" : "")
+            'modal-content ' + (darkTheme ? 'bg-dark-2 text-light' : '')
           }
         >
           <div className="modal-header">
-            <h5 className={"modal-title " + (darkTheme ? "text-white" : "")}>
-              Copyright &amp; Disclaimer
+            <h5 className={'modal-title ' + (darkTheme ? 'text-white' : '')}>
+              {Strings.gdpr.title}
             </h5>
             <button
               type="button"
-              className={"btn-close " + (darkTheme ? "btn-close-white" : "")}
+              className={'btn-close ' + (darkTheme ? 'btn-close-white' : '')}
               data-bs-dismiss="modal"
               aria-label="Close"
             />

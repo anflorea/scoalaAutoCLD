@@ -12,7 +12,7 @@ import { useEffect, useState } from 'react';
 import ClassicHeader from '~/components/ClassicHeader';
 import { commonConfig } from '~/config/commonConfig';
 import TermsAndConditions from '~/components/TermsAndConditions';
-import Disclaimer from '~/components/Disclaimer';
+import Disclaimer from '~/components/GDPR';
 import PreLoader from '~/components/Preloader';
 import { Tooltip } from '~/components/Tooltip';
 import Register from '~/components/Register';
