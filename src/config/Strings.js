@@ -45,7 +45,7 @@ export const Strings = {
   register: {
     mainTitle: 'Învață să conduci acum',
     backgroundTitle: 'Înregistrare',
-    formTitle: 'Trimiteți-ne un mesaj',
+    formTitle: 'Trimite-ne un mesaj',
   },
   contact: {
     address: 'Adresa noastră',

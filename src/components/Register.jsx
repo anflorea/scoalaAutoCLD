@@ -100,7 +100,7 @@ const Register = ({ classicHeader, darkTheme }) => {
               onSubmit={sendEmail}
             >
               <div className="row g-4">
-                <div className="col-xl-6">
+                <div className="row-xl-6">
                   <input
                     name="user_name"
                     type="text"
@@ -118,6 +118,15 @@ const Register = ({ classicHeader, darkTheme }) => {
                     placeholder="Email"
                   />
                 </div>
+                <div className="col-xl-6">
+                  <input
+                    name="phone_number"
+                    type="text"
+                    className="form-control"
+                    required
+                    placeholder="Phone"
+                  />
+                </div>
                 <div className="col">
                   <textarea
                     name="message"
@@ -128,6 +137,18 @@ const Register = ({ classicHeader, darkTheme }) => {
                     defaultValue={''}
                   />
                 </div>
+              </div>
+              <div className="form-check mt-4">
+                <input
+                  required
+                  className="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="gdpr-checkbox"
+                />
+                <label class="form-check-label" for="gdpr-checkbox">
+                  Default checkbox
+                </label>
               </div>
               <p className="text-center mt-4 mb-0">
                 <button
