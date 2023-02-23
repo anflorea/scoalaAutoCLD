@@ -58,6 +58,8 @@ const Register = ({ classicHeader, darkTheme }) => {
       message: event.target.message.value,
     };
 
+    document.getElementById('contact-form').reset();
+
     toast.success(
       `Message sent successfully! The form contains: ${JSON.stringify(
         data,
@@ -133,7 +135,7 @@ const Register = ({ classicHeader, darkTheme }) => {
                     className="form-control"
                     required
                     placeholder="Name"
-                    defaultValue={'Tudor Linca'}
+                    defaultValue={''}
                   />
                 </div>
                 <div className="col-xl-6">
@@ -143,7 +145,7 @@ const Register = ({ classicHeader, darkTheme }) => {
                     className="form-control"
                     required
                     placeholder="Email"
-                    defaultValue={'tudor@gmail.com'}
+                    defaultValue={''}
                   />
                 </div>
                 <div className="col-xl-6">
@@ -153,7 +155,7 @@ const Register = ({ classicHeader, darkTheme }) => {
                     className="form-control"
                     required
                     placeholder="Phone"
-                    defaultValue={'1234234234'}
+                    defaultValue={''}
                   />
                 </div>
                 <div className="col">
@@ -163,7 +165,7 @@ const Register = ({ classicHeader, darkTheme }) => {
                     rows={5}
                     required
                     placeholder="Tell us more about your needs"
-                    defaultValue={'Message'}
+                    defaultValue={''}
                   />
                 </div>
               </div>
