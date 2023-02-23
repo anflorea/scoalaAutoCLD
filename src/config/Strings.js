@@ -46,6 +46,13 @@ export const Strings = {
     mainTitle: 'Învață să conduci acum',
     backgroundTitle: 'Înregistrare',
     formTitle: 'Trimite-ne un mesaj',
+    placeholders: {
+      name: 'Nume și prenume',
+      email: 'Adresa de e-mail',
+      phoneNumber: 'Numărul de telefon',
+      message:
+        'Ne-ar plăcea să știm mai multe despre preferințele tale de programare și orice solicitări speciale',
+    },
   },
   contact: {
     address: 'Adresa noastră',

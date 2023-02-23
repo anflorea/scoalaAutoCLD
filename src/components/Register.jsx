@@ -134,7 +134,7 @@ const Register = ({ classicHeader, darkTheme }) => {
                     type="text"
                     className="form-control"
                     required
-                    placeholder="Name"
+                    placeholder={Strings.register.placeholders.name}
                     defaultValue={''}
                   />
                 </div>
@@ -144,7 +144,7 @@ const Register = ({ classicHeader, darkTheme }) => {
                     type="email"
                     className="form-control"
                     required
-                    placeholder="Email"
+                    placeholder={Strings.register.placeholders.email}
                     defaultValue={''}
                   />
                 </div>
@@ -154,7 +154,7 @@ const Register = ({ classicHeader, darkTheme }) => {
                     type="text"
                     className="form-control"
                     required
-                    placeholder="Phone"
+                    placeholder={Strings.register.placeholders.phoneNumber}
                     defaultValue={''}
                   />
                 </div>
@@ -164,7 +164,7 @@ const Register = ({ classicHeader, darkTheme }) => {
                     className="form-control"
                     rows={5}
                     required
-                    placeholder="Tell us more about your needs"
+                    placeholder={Strings.register.placeholders.message}
                     defaultValue={''}
                   />
                 </div>
