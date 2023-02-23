@@ -133,7 +133,7 @@ const Register = ({ classicHeader, darkTheme }) => {
                     className="form-control"
                     rows={5}
                     required
-                    placeholder="Tell us more about your needs........"
+                    placeholder="Tell us more about your needs"
                     defaultValue={''}
                   />
                 </div>
@@ -147,7 +147,17 @@ const Register = ({ classicHeader, darkTheme }) => {
                   id="gdpr-checkbox"
                 />
                 <label class="form-check-label" for="gdpr-checkbox">
-                  Default checkbox
+                  <p className="mb-3 mb-lg-0">
+                    Sunt de acord cu politica{' '}
+                    <a
+                      className="fw-500"
+                      data-bs-toggle="modal"
+                      data-bs-target="#terms-policy"
+                      href="#terms-policy"
+                    >
+                      GDPR
+                    </a>
+                  </p>
                 </label>
               </div>
               <p className="text-center mt-4 mb-0">
