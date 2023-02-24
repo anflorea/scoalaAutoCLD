@@ -21,21 +21,18 @@ const Curriculum = ({ classicHeader, darkTheme }) => {
       ...Strings.curriculum.classes.catB,
       projectInfo:
         'Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.',
-      thumbImage: 'images/projects/project-1.jpg',
-      sliderImages: [
-        'images/projects/project-1.jpg',
-        'images/projects/project-5.jpg',
-      ],
+      thumbImage: 'images/projects/CatB.png',
+      sliderImages: ['images/projects/CatB.png', 'images/projects/CatB.png'],
       categories: [filters.B.replace(/\s+/g, '')],
     },
     {
       ...Strings.curriculum.classes.AutomaticCatB,
       projectInfo:
         'Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.',
-      thumbImage: 'images/projects/project-2.jpg',
+      thumbImage: 'images/projects/CutieAutomata.jpeg',
       sliderImages: [
-        'images/projects/project-2.jpg',
-        'images/projects/project-5.jpg',
+        'images/projects/CutieAutomata.jpeg',
+        'images/projects/CutieAutomata.jpeg',
       ],
       categories: [filters.B.replace(/\s+/g, '')],
     },
@@ -43,10 +40,10 @@ const Curriculum = ({ classicHeader, darkTheme }) => {
       ...Strings.curriculum.classes.catB1,
       projectInfo:
         'Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.',
-      thumbImage: 'images/projects/project-2.jpg',
+      thumbImage: 'images/projects/CatB1.jpeg',
       sliderImages: [
-        'images/projects/project-2.jpg',
-        'images/projects/project-5.jpg',
+        'images/projects/CatB1.jpeg',
+        'images/projects/CatB1.jpeg',
       ],
       categories: [filters.B.replace(/\s+/g, '')],
     },
@@ -54,19 +51,19 @@ const Curriculum = ({ classicHeader, darkTheme }) => {
       ...Strings.curriculum.classes.catC,
       projectInfo:
         'Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.',
-      thumbImage: 'images/projects/project-4.jpg',
+      thumbImage: 'images/projects/SoferiProfesionisti.png',
       sliderImages: [
-        'images/projects/project-1.jpg',
-        'images/projects/project-4.jpg',
+        'images/projects/SoferiProfesionisti.png',
+        'images/projects/SoferiProfesionisti.png',
       ],
       categories: [filters.PROFESSIONAL.replace(/\s+/g, '')],
     },
     {
       ...Strings.curriculum.classes.catE,
-      thumbImage: 'images/projects/project-5.jpg',
+      thumbImage: 'images/projects/SoferiProfesionisti2.jpeg',
       sliderImages: [
-        'images/projects/project-1.jpg',
-        'images/projects/project-5.jpg',
+        'images/projects/SoferiProfesionisti2.jpeg',
+        'images/projects/SoferiProfesionisti2.jpeg',
       ],
       categories: [filters.PROFESSIONAL.replace(/\s+/g, '')],
     },
