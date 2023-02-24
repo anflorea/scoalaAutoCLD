@@ -93,6 +93,10 @@ const Curriculum = ({ classicHeader, darkTheme }) => {
     }
   }, [filterKey, imagesLoaded]);
 
+  const replaceWithBr = (string) => {
+    return string.replace(/\n/g, '<br />');
+  };
+
   const handleFilterKeyChange = (key) => () => setFilterKey(key);
 
   return (
@@ -186,9 +190,12 @@ const Curriculum = ({ classicHeader, darkTheme }) => {
                             data-bs-target="#exampleModal"
                           />
                           <div className="portfolio-overlay-details">
-                            <h5 className="text-white fw-400">
-                              {project.title}
-                            </h5>
+                            <h5
+                              dangerouslySetInnerHTML={{
+                                __html: replaceWithBr(project.title),
+                              }}
+                              className="text-white fw-600 fs-3 lh-base textShadow"
+                            />
                             {/* <span className="text-light">Category</span> */}
                           </div>
                         </div>

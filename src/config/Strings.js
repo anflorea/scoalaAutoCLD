@@ -46,7 +46,7 @@ export const Strings = {
     },
     classes: {
       catB: {
-        title: 'Permis Categoria B',
+        title: 'Categoria B',
         detailsHeaders: [
           'Durata cursului:',
           'Pregătire Teoretică:',
@@ -55,7 +55,7 @@ export const Strings = {
         details: ['5 săptămani', '24 de ore', '30 de ore'],
       },
       AutomaticCatB: {
-        title: 'Permis Categoria B Cutie Automata',
+        title: 'Categoria B \n Cutie Automata',
         detailsHeaders: [
           'Durata cursului:',
           'Pregătire Teoretică:',
@@ -64,7 +64,7 @@ export const Strings = {
         details: ['5 săptămani', '24 de ore', '30 de ore'],
       },
       catB1: {
-        title: 'Permis Categoria B1',
+        title: 'Categoria B1',
         detailsHeaders: [
           'Durata cursului:',
           'Pregătire Teoretică:',
@@ -73,7 +73,7 @@ export const Strings = {
         details: ['5 săptămani', '24 de ore', '30 de ore'],
       },
       catC: {
-        title: 'Permis Categoria C',
+        title: 'Categoria C',
         detailsHeaders: [
           'Durata cursului:',
           'Pregătire Teoretică:',
@@ -82,7 +82,7 @@ export const Strings = {
         details: ['7 săptămani', '40 de ore', '40 de ore'],
       },
       catE: {
-        title: 'Permis Categoria E',
+        title: 'Categoria E',
         detailsHeaders: [
           'Durata cursului:',
           'Pregătire Teoretică:',
