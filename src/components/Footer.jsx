@@ -1,27 +1,28 @@
-import React from "react";
+import React from 'react';
+import { Strings } from '~/config/Strings';
 
 const Footer = ({ classicHeader, darkTheme, handleNavClick }) => {
   return (
     <footer
       id="footer"
-      className={"section " + (darkTheme ? "footer-dark bg-dark-1" : "")}
+      className={'section ' + (darkTheme ? 'footer-dark bg-dark-1' : '')}
     >
-      <div className={"container " + (classicHeader ? "" : "px-lg-5")}>
+      <div className={'container ' + (classicHeader ? '' : 'px-lg-5')}>
         <div className="row">
           <div className="col-lg-6 text-center text-lg-start">
             <p className="mb-3 mb-lg-0">
-              Copyright © 2023{" "}
+              {Strings.footer.copyrightTitle} {''}
               <a
                 href="#home"
                 className="fw-500"
                 onClick={(e) => {
                   e.preventDefault();
-                  handleNavClick("home");
+                  handleNavClick('home');
                 }}
               >
-                Simone
+                {Strings.footer.owner}
               </a>
-              . All Rights Reserved.
+              . {Strings.footer.allRights}
             </p>
           </div>
           <div className="col-lg-6">
@@ -33,17 +34,17 @@ const Footer = ({ classicHeader, darkTheme, handleNavClick }) => {
                   data-bs-target="#terms-policy"
                   href="#terms-policy"
                 >
-                  Terms &amp; Policy
+                  {Strings.termsConditions.title}
                 </a>
               </li>
               <li className="nav-item">
                 <a
                   className="nav-link"
                   data-bs-toggle="modal"
-                  data-bs-target="#disclaimer"
-                  href="#disclaimer"
+                  data-bs-target="#gdpr-policy"
+                  href="#gdpr-policy"
                 >
-                  Disclaimer
+                  {Strings.gdpr.title}
                 </a>
               </li>
             </ul>

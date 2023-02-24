@@ -4,7 +4,7 @@ import Home from '~/components/Home';
 import AboutUs from '~/components/About';
 import Services from '~/components/Services';
 import Resume from '~/components/Resume';
-import Portfolio from '~/components/Portfolio';
+import Curriculum from '~/components/Curriculum';
 import Testimonials from '~/components/Testimonials';
 import Contact from '~/components/Contact';
 import Footer from '~/components/Footer';
@@ -12,7 +12,7 @@ import { useEffect, useState } from 'react';
 import ClassicHeader from '~/components/ClassicHeader';
 import { commonConfig } from '~/config/commonConfig';
 import TermsAndConditions from '~/components/TermsAndConditions';
-import Disclaimer from '~/components/Disclaimer';
+import Disclaimer from '~/components/GDPR';
 import PreLoader from '~/components/Preloader';
 import { Tooltip } from '~/components/Tooltip';
 import Register from '~/components/Register';
@@ -88,10 +88,10 @@ function App() {
               classicHeader={classicHeader}
               darkTheme={darkTheme}
             ></Resume>
-            <Portfolio
+            <Curriculum
               classicHeader={classicHeader}
               darkTheme={darkTheme}
-            ></Portfolio>
+            ></Curriculum>
             <Testimonials
               classicHeader={classicHeader}
               darkTheme={darkTheme}

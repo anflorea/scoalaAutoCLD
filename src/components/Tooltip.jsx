@@ -1,5 +1,5 @@
-import { Tooltip as BsTooltip } from "bootstrap";
-import React, { useEffect, useRef } from "react";
+import { Tooltip as BsTooltip } from 'bootstrap';
+import React, { useEffect, useRef } from 'react';
 
 export const Tooltip = (p) => {
   const childRef = useRef(undefined);
@@ -8,10 +8,10 @@ export const Tooltip = (p) => {
     const t = new BsTooltip(childRef.current, {
       title: p.text,
       placement: p.placement,
-      trigger: "hover",
+      trigger: 'hover',
     });
     return () => t.dispose();
-  }, [p.text]);
+  }, [p.text, p.placement]);
 
   return React.cloneElement(p.children, { ref: childRef });
 };
