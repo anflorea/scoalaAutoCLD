@@ -34,9 +34,67 @@ export const Strings = {
     mainTitle: 'Competențele noastre',
     backgroundTitle: 'Expertiză',
   },
-  portfolio: {
+  curriculum: {
     mainTitle: 'Tipuri de cursuri',
     backgroundTitle: 'Curriculum',
+    menu: {
+      categories: {
+        all: 'Toate',
+        catB: 'Categoria B',
+        professionalDrivers: 'Șoferi Profesioniști',
+      },
+    },
+    classes: {
+      catB: {
+        title: 'Categoria B',
+        detailsHeaders: [
+          'Durata cursului:',
+          'Pregătire Teoretică:',
+          'Pregătire Practică:',
+        ],
+        details: ['5 săptămani', '24 de ore', '30 de ore'],
+      },
+      AutomaticCatB: {
+        title: 'Categoria B \n Cutie Automata',
+        detailsHeaders: [
+          'Durata cursului:',
+          'Pregătire Teoretică:',
+          'Pregătire Practică:',
+        ],
+        details: ['5 săptămani', '24 de ore', '30 de ore'],
+      },
+      catB1: {
+        title: 'Categoria B1',
+        detailsHeaders: [
+          'Durata cursului:',
+          'Pregătire Teoretică:',
+          'Pregătire Practică:',
+        ],
+        details: ['5 săptămani', '24 de ore', '30 de ore'],
+      },
+      catC: {
+        title: 'Categoria C',
+        detailsHeaders: [
+          'Durata cursului:',
+          'Pregătire Teoretică:',
+          'Pregătire Practică:',
+        ],
+        details: ['7 săptămani', '40 de ore', '40 de ore'],
+      },
+      catE: {
+        title: 'Categoria E',
+        detailsHeaders: [
+          'Durata cursului:',
+          'Pregătire Teoretică:',
+          'Pregătire Practică:',
+        ],
+        details: ['4 săptămani', '30 de ore', '35 de ore'],
+      },
+    },
+  },
+  curriculumModal: {
+    descriptionHeader: 'Descrierea cursului',
+    detailsHeader: 'Detalii',
   },
   testimonials: {
     mainTitle: 'Ce spun elevii noștri',
