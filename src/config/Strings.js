@@ -70,7 +70,7 @@ export const Strings = {
   },
   footer: {
     copyrightTitle: 'Drepturi de autor © 2023',
-    owner: 'Școala Auto CLD',
+    owner: 'CLD Auto Drive Consult SRL',
     allRights: 'Toate drepturile rezervate',
   },
   termsConditions: {
