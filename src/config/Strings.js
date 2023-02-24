@@ -68,4 +68,15 @@ export const Strings = {
     mainTitle: 'Ne găsești aici',
     backgroundTitle: 'Contact',
   },
+  footer: {
+    copyrightTitle: 'Drepturi de autor © 2023',
+    owner: 'CLD Auto Drive Consult SRL',
+    allRights: 'Toate drepturile rezervate',
+  },
+  termsConditions: {
+    title: 'Termeni și Condiții',
+  },
+  gdpr: {
+    title: 'Protecția Datelor cu Caracter Personal ',
+  },
 };

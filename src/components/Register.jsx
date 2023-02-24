@@ -183,8 +183,8 @@ const Register = ({ classicHeader, darkTheme }) => {
                     <a
                       className="fw-500"
                       data-bs-toggle="modal"
-                      data-bs-target="#terms-policy"
-                      href="#terms-policy"
+                      data-bs-target="#gdpr-policy"
+                      href="#gdpr-policy"
                     >
                       GDPR
                     </a>
