@@ -136,7 +136,7 @@ const Curriculum = ({ classicHeader, darkTheme }) => {
                 className={'nav-link ' + (filterKey === '*' ? 'active' : '')}
                 onClick={handleFilterKeyChange('*')}
               >
-                All
+                {Strings.curriculum.menu.categories.all}
               </button>
             </li>
             {Object.keys(filters).map((oneKey, i) => (
@@ -189,7 +189,7 @@ const Curriculum = ({ classicHeader, darkTheme }) => {
                             <h5 className="text-white fw-400">
                               {project.title}
                             </h5>
-                            <span className="text-light">Category</span>
+                            {/* <span className="text-light">Category</span> */}
                           </div>
                         </div>
                       </div>
