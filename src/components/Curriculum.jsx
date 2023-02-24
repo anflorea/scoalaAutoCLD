@@ -12,193 +12,63 @@ const Curriculum = ({ classicHeader, darkTheme }) => {
   const [selectedProjectDetails, setSelectedProjectDetails] = useState();
 
   const filters = {
-    ALL: 'All',
-    BRAND: 'Brand',
-    PHOTOS: 'Photos',
+    B: Strings.curriculum.menu.categories.catB,
+    PROFESSIONAL: Strings.curriculum.menu.categories.professionalDrivers,
   };
 
   const projectsData = [
     {
-      title: 'Project Title 1',
+      ...Strings.curriculum.classes.catB,
       projectInfo:
         'Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.',
-      client: 'Ruby Clinton',
-      technologies: 'iOS, HTML5, CSS3, PHP, Java',
-      industry: 'Art & Design',
-      date: 'July 16, 2019',
-      url: {
-        name: 'www.example.com',
-        link: 'https://www.example.com',
-      },
-      socialLinks: {
-        facebook: 'http://www.facebook.com/',
-        twitter: 'http://www.twitter.com/',
-        google: 'http://www.google.com/',
-        instagram: 'http://www.instagram.com/',
-        mail: 'mailto:example@gmail.com',
-      },
       thumbImage: 'images/projects/project-1.jpg',
       sliderImages: [
         'images/projects/project-1.jpg',
         'images/projects/project-5.jpg',
       ],
-      categories: [filters.BRAND],
+      categories: [filters.B.replace(/\s+/g, '')],
     },
     {
-      title: 'Project Title 2',
+      ...Strings.curriculum.classes.AutomaticCatB,
       projectInfo:
         'Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.',
-      client: 'Ruby Clinton',
-      technologies: 'iOS, HTML5, CSS3, PHP, Java',
-      industry: 'Art & Design',
-      date: 'July 16, 2019',
-      url: {
-        name: 'www.example.com',
-        link: 'https://www.example.com',
-      },
-      socialLinks: {
-        facebook: 'http://www.facebook.com/',
-        twitter: 'http://www.twitter.com/',
-        google: 'http://www.google.com/',
-        instagram: 'http://www.instagram.com/',
-        mail: 'mailto:example@gmail.com',
-      },
       thumbImage: 'images/projects/project-2.jpg',
       sliderImages: [
         'images/projects/project-2.jpg',
         'images/projects/project-5.jpg',
       ],
-      categories: [filters.DESIGN],
+      categories: [filters.B.replace(/\s+/g, '')],
     },
     {
-      title: 'Project Title 3',
+      ...Strings.curriculum.classes.catB1,
       projectInfo:
         'Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.',
-      client: 'Ruby Clinton',
-      technologies: 'iOS, HTML5, CSS3, PHP, Java',
-      industry: 'Art & Design',
-      date: 'July 16, 2019',
-      url: {
-        name: 'www.example.com',
-        link: 'https://www.example.com',
-      },
-      socialLinks: {
-        facebook: 'http://www.facebook.com/',
-        twitter: 'http://www.twitter.com/',
-        google: 'http://www.google.com/',
-        instagram: 'http://www.instagram.com/',
-        mail: 'mailto:example@gmail.com',
-      },
-      thumbImage: 'images/projects/project-3.jpg',
+      thumbImage: 'images/projects/project-2.jpg',
       sliderImages: [
-        'images/projects/project-3.jpg',
+        'images/projects/project-2.jpg',
         'images/projects/project-5.jpg',
       ],
-      categories: [filters.PHOTOS],
+      categories: [filters.B.replace(/\s+/g, '')],
     },
     {
-      title: 'Project Title 4',
+      ...Strings.curriculum.classes.catC,
       projectInfo:
         'Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.',
-      client: 'Ruby Clinton',
-      technologies: 'iOS, HTML5, CSS3, PHP, Java',
-      industry: 'Art & Design',
-      date: 'July 16, 2019',
-      url: {
-        name: 'www.example.com',
-        link: 'https://www.example.com',
-      },
-      socialLinks: {
-        facebook: 'http://www.facebook.com/',
-        twitter: 'http://www.twitter.com/',
-        google: 'http://www.google.com/',
-        instagram: 'http://www.instagram.com/',
-        mail: 'mailto:example@gmail.com',
-      },
       thumbImage: 'images/projects/project-4.jpg',
       sliderImages: [
         'images/projects/project-1.jpg',
         'images/projects/project-4.jpg',
       ],
-      categories: [filters.BRAND, filters.PHOTOS],
+      categories: [filters.PROFESSIONAL.replace(/\s+/g, '')],
     },
     {
-      title: 'Project Title 5',
-      projectInfo:
-        'Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.',
-      client: 'Ruby Clinton',
-      technologies: 'iOS, HTML5, CSS3, PHP, Java',
-      industry: 'Art & Design',
-      date: 'July 16, 2019',
-      url: {
-        name: 'www.example.com',
-        link: 'https://www.example.com',
-      },
-      socialLinks: {
-        facebook: 'http://www.facebook.com/',
-        twitter: 'http://www.twitter.com/',
-        google: 'http://www.google.com/',
-        instagram: 'http://www.instagram.com/',
-        mail: 'mailto:example@gmail.com',
-      },
+      ...Strings.curriculum.classes.catE,
       thumbImage: 'images/projects/project-5.jpg',
       sliderImages: [
         'images/projects/project-1.jpg',
         'images/projects/project-5.jpg',
       ],
-      categories: [filters.DESIGN],
-    },
-    {
-      title: 'Project Title 6',
-      projectInfo:
-        'Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.',
-      client: 'Ruby Clinton',
-      technologies: 'iOS, HTML5, CSS3, PHP, Java',
-      industry: 'Art & Design',
-      date: 'July 16, 2019',
-      url: {
-        name: 'www.example.com',
-        link: 'https://www.example.com',
-      },
-      socialLinks: {
-        facebook: 'http://www.facebook.com/',
-        twitter: 'http://www.twitter.com/',
-        google: 'http://www.google.com/',
-        instagram: 'http://www.instagram.com/',
-        mail: 'mailto:example@gmail.com',
-      },
-      thumbImage: 'images/projects/project-6.jpg',
-      sliderImages: [
-        'images/projects/project-1.jpg',
-        'images/projects/project-5.jpg',
-      ],
-      categories: [filters.BRAND],
-    },
-    {
-      title: 'Project Title 7',
-      projectInfo:
-        'Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.',
-      client: 'Ruby Clinton',
-      technologies: 'iOS, HTML5, CSS3, PHP, Java',
-      industry: 'Art & Design',
-      date: 'July 16, 2019',
-      url: {
-        name: 'www.example.com',
-        link: 'https://www.example.com',
-      },
-      socialLinks: {
-        facebook: 'http://www.facebook.com/',
-        twitter: 'http://www.twitter.com/',
-        google: 'http://www.google.com/',
-        instagram: 'http://www.instagram.com/',
-        mail: 'mailto:example@gmail.com',
-      },
-      thumbImage: 'images/projects/project-7.jpg',
-      sliderImages: [
-        'images/projects/project-1.jpg',
-        'images/projects/project-5.jpg',
-      ],
-      categories: [filters.DESIGN, filters.PHOTOS],
+      categories: [filters.PROFESSIONAL.replace(/\s+/g, '')],
     },
   ];
 
@@ -220,7 +90,9 @@ const Curriculum = ({ classicHeader, darkTheme }) => {
     if (imagesLoaded) {
       filterKey === '*'
         ? isotope.current.arrange({ filter: `*` })
-        : isotope.current.arrange({ filter: `.${filterKey}` });
+        : isotope.current.arrange({
+            filter: `.${filterKey.replace(/\s+/g, '')}`,
+          });
     }
   }, [filterKey, imagesLoaded]);
 

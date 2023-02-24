@@ -37,6 +37,64 @@ export const Strings = {
   curriculum: {
     mainTitle: 'Tipuri de cursuri',
     backgroundTitle: 'Curriculum',
+    menu: {
+      categories: {
+        all: 'Toate Categoriile',
+        catB: 'Categoria B',
+        professionalDrivers: 'Șoferi Profesioniști',
+      },
+    },
+    classes: {
+      catB: {
+        title: 'Permis Categoria B',
+        detailsHeaders: [
+          'Durata cursului:',
+          'Pregătire Teoretică:',
+          'Pregătire Practică:',
+        ],
+        details: ['5 săptămani', '24 de ore', '30 de ore'],
+      },
+      AutomaticCatB: {
+        title: 'Permis Categoria B Cutie Automata',
+        detailsHeaders: [
+          'Durata cursului:',
+          'Pregătire Teoretică:',
+          'Pregătire Practică:',
+        ],
+        details: ['5 săptămani', '24 de ore', '30 de ore'],
+      },
+      catB1: {
+        title: 'Permis Categoria B1',
+        detailsHeaders: [
+          'Durata cursului:',
+          'Pregătire Teoretică:',
+          'Pregătire Practică:',
+        ],
+        details: ['5 săptămani', '24 de ore', '30 de ore'],
+      },
+      catC: {
+        title: 'Permis Categoria C',
+        detailsHeaders: [
+          'Durata cursului:',
+          'Pregătire Teoretică:',
+          'Pregătire Practică:',
+        ],
+        details: ['7 săptămani', '40 de ore', '40 de ore'],
+      },
+      catE: {
+        title: 'Permis Categoria E',
+        detailsHeaders: [
+          'Durata cursului:',
+          'Pregătire Teoretică:',
+          'Pregătire Practică:',
+        ],
+        details: ['4 săptămani', '30 de ore', '35 de ore'],
+      },
+    },
+  },
+  curriculumModal: {
+    descriptionHeader: 'Descrierea cursului',
+    detailsHeader: 'Detalii',
   },
   testimonials: {
     mainTitle: 'Ce spun elevii noștri',
