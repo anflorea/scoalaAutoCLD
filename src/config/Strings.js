@@ -39,7 +39,7 @@ export const Strings = {
     backgroundTitle: 'Curriculum',
     menu: {
       categories: {
-        all: 'Toate Categoriile',
+        all: 'Toate',
         catB: 'Categoria B',
         professionalDrivers: 'Șoferi Profesioniști',
       },
