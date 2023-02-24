@@ -2,7 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import Isotope from 'isotope-layout';
 import ProjectDetailsModal from './ProjectDetailsModal';
 import { Strings } from '~/config/Strings';
-const Portfolio = ({ classicHeader, darkTheme }) => {
+
+const Curriculum = ({ classicHeader, darkTheme }) => {
   // init one ref to store the future isotope object
   const isotope = useRef();
   // store the filter keyword in a state
@@ -11,7 +12,7 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
   const [selectedProjectDetails, setSelectedProjectDetails] = useState();
 
   const filters = {
-    DESIGN: 'Desing',
+    ALL: 'All',
     BRAND: 'Brand',
     PHOTOS: 'Photos',
   };
@@ -240,7 +241,7 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
                 (darkTheme ? 'text-muted opacity-1' : 'text-light opacity-4')
               }
             >
-              {Strings.portfolio.backgroundTitle}
+              {Strings.curriculum.backgroundTitle}
             </h2>
             <p
               className={
@@ -249,7 +250,7 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
               }
             >
               {' '}
-              {Strings.portfolio.mainTitle}
+              {Strings.curriculum.mainTitle}
               <span className="heading-separator-line border-bottom border-3 border-primary d-block mx-auto" />
             </p>
           </div>
@@ -341,4 +342,4 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
   );
 };
 
-export default Portfolio;
+export default Curriculum;

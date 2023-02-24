@@ -34,7 +34,7 @@ export const Strings = {
     mainTitle: 'Competențele noastre',
     backgroundTitle: 'Expertiză',
   },
-  portfolio: {
+  curriculum: {
     mainTitle: 'Tipuri de cursuri',
     backgroundTitle: 'Curriculum',
   },
