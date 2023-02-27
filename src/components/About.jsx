@@ -28,7 +28,7 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
         {/* Heading end*/}
         <div className="row gy-5">
           {/* About me content start */}
-          <div className="text-justify">
+          <div className="textJustify">
             <h2
               className={
                 'text-7 fw-600 mb-3 ' + (darkTheme ? 'text-white' : '')
@@ -118,7 +118,7 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
           }
         >
           <div className="row">
-            <div className="col-6 col-md-3">
+            <div className="col-6 col-md-4">
               <div className="featured-box text-center">
                 <h4
                   className={
@@ -126,14 +126,14 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                     (darkTheme ? 'text-white-50' : 'text-muted')
                   }
                 >
-                  <span>10</span>+
+                  <span>{Strings.about.statistics.yearsExperience.value}</span>+
                 </h4>
                 <p className={'mb-0 ' + (darkTheme ? 'text-light' : '')}>
-                  Years Experiance
+                  {Strings.about.statistics.yearsExperience.title}
                 </p>
               </div>
             </div>
-            <div className="col-6 col-md-3">
+            <div className="col-6 col-md-4">
               <div className="featured-box text-center">
                 <h4
                   className={
@@ -141,14 +141,14 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                     (darkTheme ? 'text-white-50' : 'text-muted')
                   }
                 >
-                  <span>250</span>+
+                  <span>{Strings.about.statistics.happyClients.value}</span>+
                 </h4>
                 <p className={'mb-0 ' + (darkTheme ? 'text-light' : '')}>
-                  Happy Clients
+                  {Strings.about.statistics.happyClients.title}
                 </p>
               </div>
             </div>
-            <div className="col-6 col-md-3">
+            <div className="col-6 col-md-4">
               <div className="featured-box text-center">
                 <h4
                   className={
@@ -156,14 +156,14 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                     (darkTheme ? 'text-white-50' : 'text-muted')
                   }
                 >
-                  <span>650</span>+
+                  <span>{Strings.about.statistics.serviceTime.value}</span>+
                 </h4>
                 <p className={'mb-0 ' + (darkTheme ? 'text-light' : '')}>
-                  Projects Done
+                  {Strings.about.statistics.serviceTime.title}
                 </p>
               </div>
             </div>
-            <div className="col-6 col-md-3">
+            {/* <div className="col-6 col-md-3">
               <div className="featured-box text-center">
                 <h4
                   className={
@@ -177,7 +177,7 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                   Get Awards
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         {/* projects rewards counting end */}
