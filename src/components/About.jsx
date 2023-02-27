@@ -28,30 +28,55 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
         {/* Heading end*/}
         <div className="row gy-5">
           {/* About me content start */}
-          <div className="col-lg-7 col-xl-8 text-center text-lg-start">
+          <div className="text-justify">
             <h2
               className={
                 'text-7 fw-600 mb-3 ' + (darkTheme ? 'text-white' : '')
               }
             >
-              I'm <span className="text-primary">Simone Olivia,</span> a Web
-              Developer
+              Noi suntem{' '}
+              <span className="text-primary">{Strings.index.title}</span>
             </h2>
             <p className={darkTheme ? 'text-white-50' : ''}>
-              I help you build brand for your business at an affordable price.
-              Thousands of clients have procured exceptional results while
-              working with our dedicated team. when an unknown printer took a
-              galley of type and scrambled it to make a type specimen book.
+              Bine ați venit la școala noastră de șoferi! Suntem o echipă
+              dedicată de profesioniști pasionați de siguranța rutieră și de
+              formarea șoferilor responsabili și încrezători.
             </p>
             <p className={darkTheme ? 'text-white-50' : ''}>
-              Delivering work within time and budget which meets client’s
-              requirements is our moto. Lorem Ipsum has been the industry's
-              standard dummy text ever when an unknown printer took a galley.
+              Înființată în urmă cu un an, suntem o școală de șoferi tânără și
+              dinamică, dar deja ne-am dovedit a fi de încredere și respectată
+              în comunitatea noastră. Suntem mândri să avem un record excelent
+              de promovare a examenului auto și de a ajuta oamenii să devină
+              șoferi experimentați și responsabili pe drumurile noastre.
+            </p>
+            <p className={darkTheme ? 'text-white-50' : ''}>
+              Indiferent de experiența dvs. anterioară ca șofer, suntem aici să
+              vă oferim o gamă completă de cursuri de conducere personalizate
+              pentru a vă ajuta să vă atingeți obiectivele de învățare și să
+              deveniți șoferul pe care îl doriți să fie. Avem instructori
+              experimentați și bine pregătiți care vă vor ghida pas cu pas în
+              procesul de a deveni un șofer sigur și încrezător.
+            </p>
+            <p className={darkTheme ? 'text-white-50' : ''}>
+              Ne-am angajat să vă oferim o experiență de învățare excelentă,
+              sigură și confortabilă, iar toate mașinile noastre sunt echipate
+              cu cele mai noi caracteristici de siguranță și tehnologie de
+              ultimă generație. În plus, suntem mereu la curent cu cele mai
+              recente reguli și legi rutiere pentru a vă ajuta să vă pregătiți
+              pentru examenul auto și pentru a fi sigur și încrezător pe
+              drumurile noastre.
+            </p>
+            <p className={darkTheme ? 'text-white-50' : ''}>
+              Vă mulțumim pentru interesul acordat școlii noastre de șoferi și
+              vă invităm să ne contactați pentru mai multe informații și pentru
+              a vă înscrie într-unul dintre cursurile noastre. Suntem aici
+              pentru a vă ajuta să vă atingeți obiectivele de conducere și să
+              deveniți un șofer sigur și responsabil.
             </p>
           </div>
           {/* About me content end */}
           {/* about me personal detials start */}
-          <div className="col-lg-5 col-xl-4">
+          {/* <div className="col-lg-5 col-xl-4">
             <div className="ps-lg-4">
               <ul
                 className={
@@ -82,7 +107,7 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                 Download CV
               </a>
             </div>
-          </div>
+          </div> */}
           {/* about me personal details end */}
         </div>
         {/* projects rewards counting start */}
