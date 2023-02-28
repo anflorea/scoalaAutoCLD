@@ -25,6 +25,20 @@ export const Strings = {
   about: {
     mainTitle: 'Echipa noastră',
     backgroundTitle: 'Despre noi',
+    statistics: {
+      yearsExperience: {
+        title: 'Ani de Expriență',
+        value: '20',
+      },
+      serviceTime: {
+        title: 'Ore predate',
+        value: '500',
+      },
+      happyClients: {
+        title: 'Șoferi Fericiți',
+        value: '175',
+      },
+    },
   },
   services: {
     mainTitle: 'Oferta noastră',
