@@ -70,10 +70,10 @@ const Services = ({ classicHeader, darkTheme }) => {
               {services.length > 0 &&
                 services.map((service, index) => (
                   <div className="col-md-6" key={index}>
-                    <div className="featured-box style-3 mb-5 textJustify">
+                    <div className="featured-box style-3 mb-5 mx-1 textJustify ">
                       <div
                         className={
-                          'featured-box-icon text-primary  shadow-sm rounded' +
+                          'featured-box-icon text-primary shadow-sm rounded ' +
                           (darkTheme ? 'bg-dark-1' : 'bg-white')
                         }
                       >
