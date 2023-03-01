@@ -169,7 +169,7 @@ const NecessaryDocuments = ({ classicHeader, darkTheme }) => {
           </div>
         </div>
         {/* My Skills */}
-        <h2
+        {/* <h2
           className={
             'text-6 fw-600 mt-4 mb-4 ' + (darkTheme ? 'text-white' : '')
           }
@@ -217,7 +217,7 @@ const NecessaryDocuments = ({ classicHeader, darkTheme }) => {
               <i className="fas fa-download" />
             </span>
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
   );
