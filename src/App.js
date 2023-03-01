@@ -3,7 +3,7 @@ import Header from '~/components/Header';
 import Home from '~/components/Home';
 import AboutUs from '~/components/About';
 import Services from '~/components/Services';
-import Resume from '~/components/Resume';
+import NecessaryDocuments from '~/components/NecessaryDocuments';
 import Curriculum from '~/components/Curriculum';
 import Testimonials from '~/components/Testimonials';
 import Contact from '~/components/Contact';
@@ -84,10 +84,10 @@ function App() {
               classicHeader={classicHeader}
               darkTheme={darkTheme}
             ></Services>
-            <Resume
+            <NecessaryDocuments
               classicHeader={classicHeader}
               darkTheme={darkTheme}
-            ></Resume>
+            ></NecessaryDocuments>
             <Curriculum
               classicHeader={classicHeader}
               darkTheme={darkTheme}

@@ -2,7 +2,7 @@ import React from 'react';
 import { Strings } from '~/config/Strings';
 import resumeFile from '../documents/resume.pdf';
 
-const Resume = ({ classicHeader, darkTheme }) => {
+const NecessaryDocuments = ({ classicHeader, darkTheme }) => {
   const educationDetails = [
     {
       yearRange: '2000 - 2004',
@@ -223,4 +223,4 @@ const Resume = ({ classicHeader, darkTheme }) => {
   );
 };
 
-export default Resume;
+export default NecessaryDocuments;
