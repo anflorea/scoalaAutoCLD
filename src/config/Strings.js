@@ -6,7 +6,7 @@ export const Strings = {
     home: 'Acasă',
     about: 'Despre noi',
     services: 'Servicii',
-    resume: 'Expertiză',
+    resume: 'Documente Necesare',
     portfolio: 'Curriculum',
     testimonials: 'Testimoniale',
     register: 'Înregistrare',

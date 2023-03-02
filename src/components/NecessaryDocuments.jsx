@@ -74,7 +74,7 @@ const NecessaryDocuments = ({ classicHeader, darkTheme }) => {
 
   return (
     <section
-      id="resume"
+      id="necessaryDocuments"
       className={'section ' + (darkTheme ? 'bg-dark-1' : '')}
     >
       <div className={'container ' + (classicHeader ? '' : 'px-lg-5')}>
