@@ -20,7 +20,7 @@ const Curriculum = ({ classicHeader, darkTheme }) => {
     {
       ...Strings.curriculum.classes.catB,
       projectInfo:
-        'Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.',
+        'Autovehiculul a carui masă totala maxima autorizata nu depaseste 3.500 Kg si al carui numar de locuri pe scaun, in afara conducatorului, nu este mai mare de 8.',
       thumbImage: 'images/projects/CatB.png',
       sliderImages: ['images/projects/CatB.png', 'images/projects/CatB.png'],
       categories: [filters.B.replace(/\s+/g, '')],
@@ -28,7 +28,7 @@ const Curriculum = ({ classicHeader, darkTheme }) => {
     {
       ...Strings.curriculum.classes.AutomaticCatB,
       projectInfo:
-        'Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.',
+        'Autovehiculul a carui masa totala maxima autorizata nu depaseste 3.500 Kg si al carui numar de locuri pe scaun, in afara conducatorului, nu este mai mare de 8, iar transmisia este cu cutie automată. Ulterior promovării examenului, deținătorul permisului având dreptul de a conduce doar autovehicule cu cutie automată.',
       thumbImage: 'images/projects/CutieAutomata.jpeg',
       sliderImages: [
         'images/projects/CutieAutomata.jpeg',
@@ -39,7 +39,7 @@ const Curriculum = ({ classicHeader, darkTheme }) => {
     {
       ...Strings.curriculum.classes.catB1,
       projectInfo:
-        'Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.',
+        'Cvadriciclurile și triciclurile, autovehiculele cu trei sau patru roți, care au masă proprie de peste 400 kg, însă nu mai mare de 550 kg. Aceste mașini sunt echipate cu motor cu ardere internă, a carui capacitate cilindrică este mai mare de 45 cmc sau cu orice alt motor care oferăo putere echivalentă ori cu viteză prin construcție mai mare de 50 km/h.',
       thumbImage: 'images/projects/CatB1.jpeg',
       sliderImages: [
         'images/projects/CatB1.jpeg',
@@ -50,7 +50,7 @@ const Curriculum = ({ classicHeader, darkTheme }) => {
     {
       ...Strings.curriculum.classes.catC,
       projectInfo:
-        'Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.',
+        'Autovehiculul a carui masă totala maxima autorizata este mai mare de 3500 Kg si care este proiectat pentru transportul a maximum 8 pasageri.',
       thumbImage: 'images/projects/SoferiProfesionisti.png',
       sliderImages: [
         'images/projects/SoferiProfesionisti.png',
@@ -60,6 +60,8 @@ const Curriculum = ({ classicHeader, darkTheme }) => {
     },
     {
       ...Strings.curriculum.classes.catE,
+      projectInfo:
+        'Ansamblu format dintr-un autovehicul tragator din categoria C si o remorcă a carei masa totala maxima autorizata este mai mare de 750 Kg.',
       thumbImage: 'images/projects/SoferiProfesionisti2.jpeg',
       sliderImages: [
         'images/projects/SoferiProfesionisti2.jpeg',

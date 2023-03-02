@@ -93,7 +93,7 @@ const ProjectDetailsModal = ({ darkTheme, projectDetails }) => {
                     >
                       {Strings.curriculumModal.descriptionHeader}
                     </h4>
-                    <p>{projectDetails?.projectInfo}</p>
+                    <p className="textJustify">{projectDetails?.projectInfo}</p>
                     <h4
                       className={
                         'text-4 font-weight-600 mt-4' +
