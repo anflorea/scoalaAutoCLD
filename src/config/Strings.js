@@ -44,9 +44,11 @@ export const Strings = {
     mainTitle: 'Oferta noastră',
     backgroundTitle: 'Servicii',
   },
-  resume: {
-    mainTitle: 'Competențele noastre',
-    backgroundTitle: 'Expertiză',
+  necessaryDocuments: {
+    mainTitle: 'Documente necesare',
+    backgroundTitle: 'Pregătire',
+    enrollment: 'Înscriere',
+    graduation: 'Finalizare Dosar'
   },
   curriculum: {
     mainTitle: 'Tipuri de cursuri',

@@ -86,7 +86,7 @@ const NecessaryDocuments = ({ classicHeader, darkTheme }) => {
               (darkTheme ? 'text-muted opacity-1' : 'text-light opacity-4')
             }
           >
-            {Strings.resume.backgroundTitle}
+            {Strings.necessaryDocuments.backgroundTitle}
           </h2>
           <p
             className={
@@ -95,7 +95,7 @@ const NecessaryDocuments = ({ classicHeader, darkTheme }) => {
             }
           >
             {' '}
-            {Strings.resume.mainTitle}
+            {Strings.necessaryDocuments.mainTitle}
             <span className="heading-separator-line border-bottom border-3 border-primary d-block mx-auto" />
           </p>
         </div>
@@ -108,7 +108,7 @@ const NecessaryDocuments = ({ classicHeader, darkTheme }) => {
                 'text-6 fw-600 mb-4 ' + (darkTheme ? 'text-white' : '')
               }
             >
-              My Education
+              {Strings.necessaryDocuments.enrollment}
             </h2>
             {educationDetails.length > 0 &&
               educationDetails.map((value, index) => (
@@ -141,7 +141,7 @@ const NecessaryDocuments = ({ classicHeader, darkTheme }) => {
                 'text-6 fw-600 mb-4 ' + (darkTheme ? 'text-white' : '')
               }
             >
-              My Experience
+              {Strings.necessaryDocuments.graduation}
             </h2>
             {experienceDetails.length > 0 &&
               experienceDetails.map((value, index) => (
