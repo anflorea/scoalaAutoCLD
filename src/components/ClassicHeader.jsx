@@ -146,7 +146,7 @@ const ClassicHeader = ({ handleNavClick }) => {
                     spy
                     activeClass="active"
                     className="nav-link"
-                    to="resume"
+                    to="necessaryDocuments"
                     onClick={(e) => {
                       e.preventDefault();
                       setIsNavModalClose(true);
