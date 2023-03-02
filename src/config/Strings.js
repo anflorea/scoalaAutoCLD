@@ -48,7 +48,7 @@ export const Strings = {
     mainTitle: 'Documente necesare',
     backgroundTitle: 'Pregătire',
     enrollment: 'Înscriere',
-    graduation: 'Finalizare Dosar'
+    graduation: 'Finalizare Dosar',
   },
   curriculum: {
     mainTitle: 'Tipuri de cursuri',

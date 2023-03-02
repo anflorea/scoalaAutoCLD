@@ -1,48 +1,48 @@
 import React from 'react';
 import { Strings } from '~/config/Strings';
-import resumeFile from '../documents/resume.pdf';
+// import resumeFile from '../documents/resume.pdf';
 
 const NecessaryDocuments = ({ classicHeader, darkTheme }) => {
-  const educationDetails = [
+  const enrollmentDetails = [
     {
-      yearRange: '2000 - 2004',
-      title: 'Computer Science',
+      // yearRange: '2000 - 2004',
+      title: 'Act de identitate sau permis',
       place: 'International University',
       desc: 'Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.',
     },
     {
-      yearRange: '2005 - 2008',
-      title: 'Bachelor Degree',
-      place: 'University of California',
-      desc: 'Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.',
+      // yearRange: '2005 - 2008',
+      title: 'Analize medicale',
+      place: 'Policlinica My Health',
+      desc: 'Bd. 1 Decembrie 1918, 11-13, Târgu Mures, Mures, 540447, Târgu Mureș. Este necesară adeverință de la medicul de familie! Rezultatul se eliberează pe loc. Nu se recoltează proba de sânge',
     },
     {
-      yearRange: '2009 - 2012',
-      title: 'Master Degree',
+      // yearRange: '2009 - 2012',
+      title: 'Aviz psihologic',
       place: 'Harvard University',
       desc: 'Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.',
     },
   ];
 
-  const experienceDetails = [
+  const graduationDetails = [
     {
-      yearRange: '2012 - 2013',
-      title: 'Jr. UI UX Designer',
+      // yearRange: '2012 - 2013',
+      title: 'Taxă permis auto',
       place: 'Themeforest',
       desc: 'Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.',
     },
     {
-      yearRange: '2014 - 2016',
-      title: 'Jr. Product Designer',
+      // yearRange: '2014 - 2016',
+      title: 'Cazier Judiciar',
       place: 'Dribbble',
       desc: 'Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.',
     },
-    {
-      yearRange: '2017 - 2019',
-      title: 'Product Designer',
-      place: 'Adobe',
-      desc: 'Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.',
-    },
+    // {
+    //   // yearRange: '2017 - 2019',
+    //   title: 'Product Designer',
+    //   place: 'Adobe',
+    //   desc: 'Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.',
+    // },
   ];
 
   const skills = [
@@ -102,7 +102,7 @@ const NecessaryDocuments = ({ classicHeader, darkTheme }) => {
         {/* Heading end*/}
         <div className="row gx-5">
           {/* My Education */}
-          <div className="col-md-6">
+          <div className="col-md-6 pe-5">
             <h2
               className={
                 'text-6 fw-600 mb-4 ' + (darkTheme ? 'text-white' : '')
@@ -110,24 +110,28 @@ const NecessaryDocuments = ({ classicHeader, darkTheme }) => {
             >
               {Strings.necessaryDocuments.enrollment}
             </h2>
-            {educationDetails.length > 0 &&
-              educationDetails.map((value, index) => (
+            {enrollmentDetails.length > 0 &&
+              enrollmentDetails.map((value, index) => (
                 <div
                   key={index}
                   className={
                     'bg-white  rounded p-4 mb-4 ' +
-                    (darkTheme ? 'bg-dark' : 'bg-white border')
+                    (darkTheme ? 'bg-dark' : 'bg-white')
                   }
                 >
-                  <p className="badge bg-primary text-2 fw-400">
+                  {/* <p className="badge bg-primary text-2 fw-400">
                     {value.yearRange}
-                  </p>
-                  <h3 className={'text-5 ' + (darkTheme ? 'text-white' : '')}>
+                  </p> */}
+                  <h3
+                    className={
+                      'text-3 fw-700 ' + (darkTheme ? 'text-white' : '')
+                    }
+                  >
                     {value.title}
                   </h3>
-                  <p className={darkTheme ? 'text-primary' : 'text-danger'}>
+                  {/* <p className={darkTheme ? 'text-primary' : 'text-danger'}>
                     {value.place}
-                  </p>
+                  </p> */}
                   <p className={'mb-0 ' + (darkTheme ? 'text-white-50' : '')}>
                     {value.desc}
                   </p>
@@ -135,7 +139,7 @@ const NecessaryDocuments = ({ classicHeader, darkTheme }) => {
               ))}
           </div>
           {/* My Experience */}
-          <div className="col-md-6">
+          <div className="col-md-6 ps-05">
             <h2
               className={
                 'text-6 fw-600 mb-4 ' + (darkTheme ? 'text-white' : '')
@@ -143,26 +147,75 @@ const NecessaryDocuments = ({ classicHeader, darkTheme }) => {
             >
               {Strings.necessaryDocuments.graduation}
             </h2>
-            {experienceDetails.length > 0 &&
-              experienceDetails.map((value, index) => (
+            {graduationDetails.length > 0 &&
+              graduationDetails.map((value, index) => (
                 <div
                   key={index}
                   className={
                     'bg-white  rounded p-4 mb-4 ' +
-                    (darkTheme ? 'bg-dark' : 'bg-white border')
+                    (darkTheme ? 'bg-dark' : 'bg-white')
                   }
                 >
-                  <p className="badge bg-primary text-2 fw-400">
+                  {/* <p className="badge bg-primary text-2 fw-400">
                     {value.yearRange}
-                  </p>
-                  <h3 className={'text-5 ' + (darkTheme ? 'text-white' : '')}>
+                  </p> */}
+                  <h3
+                    className={
+                      'text-3 fw-700 ' + (darkTheme ? 'text-white' : '')
+                    }
+                  >
                     {value.title}
                   </h3>
-                  <p className={darkTheme ? 'text-primary' : 'text-danger'}>
+                  {/* <p className={darkTheme ? 'text-primary' : 'text-danger'}>
                     {value.place}
-                  </p>
+                  </p> */}
                   <p className={'mb-0 ' + (darkTheme ? 'text-white-50' : '')}>
                     {value.desc}
+                    {/* <ul
+                      className={
+                        'list-style-2 ' + (darkTheme ? 'list-style-light' : '')
+                      }
+                    >
+                      {value.title && (
+                        <li>
+                          <span
+                            className={
+                              'text-dark font-weight-600 me-2' +
+                              (darkTheme ? ' text-white' : '')
+                            }
+                          >
+                            {value.title}
+                          </span>
+                          {value.title}
+                        </li>
+                      )}
+                      {projectDetails?.detailsHeaders[1] && (
+                        <li>
+                          <span
+                            className={
+                              'text-dark font-weight-600 me-2' +
+                              (darkTheme ? ' text-white' : '')
+                            }
+                          >
+                            {projectDetails.detailsHeaders[1]}
+                          </span>
+                          {projectDetails?.details[1]}
+                        </li>
+                      )}
+                      {projectDetails?.detailsHeaders[2] && (
+                        <li>
+                          <span
+                            className={
+                              'text-dark font-weight-600 me-2' +
+                              (darkTheme ? ' text-white' : '')
+                            }
+                          >
+                            {projectDetails.detailsHeaders[2]}
+                          </span>
+                          {projectDetails?.details[2]}
+                        </li>
+                      )}
+                    </ul> */}
                   </p>
                 </div>
               ))}
