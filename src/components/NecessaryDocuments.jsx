@@ -5,72 +5,88 @@ import { Strings } from '~/config/Strings';
 const NecessaryDocuments = ({ classicHeader, darkTheme }) => {
   const enrollmentDetails = [
     {
-      // yearRange: '2000 - 2004',
-      title: 'Act de identitate sau permis',
-      place: 'International University',
-      desc: 'Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.',
+      title: 'Act de identitate sau permis de conducere',
+      desc: 'Vârsta minimă înscriere:',
+      list: [
+        'Categoria B Manuală: 17 ani și 9 luni',
+        'Categoria B Automată: 17 ani și 9 luni',
+        'Categoria B1: 17 ani și 9 luni',
+        'Categoria C: 20 ani și 9 luni',
+        'Categoria CE: 21 ani',
+      ],
     },
     {
-      // yearRange: '2005 - 2008',
       title: 'Analize medicale',
-      place: 'Policlinica My Health',
-      desc: 'Bd. 1 Decembrie 1918, 11-13, Târgu Mures, Mures, 540447, Târgu Mureș. Este necesară adeverință de la medicul de familie! Rezultatul se eliberează pe loc. Nu se recoltează proba de sânge',
+      desc: 'Cu privire la vizita medicală:',
+      list: [
+        'Este necesară adeverință de la medicul de familie',
+        'Nu se recoltează proba de sânge',
+        'Rezultatul se eliberează pe loc',
+        'Persoanele minore pot ridica rezultatul analizei medicale, doar dacă sunt însoțite de un părinte/tutore',
+      ],
     },
     {
-      // yearRange: '2009 - 2012',
       title: 'Aviz psihologic',
-      place: 'Harvard University',
-      desc: 'Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.',
+      desc: 'Examenul psihologic se face la sediul școlii.',
+      list: [
+        'Program: Luni - Vineri între orele 09:00 - 16:00',
+        'Avizul se eliberează pe loc',
+        'Cost: 50 RON',
+      ],
     },
   ];
 
   const graduationDetails = [
     {
-      // yearRange: '2012 - 2013',
       title: 'Taxă permis auto',
-      place: 'Themeforest',
-      desc: 'Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.',
+      desc: [
+        'Se achită la sediul școlii sau la bancă',
+        'În funcție de categoria permisului, taxa este:',
+      ],
+      list: [
+        'Categoria B: 100 RON',
+        'Categoria B1: 100 RON',
+        'Categoria B Cutie Automată: 100 RON',
+        'Categoria C: 100 RON',
+        'Categoria CE: 100 RON',
+      ],
     },
     {
-      // yearRange: '2014 - 2016',
       title: 'Cazier Judiciar',
-      place: 'Dribbble',
-      desc: 'Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.',
+      desc: 'Cazierul se poate ridica de la Inspectoratul Județean de Poliție Târgu Mureș (Strada Borsos Tamás 16, Târgu Mureș)',
     },
-    // {
-    //   // yearRange: '2017 - 2019',
-    //   title: 'Product Designer',
-    //   place: 'Adobe',
-    //   desc: 'Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.',
-    // },
   ];
 
-  const skills = [
-    {
-      name: 'Web Design',
-      percent: 65,
-    },
-    {
-      name: 'HTML/CSS',
-      percent: 95,
-    },
-    {
-      name: 'JavaScript',
-      percent: 80,
-    },
-    {
-      name: 'React JS',
-      percent: 70,
-    },
-    {
-      name: 'Angular Js',
-      percent: 60,
-    },
-    {
-      name: 'Bootstrap',
-      percent: 99,
-    },
-  ];
+  const renderBulletItem = (element) => {
+    if (Array.isArray(element)) {
+      return (
+        <ul>
+          {element.map((value) => {
+            return renderBulletItem(value);
+          })}
+        </ul>
+      );
+    }
+    return <li>{element}</li>;
+  };
+
+  const renderDescription = (description) => {
+    if (Array.isArray(description)) {
+      return description.map((value) => {
+        return (
+          <p className={'mb-0 ' + (darkTheme ? 'text-white-50' : '')}>
+            {value}
+          </p>
+        );
+      });
+    }
+
+    return (
+      <p className={'mb-0 ' + (darkTheme ? 'text-white-50' : '')}>
+        {description}
+      </p>
+    );
+  };
 
   return (
     <section
@@ -94,14 +110,13 @@ const NecessaryDocuments = ({ classicHeader, darkTheme }) => {
               (darkTheme ? 'text-white' : 'text-dark')
             }
           >
-            {' '}
             {Strings.necessaryDocuments.mainTitle}
             <span className="heading-separator-line border-bottom border-3 border-primary d-block mx-auto" />
           </p>
         </div>
         {/* Heading end*/}
         <div className="row gx-5">
-          {/* My Education */}
+          {/* Enrollment */}
           <div className="col-md-6 pe-5">
             <h2
               className={
@@ -115,13 +130,10 @@ const NecessaryDocuments = ({ classicHeader, darkTheme }) => {
                 <div
                   key={index}
                   className={
-                    'bg-white  rounded p-4 mb-4 ' +
+                    'bg-white rounded mb-4 ' +
                     (darkTheme ? 'bg-dark' : 'bg-white')
                   }
                 >
-                  {/* <p className="badge bg-primary text-2 fw-400">
-                    {value.yearRange}
-                  </p> */}
                   <h3
                     className={
                       'text-3 fw-700 ' + (darkTheme ? 'text-white' : '')
@@ -129,16 +141,14 @@ const NecessaryDocuments = ({ classicHeader, darkTheme }) => {
                   >
                     {value.title}
                   </h3>
-                  {/* <p className={darkTheme ? 'text-primary' : 'text-danger'}>
-                    {value.place}
-                  </p> */}
                   <p className={'mb-0 ' + (darkTheme ? 'text-white-50' : '')}>
-                    {value.desc}
+                    {renderDescription(value.desc)}
                   </p>
+                  {value.list && renderBulletItem(value.list)}
                 </div>
               ))}
           </div>
-          {/* My Experience */}
+          {/* Graduation */}
           <div className="col-md-6 ps-05">
             <h2
               className={
@@ -152,13 +162,10 @@ const NecessaryDocuments = ({ classicHeader, darkTheme }) => {
                 <div
                   key={index}
                   className={
-                    'bg-white  rounded p-4 mb-4 ' +
+                    'bg-white rounded mb-4 ' +
                     (darkTheme ? 'bg-dark' : 'bg-white')
                   }
                 >
-                  {/* <p className="badge bg-primary text-2 fw-400">
-                    {value.yearRange}
-                  </p> */}
                   <h3
                     className={
                       'text-3 fw-700 ' + (darkTheme ? 'text-white' : '')
@@ -166,57 +173,10 @@ const NecessaryDocuments = ({ classicHeader, darkTheme }) => {
                   >
                     {value.title}
                   </h3>
-                  {/* <p className={darkTheme ? 'text-primary' : 'text-danger'}>
-                    {value.place}
-                  </p> */}
                   <p className={'mb-0 ' + (darkTheme ? 'text-white-50' : '')}>
-                    {value.desc}
-                    {/* <ul
-                      className={
-                        'list-style-2 ' + (darkTheme ? 'list-style-light' : '')
-                      }
-                    >
-                      {value.title && (
-                        <li>
-                          <span
-                            className={
-                              'text-dark font-weight-600 me-2' +
-                              (darkTheme ? ' text-white' : '')
-                            }
-                          >
-                            {value.title}
-                          </span>
-                          {value.title}
-                        </li>
-                      )}
-                      {projectDetails?.detailsHeaders[1] && (
-                        <li>
-                          <span
-                            className={
-                              'text-dark font-weight-600 me-2' +
-                              (darkTheme ? ' text-white' : '')
-                            }
-                          >
-                            {projectDetails.detailsHeaders[1]}
-                          </span>
-                          {projectDetails?.details[1]}
-                        </li>
-                      )}
-                      {projectDetails?.detailsHeaders[2] && (
-                        <li>
-                          <span
-                            className={
-                              'text-dark font-weight-600 me-2' +
-                              (darkTheme ? ' text-white' : '')
-                            }
-                          >
-                            {projectDetails.detailsHeaders[2]}
-                          </span>
-                          {projectDetails?.details[2]}
-                        </li>
-                      )}
-                    </ul> */}
+                    {renderDescription(value.desc)}
                   </p>
+                  {value.list && renderBulletItem(value.list)}
                 </div>
               ))}
           </div>
