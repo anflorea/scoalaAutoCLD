@@ -1,6 +1,5 @@
 import React from 'react';
 import { Strings } from '~/config/Strings';
-// import resumeFile from '../documents/resume.pdf';
 
 const NecessaryDocuments = ({ classicHeader, darkTheme }) => {
   const enrollmentDetails = [
