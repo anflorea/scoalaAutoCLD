@@ -6,7 +6,7 @@ export const Strings = {
     home: 'Acasă',
     about: 'Despre noi',
     services: 'Servicii',
-    resume: 'Expertiză',
+    resume: 'Documente Necesare',
     portfolio: 'Curriculum',
     testimonials: 'Testimoniale',
     register: 'Înregistrare',
@@ -25,14 +25,30 @@ export const Strings = {
   about: {
     mainTitle: 'Echipa noastră',
     backgroundTitle: 'Despre noi',
+    statistics: {
+      yearsExperience: {
+        title: 'Ani de Expriență',
+        value: '20',
+      },
+      serviceTime: {
+        title: 'Ore predate',
+        value: '500',
+      },
+      happyClients: {
+        title: 'Șoferi Fericiți',
+        value: '175',
+      },
+    },
   },
   services: {
     mainTitle: 'Oferta noastră',
     backgroundTitle: 'Servicii',
   },
-  resume: {
-    mainTitle: 'Competențele noastre',
-    backgroundTitle: 'Expertiză',
+  necessaryDocuments: {
+    mainTitle: 'Documente necesare',
+    backgroundTitle: 'Pregătire',
+    enrollment: 'Înscriere',
+    graduation: 'Finalizare Dosar',
   },
   curriculum: {
     mainTitle: 'Tipuri de cursuri',

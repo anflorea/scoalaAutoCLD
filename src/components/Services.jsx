@@ -5,34 +5,34 @@ const Services = ({ classicHeader, darkTheme }) => {
   // services details
   const services = [
     {
-      name: 'Graphic Design',
-      desc: 'Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.',
-      icon: 'fas fa-palette',
+      name: 'Instruire Practică',
+      desc: 'Oferim ore de condus de cea mai bună calitate alături de instructori experimentați pregătiți să te ghideze prin toate aspectele conducerii automobilelor.',
+      icon: 'fa-solid fa-road-circle-check fa-lg',
     },
     {
-      name: 'Web Design',
-      desc: 'Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.',
-      icon: 'fas fa-desktop',
+      name: 'Pregătire Teoretică',
+      desc: 'Efectuarea unui instructaj teoretic complet in vederea promovarii examenului teoretic, impreuna cu lectii de prim ajutor.',
+      icon: 'fa-solid fa-file-circle-check fa-lg',
     },
     {
-      name: 'UI/UX Design',
-      desc: 'Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.',
-      icon: 'fas fa-pencil-ruler',
+      name: 'Program Flexibil',
+      desc: 'Indiferent de cât de aglomerat este programul tău, suntem aici să te ajutăm să îți atingi obiectivele de conducere. Putem să adaptăm orele de studiu în funcție de nevoile tale.',
+      icon: 'fa-solid fa-calendar-check fa-lg',
     },
     {
-      name: 'App Design & Develop',
-      desc: 'Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.',
-      icon: 'fas fa-paint-brush',
+      name: 'Întocmirea Dosarului',
+      desc: 'Noi suntem pregătiți pentru a te ghida prin întregul proces, oferidu-ți informațiile și sfaturile necesare pentru a vă pregăti dosarul într-un mod eficient și corect.',
+      icon: 'fa-solid fa-file-signature fa-lg',
     },
     {
-      name: 'Business Analysis',
-      desc: 'Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.',
-      icon: 'fas fa-chart-area',
+      name: 'Flotă modernă',
+      desc: 'Oferim o flotă de autovehicule moderne și fiabile. Mașinile noastre sunt echipate cu tehnologii de actualitate, astfel încât să poți avea o experiență sigură și confortabilă.',
+      icon: 'fa-solid fa-car-side fa-lg',
     },
     {
-      name: 'SEO Marketing',
-      desc: 'Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.',
-      icon: 'fas fa-bullhorn',
+      name: 'Preț avantajos',
+      desc: 'Oferim un preț avantajos și competitiv pentru orele de conducere și studiu. Suntem dedicați să vă oferim o experiență de învățare accesibilă și de calitate.',
+      icon: 'fa-solid fa-piggy-bank fa-lg',
     },
   ];
 
@@ -70,10 +70,10 @@ const Services = ({ classicHeader, darkTheme }) => {
               {services.length > 0 &&
                 services.map((service, index) => (
                   <div className="col-md-6" key={index}>
-                    <div className="featured-box style-3 mb-5">
+                    <div className="featured-box style-3 mb-5 mx-1 textJustify ">
                       <div
                         className={
-                          'featured-box-icon text-primary  shadow-sm rounded ' +
+                          'featured-box-icon text-primary shadow-sm rounded ' +
                           (darkTheme ? 'bg-dark-1' : 'bg-white')
                         }
                       >
