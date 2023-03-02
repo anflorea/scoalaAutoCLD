@@ -17,7 +17,7 @@ const NecessaryDocuments = ({ classicHeader, darkTheme }) => {
     },
     {
       title: 'Analize medicale',
-      desc: 'Cu privire la vizita medicală:',
+      desc: 'Analizele se pot face la Clinia My Health (Bd. 1 Decembrie 1918, 11-13)',
       list: [
         'Este necesară adeverință de la medicul de familie',
         'Nu se recoltează proba de sânge',
@@ -53,7 +53,7 @@ const NecessaryDocuments = ({ classicHeader, darkTheme }) => {
     },
     {
       title: 'Cazier Judiciar',
-      desc: 'Cazierul se poate ridica de la Inspectoratul Județean de Poliție Târgu Mureș (Strada Borsos Tamás 16, Târgu Mureș)',
+      desc: 'Cazierul se poate ridica de la Inspectoratul Județean de Poliție Târgu Mureș (Str. Borsos Tamás 16)',
     },
   ];
 
