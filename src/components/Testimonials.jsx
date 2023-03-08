@@ -2,8 +2,12 @@ import React from 'react';
 
 import Slider from 'react-slick';
 import { Strings } from '~/config/Strings';
+import { useFeature } from 'flagged';
 
-const Testimonials = ({ classicHeader, darkTheme }) => {
+const Testimonials = () => {
+  const darkTheme = useFeature('darkTheme');
+  const classicHeader = useFeature('classicHeader');
+
   const reviews = [
     {
       name: 'Dennis Jacques',

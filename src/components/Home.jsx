@@ -3,7 +3,7 @@ import Typewriter from 'typewriter-effect';
 import { Strings } from '~/config/Strings';
 import videobg from '../videos/home.mp4';
 
-const Home = ({ classicHeader, darkTheme, handleNavClick }) => {
+const Home = ({ handleNavClick }) => {
   return (
     <section id="home">
       <div className="hero-wrap">

@@ -1,7 +1,11 @@
 import React from 'react';
 import { Strings } from '~/config/Strings';
+import { useFeature } from 'flagged';
 
-const Services = ({ classicHeader, darkTheme }) => {
+const Services = () => {
+  const darkTheme = useFeature('darkTheme');
+  const classicHeader = useFeature('classicHeader');
+
   // services details
   const services = [
     {

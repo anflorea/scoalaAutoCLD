@@ -1,12 +1,20 @@
 import React from 'react';
 import { Strings } from '~/config/Strings';
+import { useFeatures } from 'flagged';
 
-const Footer = ({ classicHeader, darkTheme, handleNavClick }) => {
+const Footer = ({ handleNavClick }) => {
+  const { darkTheme, classicHeader, testimonialsSection, registerSection } =
+    useFeatures();
+
+  const backgroundColorPicker = () => {
+    if (testimonialsSection !== registerSection) {
+      return darkTheme ? 'bg-dark-2' : 'bg-light';
+    }
+    return darkTheme ? 'bg-dark-1' : '';
+  };
+
   return (
-    <footer
-      id="footer"
-      className={'section ' + (darkTheme ? 'footer-dark bg-dark-1' : '')}
-    >
+    <footer id="footer" className={'section ' + backgroundColorPicker()}>
       <div className={'container ' + (classicHeader ? '' : 'px-lg-5')}>
         <div className="row">
           <div className="col-lg-6 text-center text-lg-start">

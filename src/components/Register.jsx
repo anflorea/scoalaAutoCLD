@@ -4,10 +4,23 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Tooltip } from './Tooltip';
 import { Strings } from '~/config/Strings';
+import { useFeatures } from 'flagged';
 
-const Register = ({ classicHeader, darkTheme }) => {
+const Register = () => {
   const form = useRef();
   const [sendingMail, setSendingMail] = useState(false);
+
+  const { darkTheme, classicHeader, testimonialsSection, registerSection } =
+    useFeatures();
+
+  const backgroundColorPicker = () => {
+    if (testimonialsSection !== registerSection) {
+      if (!testimonialsSection) {
+        return darkTheme ? 'bg-dark-1' : '';
+      }
+    }
+    return darkTheme ? 'bg-dark-2' : 'bg-light';
+  };
 
   const sendEmail = (event) => {
     event.preventDefault();
@@ -81,10 +94,7 @@ const Register = ({ classicHeader, darkTheme }) => {
   };
 
   return (
-    <section
-      id="register"
-      className={'section ' + (darkTheme ? 'bg-dark-2' : 'bg-light')}
-    >
+    <section id="register" className={'section ' + backgroundColorPicker()}>
       <div className={'container ' + (classicHeader ? '' : 'px-lg-5')}>
         {/* Heading */}
         <div className="position-relative d-flex text-center mb-5">

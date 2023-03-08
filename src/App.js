@@ -16,6 +16,7 @@ import Disclaimer from '~/components/GDPR';
 import PreLoader from '~/components/Preloader';
 import { Tooltip } from '~/components/Tooltip';
 import Register from '~/components/Register';
+import { FlagsProvider, useFeatures } from 'flagged';
 
 function App() {
   const classicHeader = commonConfig.classicHeader;
@@ -55,8 +56,11 @@ function App() {
     window.addEventListener('scroll', checkScrollTop);
   }
 
-  return (
-    <>
+  const AppContent = () => {
+    const { darkTheme, classicHeader, testimonialsSection, registerSection } =
+      useFeatures();
+
+    return (
       <div
         style={{ position: 'relative' }}
         className={classicHeader ? '' : 'side-header'}
@@ -71,45 +75,16 @@ function App() {
           )}
 
           <div id="content" role="main">
-            <Home
-              classicHeader={classicHeader}
-              darkTheme={darkTheme}
-              handleNavClick={handleNavClick}
-            ></Home>
-            <AboutUs
-              classicHeader={classicHeader}
-              darkTheme={darkTheme}
-            ></AboutUs>
-            <Services
-              classicHeader={classicHeader}
-              darkTheme={darkTheme}
-            ></Services>
-            <NecessaryDocuments
-              classicHeader={classicHeader}
-              darkTheme={darkTheme}
-            ></NecessaryDocuments>
-            <Curriculum
-              classicHeader={classicHeader}
-              darkTheme={darkTheme}
-            ></Curriculum>
-            <Testimonials
-              classicHeader={classicHeader}
-              darkTheme={darkTheme}
-            ></Testimonials>
-            <Register
-              classicHeader={classicHeader}
-              darkTheme={darkTheme}
-            ></Register>
-            <Contact
-              classicHeader={classicHeader}
-              darkTheme={darkTheme}
-            ></Contact>
+            <Home handleNavClick={handleNavClick}></Home>
+            <AboutUs />
+            <Services />
+            <NecessaryDocuments />
+            <Curriculum />
+            {testimonialsSection && <Testimonials />}
+            {registerSection && <Register />}
+            <Contact />
           </div>
-          <Footer
-            classicHeader={classicHeader}
-            darkTheme={darkTheme}
-            handleNavClick={handleNavClick}
-          ></Footer>
+          <Footer handleNavClick={handleNavClick}></Footer>
         </div>
         {/* back to top */}
         <Tooltip text="Back to Top" placement="left">
@@ -128,7 +103,20 @@ function App() {
         <TermsAndConditions darkTheme={darkTheme}></TermsAndConditions>
         <Disclaimer darkTheme={darkTheme}></Disclaimer>
       </div>
-    </>
+    );
+  };
+
+  return (
+    <FlagsProvider
+      features={{
+        classicHeader: true,
+        darkTheme: false,
+        testimonialsSection: false,
+        registerSection: false,
+      }}
+    >
+      <AppContent />
+    </FlagsProvider>
   );
 }
 

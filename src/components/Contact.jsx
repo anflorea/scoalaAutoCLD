@@ -2,17 +2,25 @@ import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import { Strings } from '~/config/Strings';
+import { useFeatures } from 'flagged';
 
 import 'react-toastify/dist/ReactToastify.css';
 import { Tooltip } from './Tooltip';
 import { commonConfig } from '~/config/commonConfig';
 
-const Contact = ({ classicHeader, darkTheme }) => {
+const Contact = () => {
+  const { darkTheme, classicHeader, testimonialsSection, registerSection } =
+    useFeatures();
+
+  const backgroundColorPicker = () => {
+    if (testimonialsSection !== registerSection) {
+      return darkTheme ? 'bg-dark-2' : 'bg-light';
+    }
+    return darkTheme ? 'bg-dark-1' : '';
+  };
+
   return (
-    <section
-      id="contact"
-      className={'section ' + (darkTheme ? 'bg-dark-1' : '')}
-    >
+    <section id="contact" className={'section ' + backgroundColorPicker()}>
       <div className={'container ' + (classicHeader ? '' : 'px-lg-5')}>
         {/* Heading */}
         <div className="position-relative d-flex text-center mb-5">
