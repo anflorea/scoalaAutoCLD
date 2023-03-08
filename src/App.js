@@ -10,9 +10,8 @@ import Contact from '~/components/Contact';
 import Footer from '~/components/Footer';
 import { useEffect, useState } from 'react';
 import ClassicHeader from '~/components/ClassicHeader';
-import { commonConfig } from '~/config/commonConfig';
 import TermsAndConditions from '~/components/TermsAndConditions';
-import Disclaimer from '~/components/GDPR';
+import GDPR from '~/components/GDPR';
 import PreLoader from '~/components/Preloader';
 import { Tooltip } from '~/components/Tooltip';
 import Register from '~/components/Register';
@@ -98,7 +97,7 @@ function App() {
         </Tooltip>
 
         <TermsAndConditions darkTheme={darkTheme}></TermsAndConditions>
-        <Disclaimer darkTheme={darkTheme}></Disclaimer>
+        <GDPR darkTheme={darkTheme}></GDPR>
       </div>
     );
   };
