@@ -2,8 +2,12 @@ import React, { useEffect, useRef, useState } from 'react';
 import Isotope from 'isotope-layout';
 import ProjectDetailsModal from './ProjectDetailsModal';
 import { Strings } from '~/config/Strings';
+import { useFeature } from 'flagged';
 
-const Curriculum = ({ classicHeader, darkTheme }) => {
+const Curriculum = () => {
+  const darkTheme = useFeature('darkTheme');
+  const classicHeader = useFeature('classicHeader');
+
   // init one ref to store the future isotope object
   const isotope = useRef();
   // store the filter keyword in a state
