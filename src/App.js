@@ -19,9 +19,6 @@ import Register from '~/components/Register';
 import { FlagsProvider, useFeatures } from 'flagged';
 
 function App() {
-  const classicHeader = commonConfig.classicHeader;
-  const darkTheme = commonConfig.darkTheme;
-
   const handleNavClick = (section) => {
     document.getElementById(section).scrollIntoView({ behavior: 'smooth' });
   };
