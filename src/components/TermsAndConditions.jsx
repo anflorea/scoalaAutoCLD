@@ -31,14 +31,14 @@ const TermsAndConditions = ({ darkTheme }) => {
           </div>
           <div className="modal-body p-4">
             <p className="textJustify">
-              Bine ați venit la Scoala Auto CLD, operată de CLD Auto Drive
+              Bine ați venit la Școala Auto CLD, operată de CLD Auto Drive
               Consult SRL. Accesul la și utilizarea site-ului nostru și a
               serviciilor noastre presupune acceptarea și respectarea acestor
               termeni și condiții. Vă rugăm să citiți cu atenție acești termeni
               și condiții înainte de a utiliza site-ul nostru.
             </p>
             <p className="textJustify">
-              Scoala Auto CLD, operată de CLD Auto Drive Consult SRL, nu își
+              Școala Auto CLD, operată de CLD Auto Drive Consult SRL, nu își
               asumă nicio responsabilitate pentru orice pierdere sau daună,
               inclusiv, fără limitare, daune directe, indirecte, accidentale,
               speciale, consecințiale sau exemplare, care rezultă din utilizarea
