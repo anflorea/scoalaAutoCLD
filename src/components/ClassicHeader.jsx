@@ -4,10 +4,13 @@ import { Tooltip } from './Tooltip';
 import { Link } from 'react-scroll';
 import { Strings } from '~/config/Strings';
 import { commonConfig } from '~/config/commonConfig';
+import { useFeatures } from 'flagged';
 
 const ClassicHeader = ({ handleNavClick }) => {
   const [stickyHeader, setStickyHeader] = useState(false);
   const [isNavModalClose, setIsNavModalClose] = useState(true);
+
+  const { testimonialsSection, registerSection } = useFeatures();
 
   const checkScrollTop = () => {
     let header = document.getElementsByClassName('primary-menu');
@@ -52,13 +55,15 @@ const ClassicHeader = ({ handleNavClick }) => {
                 setIsNavModalClose(true);
               }}
             >
-              {' '}
               <img
                 src="images/logo-light.png"
                 alt="Școala Auto CLD"
-                width={175}
-                style={{ margin: 15 }}
-              />{' '}
+                style={{
+                  margin: 15,
+                  maxWidth: 110,
+                  height: 'auto',
+                }}
+              />
             </Link>
             {/* Logo End */}
           </div>
@@ -173,40 +178,44 @@ const ClassicHeader = ({ handleNavClick }) => {
                     {Strings.header.portfolio}
                   </Link>
                 </li>
-                <li className="nav-item">
-                  <Link
-                    smooth
-                    duration={500}
-                    style={{ cursor: 'pointer' }}
-                    spy
-                    activeClass="active"
-                    className="nav-link"
-                    to="testimonial"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setIsNavModalClose(true);
-                    }}
-                  >
-                    {Strings.header.testimonials}
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                    smooth
-                    duration={500}
-                    style={{ cursor: 'pointer' }}
-                    spy
-                    activeClass="active"
-                    className="nav-link"
-                    to="register"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setIsNavModalClose(true);
-                    }}
-                  >
-                    {Strings.header.register}
-                  </Link>
-                </li>
+                {testimonialsSection && (
+                  <li className="nav-item">
+                    <Link
+                      smooth
+                      duration={500}
+                      style={{ cursor: 'pointer' }}
+                      spy
+                      activeClass="active"
+                      className="nav-link"
+                      to="testimonial"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setIsNavModalClose(true);
+                      }}
+                    >
+                      {Strings.header.testimonials}
+                    </Link>
+                  </li>
+                )}
+                {registerSection && (
+                  <li className="nav-item">
+                    <Link
+                      smooth
+                      duration={500}
+                      style={{ cursor: 'pointer' }}
+                      spy
+                      activeClass="active"
+                      className="nav-link"
+                      to="register"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setIsNavModalClose(true);
+                      }}
+                    >
+                      {Strings.header.register}
+                    </Link>
+                  </li>
+                )}
                 <li className="nav-item">
                   <Link
                     smooth

@@ -1,7 +1,11 @@
 import React from 'react';
 import { Strings } from '~/config/Strings';
+import { useFeature } from 'flagged';
 
-const NecessaryDocuments = ({ classicHeader, darkTheme }) => {
+const NecessaryDocuments = () => {
+  const darkTheme = useFeature('darkTheme');
+  const classicHeader = useFeature('classicHeader');
+
   const enrollmentDetails = [
     {
       title: 'Act de identitate sau permis de conducere',
@@ -66,24 +70,22 @@ const NecessaryDocuments = ({ classicHeader, darkTheme }) => {
         </ul>
       );
     }
-    return <li>{element}</li>;
+    return (
+      <li className={'mb-0 ' + (darkTheme ? 'text-white' : '')}>{element}</li>
+    );
   };
 
   const renderDescription = (description) => {
     if (Array.isArray(description)) {
       return description.map((value) => {
         return (
-          <p className={'mb-0 ' + (darkTheme ? 'text-white-50' : '')}>
-            {value}
-          </p>
+          <p className={'mb-0 ' + (darkTheme ? 'text-white' : '')}>{value}</p>
         );
       });
     }
 
     return (
-      <p className={'mb-0 ' + (darkTheme ? 'text-white-50' : '')}>
-        {description}
-      </p>
+      <p className={'mb-0 ' + (darkTheme ? 'text-white' : '')}>{description}</p>
     );
   };
 
@@ -97,7 +99,7 @@ const NecessaryDocuments = ({ classicHeader, darkTheme }) => {
         <div className="position-relative d-flex text-center mb-5">
           <h2
             className={
-              'text-24  text-uppercase fw-600 w-100 mb-0 ' +
+              'text-24 text-uppercase fw-600 w-100 mb-0 ' +
               (darkTheme ? 'text-muted opacity-1' : 'text-light opacity-4')
             }
           >
@@ -116,7 +118,9 @@ const NecessaryDocuments = ({ classicHeader, darkTheme }) => {
         {/* Heading end*/}
         <div className="row gx-5">
           {/* Enrollment */}
-          <div className="col-md-6 pe-5">
+          <div
+            className={'col-md-6 p-4 ' + (darkTheme ? 'rounded bg-dark' : '')}
+          >
             <h2
               className={
                 'text-6 fw-600 mb-4 ' + (darkTheme ? 'text-white' : '')
@@ -148,7 +152,9 @@ const NecessaryDocuments = ({ classicHeader, darkTheme }) => {
               ))}
           </div>
           {/* Graduation */}
-          <div className="col-md-6 ps-05">
+          <div
+            className={'col-md-6 p-4 ' + (darkTheme ? 'rounded bg-dark-2' : '')}
+          >
             <h2
               className={
                 'text-6 fw-600 mb-4 ' + (darkTheme ? 'text-white' : '')
@@ -162,7 +168,7 @@ const NecessaryDocuments = ({ classicHeader, darkTheme }) => {
                   key={index}
                   className={
                     'bg-white rounded mb-4 ' +
-                    (darkTheme ? 'bg-dark' : 'bg-white')
+                    (darkTheme ? 'bg-dark-2' : 'bg-white')
                   }
                 >
                   <h3

@@ -1,7 +1,10 @@
 import React from 'react';
 import { Strings } from '~/config/Strings';
-import resumeFile from '../documents/resume.pdf';
-const AboutUs = ({ classicHeader, darkTheme }) => {
+import { useFeature } from 'flagged';
+
+const AboutUs = () => {
+  const darkTheme = useFeature('darkTheme');
+  const classicHeader = useFeature('classicHeader');
   return (
     <section id="about" className={'section ' + (darkTheme ? 'bg-dark-1' : '')}>
       <div className={'container ' + (classicHeader ? '' : 'px-lg-5')}>
