@@ -20,16 +20,26 @@ const Home = ({ handleNavClick }) => {
             className="topGraphicElement"
             alt=""
             src={'images/home/TopLeftOrange.svg'}
-            style={{ maxWidth: '50vw', minWidth: '300px' }}
           />
           <img
             className="botGraphicElement"
             alt=""
             src={'images/home/BottomRightOrange.svg'}
-            style={{
-              maxWidth: '50vw',
-              minWidth: '300px',
-            }}
+          />
+          <img
+            className="roundPicture pic1position"
+            alt=""
+            src={'images/home/picture1.png'}
+          />
+          <img
+            className="roundPicture pic2position"
+            alt=""
+            src={'images/home/picture2.png'}
+          />
+          <img
+            className="roundPicture pic3position"
+            alt=""
+            src={'images/home/picture3.png'}
           />
         </div>
 
