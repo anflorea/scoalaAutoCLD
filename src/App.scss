@@ -60,6 +60,151 @@
   right: 0px;
 }
 
+// Mobile devices
+@media only screen and (max-width: 480px) {
+  .topGraphicElement {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    margin-top: -10px;
+    margin-left: -10px;
+    // transform: scaleX(2.5) rotateZ(-25deg);
+  }
+
+  .roundPicture {
+    position: absolute;
+    width: 150px;
+    height: auto;
+  }
+  
+  .pic1position {
+    margin-top: 80px;
+    margin-right: 80px;
+    top: 0px;
+    right: 0px;
+  }
+  
+  .pic2position {
+    display: none;
+    margin-top: 125px;
+    margin-left: -40px;
+    top: 0px;
+    left: 0px;
+  }
+  
+  .pic3position {
+    width: 200px;
+    margin-bottom: 20px;
+    margin-right: 60px;
+    bottom: 0px;
+    right: 0px;
+  }
+}
+
+// Tablets
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .topGraphicElement {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 350px;
+    margin-top: -10px;
+    margin-left: -10px;
+    // transform: scaleX(2.5) rotateZ(-25deg);
+  }
+
+  .botGraphicElement {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 180px;
+    margin-right: -20px;
+    margin-bottom: -20px;
+  }
+
+  .roundPicture {
+    position: absolute;
+    width: 200px;
+    height: auto;
+  }
+  
+  .pic1position {
+    margin-top: 40px;
+    margin-right: 60px;
+    top: 0px;
+    right: 0px;
+  }
+  
+  .pic2position {
+    margin-top: 200px;
+    margin-left: -30px;
+    top: 0px;
+    left: 0px;
+  }
+  
+  .pic3position {
+    width: 250px;
+    margin-bottom: 20px;
+    margin-right: 60px;
+    bottom: 0px;
+    right: 0px;
+  }
+}
+
+// Small screens
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .topGraphicElement {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 400px;
+    margin-top: -20px;
+    margin-left: -20px;
+    // transform: scaleX(2.5) rotateZ(-25deg);
+  }
+
+  .botGraphicElement {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 200px;
+    margin-right: -20px;
+    margin-bottom: -20px;
+  }
+
+  .roundPicture {
+    position: absolute;
+    width: 250px;
+    height: auto;
+  }
+  
+  .pic1position {
+    margin-top: 40px;
+    margin-right: 60px;
+    top: 0px;
+    right: 0px;
+  }
+  
+  .pic2position {
+    margin-top: 200px;
+    margin-left: -30px;
+    top: 0px;
+    left: 0px;
+  }
+  
+  .pic3position {
+    width: 300px;
+    margin-bottom: 20px;
+    margin-right: 90px;
+    bottom: 0px;
+    right: 0px;
+  }
+}
+
 .secondaryColorBG {
   background-color: #1e3c56;
 }
