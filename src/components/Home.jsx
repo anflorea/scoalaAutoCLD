@@ -9,13 +9,29 @@ const Home = ({ handleNavClick }) => {
   return (
     <section id="home">
       <div className="hero-wrap">
-        <div className="hero-mask opacity-8 bg-dark" />
+        <div className="hero-mask opacity-2 bg-dark" />
 
         {/* ---------------image background------------------ */}
         <div
           className="hero-bg parallax"
-          style={{ backgroundImage: 'url("images/intro-bg.jpg")' }}
-        ></div>
+          style={{ backgroundColor: '#1E3C56' }}
+        >
+          <img
+            className="topGraphicElement"
+            alt=""
+            src={'images/home/TopLeftOrange.svg'}
+            style={{ maxWidth: '50vw', minWidth: '300px' }}
+          />
+          <img
+            className="botGraphicElement"
+            alt=""
+            src={'images/home/BottomRightOrange.svg'}
+            style={{
+              maxWidth: '50vw',
+              minWidth: '300px',
+            }}
+          />
+        </div>
 
         {/* -------------------video background---------------------- */}
 

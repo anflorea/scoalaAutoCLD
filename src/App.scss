@@ -10,3 +10,15 @@
 .textJustify {
   text-align: justify;
 }
+
+.topGraphicElement {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.botGraphicElement {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
