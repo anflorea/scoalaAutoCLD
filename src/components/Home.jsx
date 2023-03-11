@@ -1,9 +1,11 @@
 import React from 'react';
 import Typewriter from 'typewriter-effect';
 import { Strings } from '~/config/Strings';
-import videobg from '../videos/home.mp4';
+import { useFeatures } from 'flagged';
 
 const Home = ({ handleNavClick }) => {
+  const { registerSection } = useFeatures();
+
   return (
     <section id="home">
       <div className="hero-wrap">
@@ -49,10 +51,14 @@ const Home = ({ handleNavClick }) => {
                   className="btn btn-outline-primary rounded-pill shadow-none smooth-scroll mt-2"
                   onClick={(e) => {
                     e.preventDefault();
-                    handleNavClick('contact');
+                    if (registerSection) {
+                      handleNavClick('register');
+                    } else handleNavClick('contact');
                   }}
                 >
-                  {Strings.home.callToAction}
+                  {registerSection
+                    ? Strings.home.callToAction
+                    : 'Contactează-ne acum'}
                 </a>
               </div>
             </div>
