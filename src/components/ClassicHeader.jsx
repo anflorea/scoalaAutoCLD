@@ -17,8 +17,8 @@ const ClassicHeader = ({ handleNavClick }) => {
 
     if (header) {
       if (
-        document.body.scrollTop > 180 ||
-        document.documentElement.scrollTop > 180
+        document.body.scrollTop > 858 ||
+        document.documentElement.scrollTop > 858
       ) {
         setStickyHeader(true);
       } else {
@@ -36,9 +36,10 @@ const ClassicHeader = ({ handleNavClick }) => {
       {/* Navbar */}
       <nav
         className={
-          'primary-menu navbar navbar-expand-lg navbar-dark bg-transparent border-bottom-0 sticky-top ' +
-          (stickyHeader ? 'sticky-on' : '')
+          'primary-menu navbar navbar-expand-lg navbar-dark border-bottom-0 sticky-top ' +
+          (stickyHeader ? 'sticky-on secondaryColorBG ' : 'bg-dark-1 ')
         }
+        // style
       >
         <div className="container-fluid position-relative g-lg-4">
           <div className="col-auto col-lg-2">
