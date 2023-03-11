@@ -15,9 +15,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  max-width: 1000px;
-  max-height: 700px;
-  min-width: 300px;
+  width: 900px;
+  height: 700px;
   margin-top: -30px;
   margin-left: -40px;
   // transform: scaleX(2.5) rotateZ(-25deg);
@@ -40,8 +39,9 @@
 }
 
 .pic1position {
-  margin-top: 75px;
-  margin-right: 250px;
+  width: 300px;
+  margin-top: 25px;
+  margin-right: 350px;
   top: 0px;
   right: 0px;
 }

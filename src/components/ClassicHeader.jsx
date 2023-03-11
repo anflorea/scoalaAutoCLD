@@ -37,7 +37,7 @@ const ClassicHeader = ({ handleNavClick }) => {
       <nav
         className={
           'primary-menu navbar navbar-expand-lg navbar-dark border-bottom-0 sticky-top ' +
-          (stickyHeader ? 'sticky-on secondaryColorBG ' : 'bg-dark-1 ')
+          (stickyHeader ? 'sticky-on secondaryColorBG ' : 'secondaryColorBG ')
         }
         // style
       >
