@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Isotope from 'isotope-layout';
-import ProjectDetailsModal from './ProjectDetailsModal';
+import CurriculumModal from './CurriculumModal';
 import { Strings } from '~/config/Strings';
 import { useFeature } from 'flagged';
 
@@ -215,10 +215,10 @@ const Curriculum = () => {
       </section>
       <div className="project-details-modal">
         {/* Modal */}
-        <ProjectDetailsModal
+        <CurriculumModal
           projectDetails={selectedProjectDetails}
           darkTheme={darkTheme}
-        ></ProjectDetailsModal>
+        ></CurriculumModal>
       </div>
     </>
   );
