@@ -41,6 +41,26 @@ const Home = ({ handleNavClick }) => {
             alt=""
             src={'images/home/picture3.png'}
           />
+          <img
+          className="dotsGraphic"
+          alt=""
+          src={'images/home/Graphic3.svg'}
+          />
+          <img
+          className="plusGraphic"
+          alt=""
+          src={'images/home/Graphic4.svg'}
+          />
+          <img
+          className="plusGraphic2"
+          alt=""
+          src={'images/home/Graphic4.svg'}
+          />
+          <img
+          className="plusGraphic3"
+          alt=""
+          src={'images/home/Graphic4.svg'}
+          />
         </div>
 
         {/* -------------------video background---------------------- */}
