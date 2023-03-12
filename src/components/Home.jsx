@@ -1,19 +1,67 @@
 import React from 'react';
 import Typewriter from 'typewriter-effect';
 import { Strings } from '~/config/Strings';
-import videobg from '../videos/home.mp4';
+import { useFeatures } from 'flagged';
 
 const Home = ({ handleNavClick }) => {
+  const { registerSection } = useFeatures();
+
   return (
     <section id="home">
       <div className="hero-wrap">
-        <div className="hero-mask opacity-8 bg-dark" />
+        <div className="hero-mask opacity-1 bg-dark" />
 
         {/* ---------------image background------------------ */}
         <div
           className="hero-bg parallax"
-          style={{ backgroundImage: 'url("images/intro-bg.jpg")' }}
-        ></div>
+          style={{ backgroundColor: '#1E3C56' }}
+        >
+          <img
+            className="topGraphicElement"
+            alt=""
+            src={'images/home/TopLeftOrange.svg'}
+          />
+          <img
+            className="botGraphicElement"
+            alt=""
+            src={'images/home/BottomRightOrange.svg'}
+          />
+           <img
+          className="dotsGraphic"
+          alt=""
+          src={'images/home/Graphic3.svg'}
+          />
+          <img
+            className="roundPicture pic1position"
+            alt=""
+            src={'images/home/picture1.png'}
+          />
+          <img
+            className="roundPicture pic2position"
+            alt=""
+            src={'images/home/picture2.png'}
+          />
+          <img
+            className="roundPicture pic3position"
+            alt=""
+            src={'images/home/picture3.png'}
+          />
+          <img
+          className="plusGraphic"
+          alt=""
+          src={'images/home/Graphic4.svg'}
+          />
+          <img
+          className="plusGraphic2"
+          alt=""
+          src={'images/home/Graphic4.svg'}
+          />
+          <img
+          className="plusGraphic3"
+          alt=""
+          src={'images/home/Graphic4.svg'}
+          />
+        </div>
 
         {/* -------------------video background---------------------- */}
 
@@ -49,10 +97,14 @@ const Home = ({ handleNavClick }) => {
                   className="btn btn-outline-primary rounded-pill shadow-none smooth-scroll mt-2"
                   onClick={(e) => {
                     e.preventDefault();
-                    handleNavClick('contact');
+                    if (registerSection) {
+                      handleNavClick('register');
+                    } else handleNavClick('contact');
                   }}
                 >
-                  {Strings.home.callToAction}
+                  {registerSection
+                    ? Strings.home.callToAction
+                    : 'Contactează-ne acum'}
                 </a>
               </div>
             </div>

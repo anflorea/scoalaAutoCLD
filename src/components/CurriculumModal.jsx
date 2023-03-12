@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import Slider from 'react-slick';
 import { Strings } from '~/config/Strings';
 
-const ProjectDetailsModal = ({ darkTheme, projectDetails }) => {
+const CurriculumModal = ({ darkTheme, projectDetails }) => {
   const sliderRef = useRef();
 
   var settings = {
@@ -282,4 +282,4 @@ const ProjectDetailsModal = ({ darkTheme, projectDetails }) => {
   );
 };
 
-export default ProjectDetailsModal;
+export default CurriculumModal;
