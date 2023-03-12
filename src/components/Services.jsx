@@ -80,6 +80,11 @@ const Services = () => {
                           'featured-box-icon text-primary shadow-sm rounded ' +
                           (darkTheme ? 'bg-dark-1' : 'bg-white')
                         }
+                        style={{
+                          top: 0,
+                          bottom: 0,
+                          margin: 'auto',
+                        }}
                       >
                         <i className={service.icon} />
                       </div>
