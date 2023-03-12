@@ -93,7 +93,7 @@ const ClassicHeader = ({ handleNavClick }) => {
                   : 'show navbar-collapse justify-content-center'
               }
             >
-              <ul className="navbar-nav">
+              <ul className="navbar-nav secondaryColorBG">
                 <li className="nav-item">
                   <Link
                     smooth
