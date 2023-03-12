@@ -80,13 +80,10 @@
 @media only screen and (max-width: 480px) {
   .topGraphicElement {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -10px;
+    left: -10px;
     width: 300px;
     height: 300px;
-    margin-top: -10px;
-    margin-left: -10px;
-    // transform: scaleX(2.5) rotateZ(-25deg);
   }
 
   .roundPicture {
@@ -96,26 +93,47 @@
   }
   
   .pic1position {
-    margin-top: 80px;
-    margin-right: 80px;
-    top: 0px;
-    right: 0px;
+    top: 9%;
+    right: 17.5%;
   }
   
   .pic2position {
     display: none;
-    margin-top: 125px;
-    margin-left: -40px;
-    top: 0px;
-    left: 0px;
   }
   
   .pic3position {
     width: 200px;
-    margin-bottom: 20px;
-    margin-right: 60px;
-    bottom: 0px;
-    right: 0px;
+    bottom: 2.5%;
+    right: 14%;
+  }
+
+  .dotsGraphic {
+    position: absolute;
+    bottom: 10%;
+    left: -10%;
+    width: 150px;
+  }
+  
+  .plusGraphic {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    width: 35px;
+  }
+  
+  .plusGraphic2 {
+    position: absolute;
+    top: 25%;
+    right: 7%;
+    width: 25px;
+  }
+  
+  .plusGraphic3 {
+    position: absolute;
+    top: unset;
+    left: 10%;
+    bottom: 25%;
+    width: 30px;
   }
 }
 
@@ -123,22 +141,17 @@
 @media only screen and (min-width: 481px) and (max-width: 768px) {
   .topGraphicElement {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -10px;
+    left: -10px;
     width: 400px;
     height: 350px;
-    margin-top: -10px;
-    margin-left: -10px;
-    // transform: scaleX(2.5) rotateZ(-25deg);
   }
 
   .botGraphicElement {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: -20px;
+    right: -20px;
     height: 180px;
-    margin-right: -20px;
-    margin-bottom: -20px;
   }
 
   .roundPicture {
@@ -148,25 +161,48 @@
   }
   
   .pic1position {
-    margin-top: 40px;
-    margin-right: 60px;
-    top: 0px;
-    right: 0px;
+    top: 4%;
+    right: 8%;
   }
   
   .pic2position {
-    margin-top: 200px;
-    margin-left: -30px;
-    top: 0px;
-    left: 0px;
+    top: 20%;
+    left: -2.5%;
   }
   
   .pic3position {
     width: 250px;
-    margin-bottom: 20px;
-    margin-right: 60px;
-    bottom: 0px;
-    right: 0px;
+    bottom: 2%;
+    right: 7.5%;
+  }
+
+  .dotsGraphic {
+    position: absolute;
+    bottom: 10%;
+    left: 15%;
+    width: 160px;
+  }
+  
+  .plusGraphic {
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    width: 35px;
+  }
+  
+  .plusGraphic2 {
+    position: absolute;
+    top: 30%;
+    right: 7%;
+    width: 35px;
+  }
+  
+  .plusGraphic3 {
+    position: absolute;
+    top: unset;
+    left: 12.5%;
+    bottom: 25%;
+    width: 30px;
   }
 }
 
@@ -174,22 +210,17 @@
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   .topGraphicElement {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -20px;
+    left: -20px;
     width: 500px;
     height: 400px;
-    margin-top: -20px;
-    margin-left: -20px;
-    // transform: scaleX(2.5) rotateZ(-25deg);
   }
 
   .botGraphicElement {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: -20px;
+    right: -20px;
     height: 200px;
-    margin-right: -20px;
-    margin-bottom: -20px;
   }
 
   .roundPicture {
@@ -199,25 +230,48 @@
   }
   
   .pic1position {
-    margin-top: 40px;
-    margin-right: 60px;
-    top: 0px;
-    right: 0px;
+    top: 3.5%;
+    right: 6%;
   }
   
   .pic2position {
-    margin-top: 200px;
-    margin-left: -30px;
-    top: 0px;
-    left: 0px;
+    top: 17.5%;
+    left: -3.5%;
   }
   
   .pic3position {
     width: 300px;
-    margin-bottom: 20px;
-    margin-right: 90px;
-    bottom: 0px;
-    right: 0px;
+    bottom: 2%;
+    right: 10%;
+  }
+
+  .dotsGraphic {
+    position: absolute;
+    bottom: 10%;
+    left: 15%;
+    width: 160px;
+  }
+  
+  .plusGraphic {
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    width: 35px;
+  }
+  
+  .plusGraphic2 {
+    position: absolute;
+    top: 30%;
+    right: 7%;
+    width: 35px;
+  }
+  
+  .plusGraphic3 {
+    position: absolute;
+    top: unset;
+    left: 12.5%;
+    bottom: 25%;
+    width: 30px;
   }
 }
 

@@ -26,6 +26,11 @@ const Home = ({ handleNavClick }) => {
             alt=""
             src={'images/home/BottomRightOrange.svg'}
           />
+           <img
+          className="dotsGraphic"
+          alt=""
+          src={'images/home/Graphic3.svg'}
+          />
           <img
             className="roundPicture pic1position"
             alt=""
@@ -40,11 +45,6 @@ const Home = ({ handleNavClick }) => {
             className="roundPicture pic3position"
             alt=""
             src={'images/home/picture3.png'}
-          />
-          <img
-          className="dotsGraphic"
-          alt=""
-          src={'images/home/Graphic3.svg'}
           />
           <img
           className="plusGraphic"
