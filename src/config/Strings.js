@@ -138,7 +138,8 @@ export const Strings = {
         tooShort: 'Mesajul introdus este prea scurt!',
         tooLong: 'Mesajul introdus este prea lung!',
       },
-      required: 'Acest câmp este obligatoriu!'
+      checkbox: 'Trebuie acceptată politica GDPR înainte de a continua',
+      required: 'Acest câmp este obligatoriu!',
     },
   },
   contact: {

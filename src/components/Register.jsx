@@ -30,6 +30,9 @@ const Register = () => {
       .min(3, Strings.register.validationMessages.message.tooShort)
       .max(500, Strings.register.validationMessages.message.tooLong)
       .required(Strings.register.validationMessages.required),
+    checkbox: Yup.string()
+      .matches('true', Strings.register.validationMessages.checkbox)
+      .required(Strings.register.validationMessages.required),
   });
 
   const { darkTheme, classicHeader, testimonialsSection, registerSection } =
@@ -121,6 +124,7 @@ const Register = () => {
       email: '',
       phoneNumber: '',
       message: '',
+      checkbox: false,
     },
     validationSchema: validationSchema,
     validateOnChange: true,
@@ -129,7 +133,7 @@ const Register = () => {
 
       toast.success(
         `You are registered! Name: ${values.name}. Email: ${values.email}. Phone Number: ${values.phoneNumber}.
-        Message: ${values.message}`,
+        Message: ${values.message}, Checkbox: ${values.checkbox}`,
         {
           position: 'top-right',
           autoClose: 5000,
@@ -272,10 +276,16 @@ const Register = () => {
               </div>
               <div className="form-check mt-3">
                 <input
-                  required
-                  className="form-check-input"
+                  name="checkbox"
+                  className={`form-check-input ${
+                    formik.touched.message && formik.errors.message
+                      ? 'border-danger'
+                      : ''
+                  }`}
                   type="checkbox"
-                  value=""
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  value={formik.values.checkbox}
                   id="gdpr-checkbox"
                 />
                 <label class="form-check-label" for="gdpr-checkbox">
@@ -290,6 +300,11 @@ const Register = () => {
                       GDPR
                     </a>
                   </p>
+                  {formik.touched.checkbox && formik.errors.checkbox && (
+                    <span className="text-danger">
+                      {formik.errors.checkbox}
+                    </span>
+                  )}
                 </label>
               </div>
               <p className="text-center mt-4 mb-0">
