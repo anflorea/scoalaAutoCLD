@@ -7,9 +7,9 @@ import { Strings } from '~/config/Strings';
 import { useFeatures } from 'flagged';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import Mailgun from 'mailgun-js';
 
 const Register = () => {
-  // const form = useRef();
   const [sendingMail, setSendingMail] = useState(false);
 
   const phoneValidator =
@@ -47,76 +47,42 @@ const Register = () => {
     return darkTheme ? 'bg-dark-2' : 'bg-light';
   };
 
-  // const sendEmail = (event) => {
-  //   event.preventDefault();
-  //   setSendingMail(true);
-  //   // emailjs
-  //   //   .sendForm(
-  //   //     'service_i86k3ms',
-  //   //     'template_si6cin9',
-  //   //     form.current,
-  //   //     'c9HsDgGF0tvWyVnAL'
-  //   //   )
-  //   //   .then(
-  //   //     (result) => {
-  //   //       document.getElementById('contact-form').reset();
-  //   //       toast.success('Message sent successfully!', {
-  //   //         position: 'top-right',
-  //   //         autoClose: 5000,
-  //   //         hideProgressBar: false,
-  //   //         closeOnClick: true,
-  //   //         pauseOnHover: true,
-  //   //         draggable: true,
-  //   //         progress: undefined,
-  //   //         theme: darkTheme ? 'dark' : 'light',
-  //   //       });
-  //   //       console.log(result.text);
-  //   //       setSendingMail(false);
-  //   //     },
-  //   //     (error) => {
-  //   //       toast.error('Something went wrong!', {
-  //   //         position: 'top-right',
-  //   //         autoClose: 5000,
-  //   //         hideProgressBar: false,
-  //   //         closeOnClick: true,
-  //   //         pauseOnHover: true,
-  //   //         draggable: true,
-  //   //         progress: undefined,
-  //   //         theme: darkTheme ? 'dark' : 'light',
-  //   //       });
-  //   //       console.log(error.text);
-  //   //       setSendingMail(false);
-  //   //     }
-  //   //   );
+  const sendEmail = (values) => {
+    setSendingMail(true);
 
-  //   const data = {
-  //     name: event.target.name.value,
-  //     email: event.target.email.value,
-  //     phoneNumber: event.target.phoneNumber.value,
-  //     message: event.target.message.value,
-  //   };
+    const mg = Mailgun({
+      apiKey: '9697601690b8551078736b6ed7f7e2d7-7764770b-17fbd0e5',
+      domain:
+        'https://api.mailgun.net/v3/sandbox0a86a024a8294c52b372c7ede96509fb.mailgun.org',
+    });
 
-  //   document.getElementById('contact-form').reset();
+    const data = {
+      from: 'Excited User <me@samples.mailgun.org>',
+      to: 'linca.tudor@gmail.com',
+      subject: 'Hello',
+      text: 'Testing some Mailgun awesomness!',
+    };
 
-  //   toast.success(
-  //     `Message sent successfully! The form contains: ${JSON.stringify(
-  //       data,
-  //       0,
-  //       2
-  //     )}`,
-  //     {
-  //       position: 'top-right',
-  //       autoClose: 5000,
-  //       hideProgressBar: false,
-  //       closeOnClick: true,
-  //       pauseOnHover: true,
-  //       draggable: true,
-  //       progress: undefined,
-  //       theme: darkTheme ? 'dark' : 'light',
-  //     }
-  //   );
-  //   setSendingMail(false);
-  // };
+    mg.messages().send(data, function (error, body) {
+      console.log(body);
+    });
+
+    // toast.success(
+    //   `You are registered! Name: ${values.name}. Email: ${values.email}. Phone Number: ${values.phoneNumber}.
+    //     Message: ${values.message}, Checkbox: ${values.checkbox}`,
+    //   {
+    //     position: 'top-right',
+    //     autoClose: 5000,
+    //     hideProgressBar: false,
+    //     closeOnClick: true,
+    //     pauseOnHover: true,
+    //     draggable: true,
+    //     progress: undefined,
+    //     theme: darkTheme ? 'dark' : 'light',
+    //   }
+    // );
+    setSendingMail(false);
+  };
 
   const formik = useFormik({
     initialValues: {
