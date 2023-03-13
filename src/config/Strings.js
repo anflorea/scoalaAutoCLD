@@ -127,6 +127,19 @@ export const Strings = {
       message:
         'Ne-ar plăcea să știm mai multe despre preferințele tale de programare și orice solicitări speciale',
     },
+    validationMessages: {
+      name: {
+        tooShort: 'Numele introdus este prea scurt!',
+        tooLong: 'Numele introdus este prea lung!',
+      },
+      email: 'Adresa de e-mail introdusă este invalidă!',
+      phoneNumber: 'Numărul de telefon introdus este invalid!',
+      message: {
+        tooShort: 'Mesajul introdus este prea scurt!',
+        tooLong: 'Mesajul introdus este prea lung!',
+      },
+      required: 'Acest câmp este obligatoriu!'
+    },
   },
   contact: {
     address: 'Adresa noastră',

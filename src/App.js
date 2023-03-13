@@ -108,7 +108,7 @@ function App() {
         classicHeader: true,
         darkTheme: false,
         testimonialsSection: false,
-        registerSection: false,
+        registerSection: true,
       }}
     >
       <AppContent />
