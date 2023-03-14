@@ -54,22 +54,40 @@ const Contact = () => {
             >
               {Strings.contact.address}
             </h2>
-            <p className={'text-3 mb-3 ' + (darkTheme ? 'text-light' : '')}>
+            <p className={'text-3 mb-1 ' + (darkTheme ? 'text-light' : '')}>
+              <span className="text-primary text-4 me-2">
+                <i className="fas fa-map-location-dot contactIcon" />
+              </span>
               {Strings.contact.info.streetAndNumber}
-              <br />
+            </p>
+            <p className={'text-3 mb-4 ' + (darkTheme ? 'text-light' : '')}>
+              <span className="text-primary text-4 me-2">
+                <i className="fas fa-city contactIcon" />
+              </span>
               {Strings.contact.info.cityAndRegion}
-              <br />
-              {Strings.contact.info.postalCode}
+            </p>
+            <h2
+              className={
+                'mb-3 text-5 text-uppercase ' + (darkTheme ? 'text-white' : '')
+              }
+            >
+              {Strings.contact.contactInfo}
+            </h2>
+            <p className={'text-3 mb-1 ' + (darkTheme ? 'text-light' : '')}>
+              <span className="text-primary text-4 me-2">
+                <i className="fas fa-envelope contactIcon" />
+              </span>
+              {Strings.contact.info.email}
             </p>
             <p className={'text-3 mb-1 ' + (darkTheme ? 'text-light' : '')}>
               <span className="text-primary text-4 me-2">
-                <i className="fas fa-mobile" />
+                <i className="fas fa-phone contactIcon" />
               </span>
               {Strings.contact.info.mainPhoneNumber}
             </p>
             <p className={'text-3 mb-4 ' + (darkTheme ? 'text-light' : '')}>
               <span className="text-primary text-4 me-2">
-                <i className="fas fa-phone" />
+                <i className="fas fa-phone contactIcon" />
               </span>
               {Strings.contact.info.secondaryPhoneNumber}
             </p>

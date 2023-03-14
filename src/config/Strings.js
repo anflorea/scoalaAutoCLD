@@ -143,11 +143,11 @@ export const Strings = {
     },
   },
   contact: {
-    address: 'Adresa noastră',
+    address: 'Locație',
+    contactInfo: 'Contact',
     info: {
       streetAndNumber: 'Str. Iuliu Maniu, Nr. 40',
       cityAndRegion: 'Târgu Mureș, Jud. Mureș',
-      postalCode: ' Cod Poștal 540165',
       mainPhoneNumber: '+40 (756) 755-785',
       secondaryPhoneNumber: '+40 (744) 364-088',
       email: 'contact@scoalaaudorcld.ro',
