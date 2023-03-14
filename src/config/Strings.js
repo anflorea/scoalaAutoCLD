@@ -28,11 +28,11 @@ export const Strings = {
     statistics: {
       yearsExperience: {
         title: 'Ani de Expriență',
-        value: '20',
+        value: '5',
       },
       serviceTime: {
         title: 'Ore predate',
-        value: '500',
+        value: '5000',
       },
       happyClients: {
         title: 'Șoferi Fericiți',
