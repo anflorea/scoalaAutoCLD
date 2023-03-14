@@ -7,7 +7,6 @@ import { Strings } from '~/config/Strings';
 import { useFeatures } from 'flagged';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import Mailgun from 'mailgun-js';
 
 const Register = () => {
   const [sendingMail, setSendingMail] = useState(false);
@@ -50,22 +49,22 @@ const Register = () => {
   const sendEmail = (values) => {
     setSendingMail(true);
 
-    const mg = Mailgun({
-      apiKey: '9697601690b8551078736b6ed7f7e2d7-7764770b-17fbd0e5',
-      domain:
-        'https://api.mailgun.net/v3/sandbox0a86a024a8294c52b372c7ede96509fb.mailgun.org',
-    });
+    // const mg = Mailgun({
+    //   apiKey: '9697601690b8551078736b6ed7f7e2d7-7764770b-17fbd0e5',
+    //   domain:
+    //     'https://api.mailgun.net/v3/sandbox0a86a024a8294c52b372c7ede96509fb.mailgun.org',
+    // });
 
-    const data = {
-      from: 'Excited User <me@samples.mailgun.org>',
-      to: 'linca.tudor@gmail.com',
-      subject: 'Hello',
-      text: 'Testing some Mailgun awesomness!',
-    };
+    // const data = {
+    //   from: 'Excited User <me@samples.mailgun.org>',
+    //   to: 'linca.tudor@gmail.com',
+    //   subject: 'Hello',
+    //   text: 'Testing some Mailgun awesomness!',
+    // };
 
-    mg.messages().send(data, function (error, body) {
-      console.log(body);
-    });
+    // mg.messages().send(data, function (error, body) {
+    //   console.log(body);
+    // });
 
     // toast.success(
     //   `You are registered! Name: ${values.name}. Email: ${values.email}. Phone Number: ${values.phoneNumber}.
