@@ -9,12 +9,11 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
 const Register = () => {
+  const form = useRef();
   const [sendingMail, setSendingMail] = useState(false);
 
   const { REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_API_KEY } =
     process.env;
-
-  console.log(REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_API_KEY);
 
   const phoneValidator =
     /^(?:(?:(?:00\s?|\+)40\s?|0)(?:7\d{2}\s?\d{3}\s?\d{3}|(21|31)\d{1}\s?\d{3}\s?\d{3}|((2|3)[3-7]\d{1})\s?\d{3}\s?\d{3}|(8|9)0\d{1}\s?\d{3}\s?\d{3}))$/;
@@ -51,13 +50,13 @@ const Register = () => {
     return darkTheme ? 'bg-dark-2' : 'bg-light';
   };
 
-  const sendEmail = (values) => {
+  const sendEmail = () => {
     setSendingMail(true);
     emailjs
       .sendForm(
         REACT_APP_SERVICE_ID,
         REACT_APP_TEMPLATE_ID,
-        values,
+        form.current,
         REACT_APP_API_KEY
       )
       .then(
@@ -149,7 +148,7 @@ const Register = () => {
               id="contact-form"
               // action="php/mail.php"
               // method="post"
-              // ref={form}
+              ref={form}
               onSubmit={formik.handleSubmit}
             >
               <div className="row g-4">
