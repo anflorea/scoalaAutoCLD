@@ -143,8 +143,7 @@ export const Strings = {
     },
   },
   contact: {
-    address: 'Locație',
-    contactInfo: 'Contact',
+    header: 'Contact',
     info: {
       streetAndNumber: 'Str. Iuliu Maniu, Nr. 40',
       cityAndRegion: 'Târgu Mureș, Jud. Mureș',

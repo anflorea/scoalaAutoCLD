@@ -52,7 +52,7 @@ const Contact = () => {
                 'mb-3 text-5 text-uppercase ' + (darkTheme ? 'text-white' : '')
               }
             >
-              {Strings.contact.address}
+              {Strings.contact.header}
             </h2>
             <p className={'text-3 mb-1 ' + (darkTheme ? 'text-light' : '')}>
               <span className="text-primary text-4 me-2">
@@ -60,19 +60,12 @@ const Contact = () => {
               </span>
               {Strings.contact.info.streetAndNumber}
             </p>
-            <p className={'text-3 mb-4 ' + (darkTheme ? 'text-light' : '')}>
+            <p className={'text-3 mb-1 ' + (darkTheme ? 'text-light' : '')}>
               <span className="text-primary text-4 me-2">
                 <i className="fas fa-city contactIcon" />
               </span>
               {Strings.contact.info.cityAndRegion}
             </p>
-            <h2
-              className={
-                'mb-3 text-5 text-uppercase ' + (darkTheme ? 'text-white' : '')
-              }
-            >
-              {Strings.contact.contactInfo}
-            </h2>
             <p className={'text-3 mb-1 ' + (darkTheme ? 'text-light' : '')}>
               <span className="text-primary text-4 me-2">
                 <i className="fas fa-envelope contactIcon" />
