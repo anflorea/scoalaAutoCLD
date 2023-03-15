@@ -7,6 +7,7 @@ import { Strings } from '~/config/Strings';
 import { useFeatures } from 'flagged';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import { SERVICE_ID, TEMPLATE_ID, API_KEY } from '@env';
 
 const Register = () => {
   const [sendingMail, setSendingMail] = useState(false);
@@ -48,39 +49,37 @@ const Register = () => {
 
   const sendEmail = (values) => {
     setSendingMail(true);
-
-    // const mg = Mailgun({
-    //   apiKey: '9697601690b8551078736b6ed7f7e2d7-7764770b-17fbd0e5',
-    //   domain:
-    //     'https://api.mailgun.net/v3/sandbox0a86a024a8294c52b372c7ede96509fb.mailgun.org',
-    // });
-
-    // const data = {
-    //   from: 'Excited User <me@samples.mailgun.org>',
-    //   to: 'linca.tudor@gmail.com',
-    //   subject: 'Hello',
-    //   text: 'Testing some Mailgun awesomness!',
-    // };
-
-    // mg.messages().send(data, function (error, body) {
-    //   console.log(body);
-    // });
-
-    // toast.success(
-    //   `You are registered! Name: ${values.name}. Email: ${values.email}. Phone Number: ${values.phoneNumber}.
-    //     Message: ${values.message}, Checkbox: ${values.checkbox}`,
-    //   {
-    //     position: 'top-right',
-    //     autoClose: 5000,
-    //     hideProgressBar: false,
-    //     closeOnClick: true,
-    //     pauseOnHover: true,
-    //     draggable: true,
-    //     progress: undefined,
-    //     theme: darkTheme ? 'dark' : 'light',
-    //   }
-    // );
-    setSendingMail(false);
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, values, API_KEY).then(
+      (result) => {
+        document.getElementById('contact-form').reset();
+        toast.success(Strings.register.toast.success, {
+          position: 'top-right',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: darkTheme ? 'dark' : 'light',
+        });
+        console.log(result.text);
+        setSendingMail(false);
+      },
+      (error) => {
+        toast.error(Strings.register.toast.failure, {
+          position: 'top-right',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: darkTheme ? 'dark' : 'light',
+        });
+        console.log(error.text);
+        setSendingMail(false);
+      }
+    );
   };
 
   const formik = useFormik({
@@ -94,24 +93,7 @@ const Register = () => {
     validationSchema: validationSchema,
     validateOnChange: true,
     onSubmit: (values) => {
-      setSendingMail(true);
-
-      toast.success(
-        `You are registered! Name: ${values.name}. Email: ${values.email}. Phone Number: ${values.phoneNumber}.
-        Message: ${values.message}, Checkbox: ${values.checkbox}`,
-        {
-          position: 'top-right',
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: darkTheme ? 'dark' : 'light',
-        }
-      );
-
-      setSendingMail(false);
+      sendEmail(values);
     },
   });
 
