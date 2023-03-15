@@ -7,10 +7,14 @@ import { Strings } from '~/config/Strings';
 import { useFeatures } from 'flagged';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { SERVICE_ID, TEMPLATE_ID, API_KEY } from '@env';
 
 const Register = () => {
   const [sendingMail, setSendingMail] = useState(false);
+
+  const { REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_API_KEY } =
+    process.env;
+
+  console.log(REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_API_KEY);
 
   const phoneValidator =
     /^(?:(?:(?:00\s?|\+)40\s?|0)(?:7\d{2}\s?\d{3}\s?\d{3}|(21|31)\d{1}\s?\d{3}\s?\d{3}|((2|3)[3-7]\d{1})\s?\d{3}\s?\d{3}|(8|9)0\d{1}\s?\d{3}\s?\d{3}))$/;
@@ -49,37 +53,44 @@ const Register = () => {
 
   const sendEmail = (values) => {
     setSendingMail(true);
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, values, API_KEY).then(
-      (result) => {
-        document.getElementById('contact-form').reset();
-        toast.success(Strings.register.toast.success, {
-          position: 'top-right',
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: darkTheme ? 'dark' : 'light',
-        });
-        console.log(result.text);
-        setSendingMail(false);
-      },
-      (error) => {
-        toast.error(Strings.register.toast.failure, {
-          position: 'top-right',
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: darkTheme ? 'dark' : 'light',
-        });
-        console.log(error.text);
-        setSendingMail(false);
-      }
-    );
+    emailjs
+      .sendForm(
+        REACT_APP_SERVICE_ID,
+        REACT_APP_TEMPLATE_ID,
+        values,
+        REACT_APP_API_KEY
+      )
+      .then(
+        (result) => {
+          document.getElementById('contact-form').reset();
+          toast.success(Strings.register.toast.success, {
+            position: 'top-right',
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: darkTheme ? 'dark' : 'light',
+          });
+          console.log(result.text);
+          setSendingMail(false);
+        },
+        (error) => {
+          toast.error(Strings.register.toast.failure, {
+            position: 'top-right',
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: darkTheme ? 'dark' : 'light',
+          });
+          console.log(error.text);
+          setSendingMail(false);
+        }
+      );
   };
 
   const formik = useFormik({
