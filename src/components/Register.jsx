@@ -50,7 +50,7 @@ const Register = () => {
     return darkTheme ? 'bg-dark-2' : 'bg-light';
   };
 
-  const sendEmail = () => {
+  const sendEmail = (resetForm) => {
     setSendingMail(true);
     emailjs
       .sendForm(
@@ -73,6 +73,7 @@ const Register = () => {
             theme: darkTheme ? 'dark' : 'light',
           });
           console.log(result.text);
+          resetForm({ values: '' });
           setSendingMail(false);
         },
         (error) => {
@@ -102,8 +103,8 @@ const Register = () => {
     },
     validationSchema: validationSchema,
     validateOnChange: true,
-    onSubmit: (values) => {
-      sendEmail(values);
+    onSubmit: (values, { resetForm }) => {
+      sendEmail(resetForm);
     },
   });
 
