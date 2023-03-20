@@ -7,7 +7,12 @@ import { Strings } from '~/config/Strings';
 import { useFeatures } from 'flagged';
 import { useFormik, setFieldValue } from 'formik';
 import * as Yup from 'yup';
-import { AsYouType } from 'libphonenumber-js/max';
+import {
+  isPossiblePhoneNumber,
+  isValidPhoneNumber,
+  validatePhoneNumberLength,
+  AsYouType,
+} from 'libphonenumber-js/max';
 
 const Register = () => {
   const form = useRef();
@@ -29,10 +34,8 @@ const Register = () => {
         'phoneNumber',
         Strings.register.validationMessages.phoneNumber,
         (value) => {
-          console.log(
-            `Yup said that the number is ${formatter.isValid(value)}`
-          );
-          return formatter.isValid(value);
+          if (value[0] !== '+') value = '+4' + value;
+          return isValidPhoneNumber(value);
         }
       )
       .required(Strings.register.validationMessages.required),
@@ -42,7 +45,7 @@ const Register = () => {
     message: Yup.string()
       .min(3, Strings.register.validationMessages.message.tooShort)
       .max(500, Strings.register.validationMessages.message.tooLong)
-      .required(Strings.register.validationMessages.required),
+      .nullable(),
     checkbox: Yup.string()
       .matches('true', Strings.register.validationMessages.checkbox)
       .required(Strings.register.validationMessages.required),
@@ -112,7 +115,8 @@ const Register = () => {
       checkbox: false,
     },
     validationSchema: validationSchema,
-    validateOnChange: true,
+    validateOnChange: false,
+    validateOnBlur: true,
     onSubmit: (values, { resetForm }) => {
       sendEmail(resetForm);
     },
@@ -212,6 +216,7 @@ const Register = () => {
                     placeholder={Strings.register.placeholders.phoneNumber}
                     onChange={(e) => {
                       e.target.value = formatter.input(e.target.value);
+                      console.log(e.target.value);
                       formik.handleChange(e);
                     }}
                     onBlur={formik.handleBlur}
