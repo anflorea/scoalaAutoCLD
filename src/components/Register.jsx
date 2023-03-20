@@ -2,13 +2,56 @@ import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Tooltip } from './Tooltip';
 import { Strings } from '~/config/Strings';
 import { useFeatures } from 'flagged';
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+import { isValidPhoneNumber, AsYouType } from 'libphonenumber-js/max';
 
 const Register = () => {
   const form = useRef();
+
+  const formatter = new AsYouType('RO');
+
   const [sendingMail, setSendingMail] = useState(false);
+
+  const { REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_API_KEY } =
+    process.env;
+
+  const validationSchema = Yup.object().shape({
+    name: Yup.string()
+      .min(3, Strings.register.validationMessages.name.tooShort)
+      .max(30, Strings.register.validationMessages.name.tooLong)
+      .required(Strings.register.validationMessages.required),
+    phoneNumber: Yup.string()
+      .test(
+        'phoneNumber',
+        Strings.register.validationMessages.phoneNumber,
+        (value) => {
+          let phone = value;
+
+          if (phone[0] !== '+') {
+            if (phone.substring(0, 2) === '00') {
+              phone = phone.replace(/^.{2}/g, '+');
+            } else {
+              phone = '+4' + phone;
+            }
+          }
+          return isValidPhoneNumber(phone);
+        }
+      )
+      .required(Strings.register.validationMessages.required),
+    email: Yup.string()
+      .email(Strings.register.validationMessages.email)
+      .required(Strings.register.validationMessages.required),
+    message: Yup.string()
+      .min(3, Strings.register.validationMessages.message.tooShort)
+      .max(500, Strings.register.validationMessages.message.tooLong)
+      .nullable(),
+    checkbox: Yup.string()
+      .matches('true', Strings.register.validationMessages.checkbox)
+      .required(Strings.register.validationMessages.required),
+  });
 
   const { darkTheme, classicHeader, testimonialsSection, registerSection } =
     useFeatures();
@@ -22,76 +65,64 @@ const Register = () => {
     return darkTheme ? 'bg-dark-2' : 'bg-light';
   };
 
-  const sendEmail = (event) => {
-    event.preventDefault();
+  const sendEmail = (resetForm) => {
     setSendingMail(true);
-    // emailjs
-    //   .sendForm(
-    //     'service_i86k3ms',
-    //     'template_si6cin9',
-    //     form.current,
-    //     'c9HsDgGF0tvWyVnAL'
-    //   )
-    //   .then(
-    //     (result) => {
-    //       document.getElementById('contact-form').reset();
-    //       toast.success('Message sent successfully!', {
-    //         position: 'top-right',
-    //         autoClose: 5000,
-    //         hideProgressBar: false,
-    //         closeOnClick: true,
-    //         pauseOnHover: true,
-    //         draggable: true,
-    //         progress: undefined,
-    //         theme: darkTheme ? 'dark' : 'light',
-    //       });
-    //       console.log(result.text);
-    //       setSendingMail(false);
-    //     },
-    //     (error) => {
-    //       toast.error('Something went wrong!', {
-    //         position: 'top-right',
-    //         autoClose: 5000,
-    //         hideProgressBar: false,
-    //         closeOnClick: true,
-    //         pauseOnHover: true,
-    //         draggable: true,
-    //         progress: undefined,
-    //         theme: darkTheme ? 'dark' : 'light',
-    //       });
-    //       console.log(error.text);
-    //       setSendingMail(false);
-    //     }
-    //   );
-
-    const data = {
-      name: event.target.name.value,
-      email: event.target.email.value,
-      phoneNumber: event.target.phoneNumber.value,
-      message: event.target.message.value,
-    };
-
-    document.getElementById('contact-form').reset();
-
-    toast.success(
-      `Message sent successfully! The form contains: ${JSON.stringify(
-        data,
-        0,
-        2
-      )}`,
-      {
-        position: 'top-right',
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: darkTheme ? 'dark' : 'light',
-      }
-    );
-    setSendingMail(false);
+    emailjs
+      .sendForm(
+        REACT_APP_SERVICE_ID,
+        REACT_APP_TEMPLATE_ID,
+        form.current,
+        REACT_APP_API_KEY
+      )
+      .then(
+        (result) => {
+          document.getElementById('contact-form').reset();
+          toast.success(Strings.register.toast.success, {
+            position: 'top-right',
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: darkTheme ? 'dark' : 'light',
+          });
+          console.log(result.text);
+          resetForm({ values: '' });
+          setSendingMail(false);
+        },
+        (error) => {
+          toast.error(Strings.register.toast.failure, {
+            position: 'top-right',
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: darkTheme ? 'dark' : 'light',
+          });
+          console.log(error.text);
+          setSendingMail(false);
+        }
+      );
   };
+
+  const formik = useFormik({
+    initialValues: {
+      name: '',
+      email: '',
+      phoneNumber: '',
+      message: '',
+      checkbox: false,
+    },
+    validationSchema: validationSchema,
+    validateOnChange: false,
+    validateOnBlur: true,
+    onSubmit: (values, { resetForm }) => {
+      sendEmail(resetForm);
+    },
+  });
 
   return (
     <section id="register" className={'section ' + backgroundColorPicker()}>
@@ -132,59 +163,104 @@ const Register = () => {
             <form
               className={darkTheme ? 'form-dark' : ''}
               id="contact-form"
-              // action="php/mail.php"
-              // method="post"
               ref={form}
-              onSubmit={sendEmail}
+              onSubmit={formik.handleSubmit}
             >
               <div className="row g-4">
                 <div className="row-xl-6">
                   <input
+                    id="name"
                     name="name"
                     type="text"
-                    className="form-control"
-                    required
+                    className={`form-control border- ${
+                      formik.touched.name && formik.errors.name
+                        ? 'border-danger'
+                        : ''
+                    }`}
                     placeholder={Strings.register.placeholders.name}
-                    defaultValue={''}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.name}
                   />
+                  {formik.touched.name && formik.errors.name && (
+                    <span className="text-danger">{formik.errors.name}</span>
+                  )}
                 </div>
                 <div className="col-xl-6">
                   <input
+                    id="email"
                     name="email"
-                    type="email"
-                    className="form-control"
-                    required
+                    type="text"
+                    className={`form-control ${
+                      formik.touched.email && formik.errors.email
+                        ? 'border-danger'
+                        : ''
+                    }`}
                     placeholder={Strings.register.placeholders.email}
-                    defaultValue={''}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.email}
                   />
+                  {formik.touched.email && formik.errors.email && (
+                    <span className="text-danger">{formik.errors.email}</span>
+                  )}
                 </div>
                 <div className="col-xl-6">
                   <input
+                    id="phoneNumber"
                     name="phoneNumber"
                     type="text"
-                    className="form-control"
-                    required
+                    className={`form-control ${
+                      formik.touched.phoneNumber && formik.errors.phoneNumber
+                        ? 'border-danger'
+                        : ''
+                    }`}
                     placeholder={Strings.register.placeholders.phoneNumber}
-                    defaultValue={''}
+                    onChange={(e) => {
+                      e.target.value = formatter.input(e.target.value);
+                      formik.handleChange(e);
+                    }}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.phoneNumber}
                   />
+                  {formik.touched.phoneNumber && formik.errors.phoneNumber && (
+                    <span className="text-danger">
+                      {formik.errors.phoneNumber}
+                    </span>
+                  )}
                 </div>
                 <div className="col">
                   <textarea
+                    id="message"
                     name="message"
-                    className="form-control"
+                    className={`form-control ${
+                      formik.touched.message && formik.errors.message
+                        ? 'border-danger'
+                        : ''
+                    }`}
                     rows={5}
-                    required
                     placeholder={Strings.register.placeholders.message}
-                    defaultValue={''}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.message}
                   />
+                  {formik.touched.message && formik.errors.message && (
+                    <span className="text-danger">{formik.errors.message}</span>
+                  )}
                 </div>
               </div>
               <div className="form-check mt-3">
                 <input
-                  required
-                  className="form-check-input"
+                  name="checkbox"
+                  className={`form-check-input ${
+                    formik.touched.message && formik.errors.message
+                      ? 'border-danger'
+                      : ''
+                  }`}
                   type="checkbox"
-                  value=""
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  value={formik.values.checkbox}
                   id="gdpr-checkbox"
                 />
                 <label class="form-check-label" for="gdpr-checkbox">
@@ -199,6 +275,11 @@ const Register = () => {
                       GDPR
                     </a>
                   </p>
+                  {formik.touched.checkbox && formik.errors.checkbox && (
+                    <span className="text-danger">
+                      {formik.errors.checkbox}
+                    </span>
+                  )}
                 </label>
               </div>
               <p className="text-center mt-4 mb-0">

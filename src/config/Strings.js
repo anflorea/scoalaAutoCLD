@@ -28,11 +28,11 @@ export const Strings = {
     statistics: {
       yearsExperience: {
         title: 'Ani de Expriență',
-        value: '20',
+        value: '5',
       },
       serviceTime: {
         title: 'Ore predate',
-        value: '500',
+        value: '5000',
       },
       happyClients: {
         title: 'Șoferi Fericiți',
@@ -127,16 +127,33 @@ export const Strings = {
       message:
         'Ne-ar plăcea să știm mai multe despre preferințele tale de programare și orice solicitări speciale',
     },
+    validationMessages: {
+      name: {
+        tooShort: 'Numele introdus este prea scurt!',
+        tooLong: 'Numele introdus este prea lung!',
+      },
+      email: 'Adresa de e-mail introdusă este invalidă!',
+      phoneNumber: 'Numărul de telefon introdus este invalid!',
+      message: {
+        tooShort: 'Mesajul introdus este prea scurt!',
+        tooLong: 'Mesajul introdus este prea lung!',
+      },
+      checkbox: 'Trebuie acceptată politica GDPR înainte de a continua',
+      required: 'Acest câmp este obligatoriu!',
+    },
+    toast: {
+      success: 'Mesajul a fost trimis cu succes!',
+      failure: 'Trimiterea mesajului a întâmpinat o eroare!',
+    },
   },
   contact: {
-    address: 'Adresa noastră',
+    header: 'Contact',
     info: {
       streetAndNumber: 'Str. Iuliu Maniu, Nr. 40',
       cityAndRegion: 'Târgu Mureș, Jud. Mureș',
-      postalCode: ' Cod Poștal 540165',
       mainPhoneNumber: '+40 (756) 755-785',
       secondaryPhoneNumber: '+40 (744) 364-088',
-      email: 'contact@scoalaaudorcld.ro',
+      email: 'contact@scoalaautocld.ro',
     },
     followUs: 'Social Media',
     mainTitle: 'Ne găsești aici',

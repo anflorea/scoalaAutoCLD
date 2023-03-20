@@ -3,6 +3,12 @@
   height: 100%;
 }
 
+.contactIcon {
+  width: 20px;
+  height: auto;
+  text-align: center;
+}
+
 .textShadow {
   text-shadow: 2px 2px 7px #000;
 }
@@ -91,16 +97,16 @@
     width: 150px;
     height: auto;
   }
-  
+
   .pic1position {
     top: 9%;
     right: 17.5%;
   }
-  
+
   .pic2position {
     display: none;
   }
-  
+
   .pic3position {
     width: 200px;
     bottom: 2.5%;
@@ -113,21 +119,21 @@
     left: -10%;
     width: 150px;
   }
-  
+
   .plusGraphic {
     position: absolute;
     top: 15%;
     left: 10%;
     width: 35px;
   }
-  
+
   .plusGraphic2 {
     position: absolute;
     top: 25%;
     right: 7%;
     width: 25px;
   }
-  
+
   .plusGraphic3 {
     position: absolute;
     top: unset;
@@ -159,17 +165,17 @@
     width: 200px;
     height: auto;
   }
-  
+
   .pic1position {
     top: 4%;
     right: 8%;
   }
-  
+
   .pic2position {
     top: 20%;
     left: -2.5%;
   }
-  
+
   .pic3position {
     width: 250px;
     bottom: 2%;
@@ -182,21 +188,21 @@
     left: 15%;
     width: 160px;
   }
-  
+
   .plusGraphic {
     position: absolute;
     top: 10%;
     left: 25%;
     width: 35px;
   }
-  
+
   .plusGraphic2 {
     position: absolute;
     top: 30%;
     right: 7%;
     width: 35px;
   }
-  
+
   .plusGraphic3 {
     position: absolute;
     top: unset;
@@ -228,17 +234,17 @@
     width: 250px;
     height: auto;
   }
-  
+
   .pic1position {
     top: 3.5%;
     right: 6%;
   }
-  
+
   .pic2position {
     top: 17.5%;
     left: -3.5%;
   }
-  
+
   .pic3position {
     width: 300px;
     bottom: 2%;
@@ -251,21 +257,21 @@
     left: 15%;
     width: 160px;
   }
-  
+
   .plusGraphic {
     position: absolute;
     top: 10%;
     left: 25%;
     width: 35px;
   }
-  
+
   .plusGraphic2 {
     position: absolute;
     top: 30%;
     right: 7%;
     width: 35px;
   }
-  
+
   .plusGraphic3 {
     position: absolute;
     top: unset;
