@@ -2,21 +2,21 @@ import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Tooltip } from './Tooltip';
 import { Strings } from '~/config/Strings';
 import { useFeatures } from 'flagged';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import { isValidPhoneNumber, AsYouType } from 'libphonenumber-js/max';
 
 const Register = () => {
   const form = useRef();
+
+  const formatter = new AsYouType('RO');
+
   const [sendingMail, setSendingMail] = useState(false);
 
   const { REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_API_KEY } =
     process.env;
-
-  const phoneValidator =
-    /^(?:(?:(?:00\s?|\+)40\s?|0)(?:7\d{2}\s?\d{3}\s?\d{3}|(21|31)\d{1}\s?\d{3}\s?\d{3}|((2|3)[3-7]\d{1})\s?\d{3}\s?\d{3}|(8|9)0\d{1}\s?\d{3}\s?\d{3}))$/;
 
   const validationSchema = Yup.object().shape({
     name: Yup.string()
@@ -24,7 +24,22 @@ const Register = () => {
       .max(30, Strings.register.validationMessages.name.tooLong)
       .required(Strings.register.validationMessages.required),
     phoneNumber: Yup.string()
-      .matches(phoneValidator, Strings.register.validationMessages.phoneNumber)
+      .test(
+        'phoneNumber',
+        Strings.register.validationMessages.phoneNumber,
+        (value) => {
+          let phone = value;
+
+          if (phone[0] !== '+') {
+            if (phone.substring(0, 2) === '00') {
+              phone = phone.replace(/^.{2}/g, '+');
+            } else {
+              phone = '+4' + phone;
+            }
+          }
+          return isValidPhoneNumber(phone);
+        }
+      )
       .required(Strings.register.validationMessages.required),
     email: Yup.string()
       .email(Strings.register.validationMessages.email)
@@ -32,7 +47,7 @@ const Register = () => {
     message: Yup.string()
       .min(3, Strings.register.validationMessages.message.tooShort)
       .max(500, Strings.register.validationMessages.message.tooLong)
-      .required(Strings.register.validationMessages.required),
+      .nullable(),
     checkbox: Yup.string()
       .matches('true', Strings.register.validationMessages.checkbox)
       .required(Strings.register.validationMessages.required),
@@ -102,7 +117,8 @@ const Register = () => {
       checkbox: false,
     },
     validationSchema: validationSchema,
-    validateOnChange: true,
+    validateOnChange: false,
+    validateOnBlur: true,
     onSubmit: (values, { resetForm }) => {
       sendEmail(resetForm);
     },
@@ -147,8 +163,6 @@ const Register = () => {
             <form
               className={darkTheme ? 'form-dark' : ''}
               id="contact-form"
-              // action="php/mail.php"
-              // method="post"
               ref={form}
               onSubmit={formik.handleSubmit}
             >
@@ -202,7 +216,10 @@ const Register = () => {
                         : ''
                     }`}
                     placeholder={Strings.register.placeholders.phoneNumber}
-                    onChange={formik.handleChange}
+                    onChange={(e) => {
+                      e.target.value = formatter.input(e.target.value);
+                      formik.handleChange(e);
+                    }}
                     onBlur={formik.handleBlur}
                     value={formik.values.phoneNumber}
                   />
