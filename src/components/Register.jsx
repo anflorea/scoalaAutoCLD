@@ -2,17 +2,11 @@ import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Tooltip } from './Tooltip';
 import { Strings } from '~/config/Strings';
 import { useFeatures } from 'flagged';
-import { useFormik, setFieldValue } from 'formik';
+import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import {
-  isPossiblePhoneNumber,
-  isValidPhoneNumber,
-  validatePhoneNumberLength,
-  AsYouType,
-} from 'libphonenumber-js/max';
+import { isValidPhoneNumber, AsYouType } from 'libphonenumber-js/max';
 
 const Register = () => {
   const form = useRef();
