@@ -28,11 +28,11 @@ export const Strings = {
     statistics: {
       yearsExperience: {
         title: 'Ani de Expriență',
-        value: '20',
+        value: '5',
       },
       serviceTime: {
         title: 'Ore predate',
-        value: '500',
+        value: '5000',
       },
       happyClients: {
         title: 'Șoferi Fericiți',
@@ -147,14 +147,13 @@ export const Strings = {
     },
   },
   contact: {
-    address: 'Adresa noastră',
+    header: 'Contact',
     info: {
       streetAndNumber: 'Str. Iuliu Maniu, Nr. 40',
       cityAndRegion: 'Târgu Mureș, Jud. Mureș',
-      postalCode: ' Cod Poștal 540165',
       mainPhoneNumber: '+40 (756) 755-785',
       secondaryPhoneNumber: '+40 (744) 364-088',
-      email: 'contact@scoalaaudorcld.ro',
+      email: 'contact@scoalaautocld.ro',
     },
     followUs: 'Social Media',
     mainTitle: 'Ne găsești aici',
