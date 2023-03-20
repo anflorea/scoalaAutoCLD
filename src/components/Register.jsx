@@ -28,8 +28,16 @@ const Register = () => {
         'phoneNumber',
         Strings.register.validationMessages.phoneNumber,
         (value) => {
-          if (value[0] !== '+') value = '+4' + value;
-          return isValidPhoneNumber(value);
+          let phone = value;
+
+          if (phone[0] !== '+') {
+            if (phone.substring(0, 2) === '00') {
+              phone = phone.replace(/^.{2}/g, '+');
+            } else {
+              phone = '+4' + phone;
+            }
+          }
+          return isValidPhoneNumber(phone);
         }
       )
       .required(Strings.register.validationMessages.required),
@@ -210,7 +218,6 @@ const Register = () => {
                     placeholder={Strings.register.placeholders.phoneNumber}
                     onChange={(e) => {
                       e.target.value = formatter.input(e.target.value);
-                      console.log(e.target.value);
                       formik.handleChange(e);
                     }}
                     onBlur={formik.handleBlur}
