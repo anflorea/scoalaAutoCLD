@@ -30,11 +30,13 @@ const Register = () => {
         (value) => {
           let phone = value;
 
-          if (phone[0] !== '+')
-            if (phone.substring(0, 2) === '00')
+          if (phone[0] !== '+') {
+            if (phone.substring(0, 2) === '00') {
               phone = phone.replace(/^.{2}/g, '+');
-            else phone = '+4' + phone;
-          console.log(phone);
+            } else {
+              phone = '+4' + phone;
+            }
+          }
           return isValidPhoneNumber(phone);
         }
       )
