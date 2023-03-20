@@ -9,7 +9,11 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
 const Register = () => {
+  const form = useRef();
   const [sendingMail, setSendingMail] = useState(false);
+
+  const { REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_API_KEY } =
+    process.env;
 
   const phoneValidator =
     /^(?:(?:(?:00\s?|\+)40\s?|0)(?:7\d{2}\s?\d{3}\s?\d{3}|(21|31)\d{1}\s?\d{3}\s?\d{3}|((2|3)[3-7]\d{1})\s?\d{3}\s?\d{3}|(8|9)0\d{1}\s?\d{3}\s?\d{3}))$/;
@@ -46,41 +50,47 @@ const Register = () => {
     return darkTheme ? 'bg-dark-2' : 'bg-light';
   };
 
-  const sendEmail = (values) => {
+  const sendEmail = (resetForm) => {
     setSendingMail(true);
-
-    // const mg = Mailgun({
-    //   apiKey: '9697601690b8551078736b6ed7f7e2d7-7764770b-17fbd0e5',
-    //   domain:
-    //     'https://api.mailgun.net/v3/sandbox0a86a024a8294c52b372c7ede96509fb.mailgun.org',
-    // });
-
-    // const data = {
-    //   from: 'Excited User <me@samples.mailgun.org>',
-    //   to: 'linca.tudor@gmail.com',
-    //   subject: 'Hello',
-    //   text: 'Testing some Mailgun awesomness!',
-    // };
-
-    // mg.messages().send(data, function (error, body) {
-    //   console.log(body);
-    // });
-
-    // toast.success(
-    //   `You are registered! Name: ${values.name}. Email: ${values.email}. Phone Number: ${values.phoneNumber}.
-    //     Message: ${values.message}, Checkbox: ${values.checkbox}`,
-    //   {
-    //     position: 'top-right',
-    //     autoClose: 5000,
-    //     hideProgressBar: false,
-    //     closeOnClick: true,
-    //     pauseOnHover: true,
-    //     draggable: true,
-    //     progress: undefined,
-    //     theme: darkTheme ? 'dark' : 'light',
-    //   }
-    // );
-    setSendingMail(false);
+    emailjs
+      .sendForm(
+        REACT_APP_SERVICE_ID,
+        REACT_APP_TEMPLATE_ID,
+        form.current,
+        REACT_APP_API_KEY
+      )
+      .then(
+        (result) => {
+          document.getElementById('contact-form').reset();
+          toast.success(Strings.register.toast.success, {
+            position: 'top-right',
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: darkTheme ? 'dark' : 'light',
+          });
+          console.log(result.text);
+          resetForm({ values: '' });
+          setSendingMail(false);
+        },
+        (error) => {
+          toast.error(Strings.register.toast.failure, {
+            position: 'top-right',
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: darkTheme ? 'dark' : 'light',
+          });
+          console.log(error.text);
+          setSendingMail(false);
+        }
+      );
   };
 
   const formik = useFormik({
@@ -93,25 +103,8 @@ const Register = () => {
     },
     validationSchema: validationSchema,
     validateOnChange: true,
-    onSubmit: (values) => {
-      setSendingMail(true);
-
-      toast.success(
-        `You are registered! Name: ${values.name}. Email: ${values.email}. Phone Number: ${values.phoneNumber}.
-        Message: ${values.message}, Checkbox: ${values.checkbox}`,
-        {
-          position: 'top-right',
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: darkTheme ? 'dark' : 'light',
-        }
-      );
-
-      setSendingMail(false);
+    onSubmit: (values, { resetForm }) => {
+      sendEmail(resetForm);
     },
   });
 
@@ -156,7 +149,7 @@ const Register = () => {
               id="contact-form"
               // action="php/mail.php"
               // method="post"
-              // ref={form}
+              ref={form}
               onSubmit={formik.handleSubmit}
             >
               <div className="row g-4">

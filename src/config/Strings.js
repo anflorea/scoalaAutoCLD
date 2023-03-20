@@ -141,6 +141,10 @@ export const Strings = {
       checkbox: 'Trebuie acceptată politica GDPR înainte de a continua',
       required: 'Acest câmp este obligatoriu!',
     },
+    toast: {
+      success: 'Mesajul a fost trimis cu succes!',
+      failure: 'Trimiterea mesajului a întâmpinat o eroare!',
+    },
   },
   contact: {
     header: 'Contact',
