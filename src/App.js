@@ -107,7 +107,7 @@ function App() {
       features={{
         classicHeader: true,
         darkTheme: false,
-        testimonialsSection: false,
+        testimonialsSection: true,
         registerSection: true,
       }}
     >
