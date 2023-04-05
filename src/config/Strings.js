@@ -153,7 +153,7 @@ export const Strings = {
       cityAndRegion: 'Târgu Mureș, Jud. Mureș',
       mainPhoneNumber: '+40 (756) 755-785',
       secondaryPhoneNumber: '+40 (744) 364-088',
-      email: 'contact@scoalaautocld.ro',
+      email: 'scoala.auto.cld@gmail.com',
     },
     followUs: 'Social Media',
     mainTitle: 'Ne găsești aici',
