@@ -13,7 +13,7 @@ const Testimonials = () => {
       name: 'Hoffmann Isa',
       date: '09 Ianuarie 2023',
       src: 'images/testimonial/client-sm-1.jpeg',
-      desc: 'Mulțumesc mult pentru tot! Recomand cu încredere școala de șoferi CLD. Am avut parte de o pregătire foarte bună alături de instructori amabili, calmi, înțelegători și profesioniști în domeniu!',
+      desc: 'Mulțumesc pentru tot! Recomand cu încredere școala de șoferi CLD. Am avut parte de o pregătire foarte bună alături de instructori amabili, calmi, înțelegători și profesioniști în domeniu. Cu ajutorul lor am obținut permisul de conducere cu succes!',
       rating: 5,
     },
     {
@@ -27,7 +27,7 @@ const Testimonials = () => {
       name: 'Rodica Radu',
       date: '07 Mai 2020',
       src: 'images/testimonial/client-sm-3.jpeg',
-      desc: 'Îi mulțumesc mult instructorului Cosmin Olariu! Acesta a fost răbdător cu mine, m-a îndrumat și m-a ajutat sa devin un șofer adevărat. Este un om "jos pălăria" și este un instructor ce iubește ceea ce face!',
+      desc: 'Îi mulțumesc mult instructorului meu, Cosmin Olariu, care a fost răbdător cu mine, m-a îndrumat și mi-a dat sfaturi despre cum să fiu un șofer adevărat. Este un om "jos pălăria" și un instructor care iubește ceea ce face!',
       rating: 5,
     },
     {
@@ -110,15 +110,12 @@ const Testimonials = () => {
                       >
                         {value.name}
                       </strong>
-                      <span className="text-muted fw-500">
-                        {' '}
-                        {value.date}{' '}
-                      </span>
+                      <span className="text-muted fw-500"> {value.date} </span>
                     </p>
                   </div>
                   <p
                     className={
-                      ' fw-500 mb-4 ' + (darkTheme ? 'text-white' : 'text-dark')
+                      ' fw-500 mb-4 textJustify ' + (darkTheme ? 'text-white' : 'text-dark')
                     }
                   >
                     “{value.desc}”
