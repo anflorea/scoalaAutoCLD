@@ -284,3 +284,21 @@
 .secondaryColorBG {
   background-color: #1e3c56;
 }
+
+.testimonialProfilePic {
+  width: 50px;
+  height: auto;
+}
+
+#necessaryDocuments ul {
+  list-style-type: none;
+  // padding-left: 0px;
+}
+
+#necessaryDocuments ul li:before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f0a9';
+  color: #f8961d;
+  padding-right: 10px;
+}

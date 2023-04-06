@@ -107,8 +107,8 @@ function App() {
       features={{
         classicHeader: true,
         darkTheme: false,
-        testimonialsSection: false,
-        registerSection: true,
+        testimonialsSection: true,
+        registerSection: false,
       }}
     >
       <AppContent />

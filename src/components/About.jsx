@@ -41,41 +41,37 @@ const AboutUs = () => {
               <span className="text-primary">{Strings.index.title}</span>
             </h2>
             <p className={darkTheme ? 'text-white-50' : ''}>
-              Bine ați venit la școala noastră de șoferi! Suntem o echipă
-              dedicată de profesioniști pasionați de siguranța rutieră și de
-              formarea șoferilor responsabili și încrezători.
+              Suntem o echipă de profesioniști dedicată să oferim o experiență
+              de învățare excelentă și sigură pentru viitorii șoferi. Cu
+              instructori pasionați și încrezători, suntem aici pentru a-ți
+              oferi cele mai bune cursuri de conducere personalizate.
             </p>
             <p className={darkTheme ? 'text-white-50' : ''}>
-              Înființată în urmă cu un an, suntem o școală de șoferi tânără și
-              dinamică, dar deja ne-am dovedit a fi de încredere și respectată
-              în comunitatea noastră. Suntem mândri să avem un record excelent
-              de promovare a examenului auto și de a ajuta oamenii să devină
-              șoferi experimentați și responsabili pe drumurile noastre.
+              Cu o istorie de un an, suntem o școală de șoferi tânără și
+              dinamică, de încredere și respectată în comunitatea noastră.
+              Echipa noastră este formată din instructori experimentați și bine
+              pregătiți, iar toate mașinile noastre sunt echipate cu cele mai
+              noi tehnologii de siguranță.
             </p>
             <p className={darkTheme ? 'text-white-50' : ''}>
-              Indiferent de experiența dvs. anterioară ca șofer, suntem aici să
-              vă oferim o gamă completă de cursuri de conducere personalizate
-              pentru a vă ajuta să vă atingeți obiectivele de învățare și să
-              deveniți șoferul pe care îl doriți să fie. Avem instructori
-              experimentați și bine pregătiți care vă vor ghida pas cu pas în
-              procesul de a deveni un șofer sigur și încrezător.
+              Nu rata ocazia de a te înscrie într-unul dintre cursurile noastre
+              de conducere interactive și antrenante! Suntem aici pentru a te
+              ajuta să devii un șofer sigur și responsabil. Indiferent de
+              obiectivele tale de învățare sau de nivelul tău de experiență ca
+              șofer, vom lucra împreună pentru a-ți oferi instruirea și ghidarea
+              necesare pentru a obține permisul de conducere.
             </p>
-            <p className={darkTheme ? 'text-white-50' : ''}>
-              Ne-am angajat să vă oferim o experiență de învățare excelentă,
-              sigură și confortabilă, iar toate mașinile noastre sunt echipate
-              cu cele mai noi caracteristici de siguranță și tehnologie de
-              ultimă generație. În plus, suntem mereu la curent cu cele mai
-              recente reguli și legi rutiere pentru a vă ajuta să vă pregătiți
-              pentru examenul auto și pentru a fi sigur și încrezător pe
-              drumurile noastre.
+            <p className={darkTheme ? 'text-white-50 ' : 'fw-600 text-primary'}>
+              Suntem aici pentru a te aduce pe cel mai scurt drum spre un condus
+              in siguranță!
             </p>
-            <p className={darkTheme ? 'text-white-50' : ''}>
+            {/* <p className={darkTheme ? 'text-white-50' : ''}>
               Vă mulțumim pentru interesul acordat școlii noastre de șoferi și
               vă invităm să ne contactați pentru mai multe informații și pentru
               a vă înscrie într-unul dintre cursurile noastre. Suntem aici
               pentru a vă ajuta să vă atingeți obiectivele de conducere și să
               deveniți un șofer sigur și responsabil.
-            </p>
+            </p> */}
           </div>
           {/* About me content end */}
           {/* about me personal detials start */}

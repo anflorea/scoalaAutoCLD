@@ -68,7 +68,7 @@ export const Strings = {
           'Pregătire Teoretică:',
           'Pregătire Practică:',
         ],
-        details: ['5 săptămani', '24 de ore', '30 de ore'],
+        details: ['minim 4 săptămani', '30 de ore', '30 de ore'],
       },
       AutomaticCatB: {
         title: 'Categoria B \n Cutie Automata',
@@ -77,7 +77,7 @@ export const Strings = {
           'Pregătire Teoretică:',
           'Pregătire Practică:',
         ],
-        details: ['5 săptămani', '24 de ore', '30 de ore'],
+        details: ['minim 4 săptămani', '30 de ore', '30 de ore'],
       },
       catB1: {
         title: 'Categoria B1',
@@ -86,7 +86,7 @@ export const Strings = {
           'Pregătire Teoretică:',
           'Pregătire Practică:',
         ],
-        details: ['5 săptămani', '24 de ore', '30 de ore'],
+        details: ['minim 4 săptămani', '30 de ore', '30 de ore'],
       },
       catC: {
         title: 'Categoria C',
@@ -95,7 +95,7 @@ export const Strings = {
           'Pregătire Teoretică:',
           'Pregătire Practică:',
         ],
-        details: ['7 săptămani', '40 de ore', '40 de ore'],
+        details: ['5 săptămani', '50 de ore', '30 de ore'],
       },
       catE: {
         title: 'Categoria E',
@@ -104,7 +104,7 @@ export const Strings = {
           'Pregătire Teoretică:',
           'Pregătire Practică:',
         ],
-        details: ['4 săptămani', '30 de ore', '35 de ore'],
+        details: ['2 săptămani', '10 de ore', '10 de ore'],
       },
     },
   },
@@ -153,7 +153,7 @@ export const Strings = {
       cityAndRegion: 'Târgu Mureș, Jud. Mureș',
       mainPhoneNumber: '+40 (756) 755-785',
       secondaryPhoneNumber: '+40 (744) 364-088',
-      email: 'contact@scoalaautocld.ro',
+      email: 'scoala.auto.cld@gmail.com',
     },
     followUs: 'Social Media',
     mainTitle: 'Ne găsești aici',

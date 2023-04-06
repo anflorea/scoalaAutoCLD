@@ -10,31 +10,31 @@ const Testimonials = () => {
 
   const reviews = [
     {
-      name: 'Dennis Jacques',
-      position: 'User from USA',
-      src: 'images/testimonial/client-sm-3.jpg',
-      desc: 'Only trying it out since a few days. But up to now excellent. Seems to work flawlessly. priced simply dummy text of the printing and typesetting industry.',
+      name: 'Hoffmann Isa',
+      date: '09 Ianuarie 2023',
+      src: 'images/testimonial/client-sm-1.jpeg',
+      desc: 'Mulțumesc pentru tot! Recomand cu încredere școala de șoferi CLD. Am avut parte de o pregătire foarte bună alături de instructori amabili, calmi, înțelegători și profesioniști în domeniu. Cu ajutorul lor am obținut permisul de conducere cu succes!',
       rating: 5,
     },
     {
-      name: 'Jay Shah',
-      position: 'Founder at Icomatic Pvt Ltd',
-      src: 'images/testimonial/client-sm-1.jpg',
-      desc: 'Easy to use, reasonably priced simply dummy text of the printing and typesetting industry. Quidam lisque persius interesset his et, in quot quidam possim iriure.',
+      name: 'Mirela Antonescu',
+      date: '31 Decembrie 2022',
+      src: 'images/testimonial/client-sm-2.jpeg',
+      desc: 'Recomand cu încredere această școală de șoferi! Am avut parte de instructori cu un grad mare de profesionalism, cu multă răbdare și pasiune în munca depusă, care m-au ajutat să obțin permisul de conducere fără nicio problemă.',
       rating: 5,
     },
     {
-      name: 'Patrick Cary',
-      position: 'Freelancer from USA',
-      src: 'images/testimonial/client-sm-2.jpg',
-      desc: 'I am happy Working with printing and typesetting industry. Quidam lisque persius interesset his et, in quot quidam persequeris essent possim iriure.',
+      name: 'Rodica Radu',
+      date: '07 Mai 2020',
+      src: 'images/testimonial/client-sm-3.jpeg',
+      desc: 'Îi mulțumesc mult instructorului meu, Cosmin Olariu, care a fost răbdător cu mine, m-a îndrumat și mi-a dat sfaturi despre cum să fiu un șofer adevărat. Este un om "jos pălăria" și un instructor care iubește ceea ce face!',
       rating: 5,
     },
     {
-      name: 'Chris Tom',
-      position: 'User from UK',
-      src: 'images/testimonial/client-sm-4.jpg',
-      desc: 'I have used them twice now. Good rates, very efficient service and priced simply dummy text of the printing and typesetting industry quidam interesset his et. Excellent.',
+      name: 'Bone Olaru Ana Maria',
+      date: '16 Noiembrie 2019',
+      src: 'images/testimonial/client-sm-4.jpeg',
+      desc: 'Nota 10! Pot să spun cu încredere că instructorul Cosmin Olariu este unul dintre cei mai buni instructori de conducere cu care am avut ocazia să lucrez. Este un profesionist desăvârșit și un om cu un mare simț al răspunderii.',
       rating: 5,
     },
   ];
@@ -97,7 +97,7 @@ const Testimonials = () => {
                 >
                   <div className="d-flex align-items-center mt-auto mb-4">
                     <img
-                      className="img-fluid rounded-circle border d-inline-block w-auto"
+                      className="img-fluid rounded-circle border d-inline-block testimonialProfilePic"
                       src={value.src}
                       alt=""
                     />
@@ -110,15 +110,12 @@ const Testimonials = () => {
                       >
                         {value.name}
                       </strong>
-                      <span className="text-muted fw-500">
-                        {' '}
-                        {value.position}{' '}
-                      </span>
+                      <span className="text-muted fw-500"> {value.date} </span>
                     </p>
                   </div>
                   <p
                     className={
-                      ' fw-500 mb-4 ' + (darkTheme ? 'text-white' : 'text-dark')
+                      ' fw-500 mb-4 textJustify ' + (darkTheme ? 'text-white' : 'text-dark')
                     }
                   >
                     “{value.desc}”
