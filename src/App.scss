@@ -1,0 +1,304 @@
+.mapWrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.contactIcon {
+  width: 20px;
+  height: auto;
+  text-align: center;
+}
+
+.textShadow {
+  text-shadow: 2px 2px 7px #000;
+}
+
+.textJustify {
+  text-align: justify;
+}
+
+.topGraphicElement {
+  position: absolute;
+  top: -30px;
+  left: -40px;
+  width: 900px;
+  height: 700px;
+}
+
+.botGraphicElement {
+  position: absolute;
+  bottom: -20px;
+  right: -50px;
+  max-width: 30vw;
+  min-width: 300px;
+}
+
+.roundPicture {
+  position: absolute;
+  width: 350px;
+}
+
+.pic1position {
+  width: 300px;
+  top: 2.5%;
+  right: 18%;
+}
+
+.pic2position {
+  top: 45%;
+  left: 7.5%;
+}
+
+.pic3position {
+  bottom: 5%;
+  right: 12%;
+}
+
+.dotsGraphic {
+  position: absolute;
+  bottom: 10%;
+  left: 30%;
+  width: 150px;
+}
+
+.plusGraphic {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  width: 40px;
+}
+
+.plusGraphic2 {
+  position: absolute;
+  top: 35%;
+  right: 7%;
+  width: 45px;
+}
+
+.plusGraphic3 {
+  position: absolute;
+  top: 17%;
+  left: 40%;
+  width: 30px;
+}
+
+// Mobile devices
+@media only screen and (max-width: 480px) {
+  .topGraphicElement {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 300px;
+    height: 300px;
+  }
+
+  .roundPicture {
+    position: absolute;
+    width: 150px;
+    height: auto;
+  }
+
+  .pic1position {
+    top: 9%;
+    right: 17.5%;
+  }
+
+  .pic2position {
+    display: none;
+  }
+
+  .pic3position {
+    width: 200px;
+    bottom: 2.5%;
+    right: 14%;
+  }
+
+  .dotsGraphic {
+    position: absolute;
+    bottom: 10%;
+    left: -10%;
+    width: 150px;
+  }
+
+  .plusGraphic {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    width: 35px;
+  }
+
+  .plusGraphic2 {
+    position: absolute;
+    top: 25%;
+    right: 7%;
+    width: 25px;
+  }
+
+  .plusGraphic3 {
+    position: absolute;
+    top: unset;
+    left: 10%;
+    bottom: 25%;
+    width: 30px;
+  }
+}
+
+// Tablets
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .topGraphicElement {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 400px;
+    height: 350px;
+  }
+
+  .botGraphicElement {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    height: 180px;
+  }
+
+  .roundPicture {
+    position: absolute;
+    width: 200px;
+    height: auto;
+  }
+
+  .pic1position {
+    top: 4%;
+    right: 8%;
+  }
+
+  .pic2position {
+    top: 20%;
+    left: -2.5%;
+  }
+
+  .pic3position {
+    width: 250px;
+    bottom: 2%;
+    right: 7.5%;
+  }
+
+  .dotsGraphic {
+    position: absolute;
+    bottom: 10%;
+    left: 15%;
+    width: 160px;
+  }
+
+  .plusGraphic {
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    width: 35px;
+  }
+
+  .plusGraphic2 {
+    position: absolute;
+    top: 30%;
+    right: 7%;
+    width: 35px;
+  }
+
+  .plusGraphic3 {
+    position: absolute;
+    top: unset;
+    left: 12.5%;
+    bottom: 25%;
+    width: 30px;
+  }
+}
+
+// Small screens
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .topGraphicElement {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 500px;
+    height: 400px;
+  }
+
+  .botGraphicElement {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    height: 200px;
+  }
+
+  .roundPicture {
+    position: absolute;
+    width: 250px;
+    height: auto;
+  }
+
+  .pic1position {
+    top: 3.5%;
+    right: 6%;
+  }
+
+  .pic2position {
+    top: 17.5%;
+    left: -3.5%;
+  }
+
+  .pic3position {
+    width: 300px;
+    bottom: 2%;
+    right: 10%;
+  }
+
+  .dotsGraphic {
+    position: absolute;
+    bottom: 10%;
+    left: 15%;
+    width: 160px;
+  }
+
+  .plusGraphic {
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    width: 35px;
+  }
+
+  .plusGraphic2 {
+    position: absolute;
+    top: 30%;
+    right: 7%;
+    width: 35px;
+  }
+
+  .plusGraphic3 {
+    position: absolute;
+    top: unset;
+    left: 12.5%;
+    bottom: 25%;
+    width: 30px;
+  }
+}
+
+.secondaryColorBG {
+  background-color: #1e3c56;
+}
+
+.testimonialProfilePic {
+  width: 50px;
+  height: auto;
+}
+
+#necessaryDocuments ul {
+  list-style-type: none;
+  // padding-left: 0px;
+}
+
+#necessaryDocuments ul li:before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f0a9';
+  color: #f8961d;
+  padding-right: 10px;
+}
