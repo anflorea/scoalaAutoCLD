@@ -99,7 +99,7 @@ const Testimonials = () => {
                     <img
                       className="img-fluid rounded-circle border d-inline-block testimonialProfilePic"
                       src={value.src}
-                      alt=""
+                      alt="Testimoniale Scoala Auto CLD"
                     />
                     <p className="ms-3 mb-0">
                       <strong
@@ -115,7 +115,8 @@ const Testimonials = () => {
                   </div>
                   <p
                     className={
-                      ' fw-500 mb-4 textJustify ' + (darkTheme ? 'text-white' : 'text-dark')
+                      ' fw-500 mb-4 textJustify ' +
+                      (darkTheme ? 'text-white' : 'text-dark')
                     }
                   >
                     “{value.desc}”
