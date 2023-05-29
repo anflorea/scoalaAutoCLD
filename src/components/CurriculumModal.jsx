@@ -72,14 +72,18 @@ const CurriculumModal = ({ darkTheme, projectDetails }) => {
                       <div className="item">
                         <img
                           className="img-fluid"
-                          alt=""
+                          alt="Categorie permis conducere"
                           src={projectDetails?.thumbImage}
                         />
                       </div>
                       {projectDetails?.sliderImages?.length > 0 &&
                         projectDetails?.sliderImages?.map((image, index) => (
                           <div className="item" key={index}>
-                            <img className="img-fluid" alt="" src={image} />
+                            <img
+                              className="img-fluid"
+                              alt="Categorie permis conducere"
+                              src={image}
+                            />
                           </div>
                         ))}
                     </Slider>

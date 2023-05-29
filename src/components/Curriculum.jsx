@@ -193,7 +193,7 @@ const Curriculum = () => {
                           }}
                           className="img-fluid d-block portfolio-image"
                           src={project.thumbImage}
-                          alt=""
+                          alt="Categorie permis conducere"
                         />
                         <div className="portfolio-overlay">
                           <a
