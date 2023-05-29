@@ -170,4 +170,17 @@ export const Strings = {
   gdpr: {
     title: 'Protecția Datelor cu Caracter Personal ',
   },
+  SEO: {
+    title: 'Școala Auto CLD',
+    desc_ro:
+      'Învață să conduci în siguranță cu școala noastră auto dinamică din Târgu Mureș. Echipa noastră de profesioniști pasionați oferă cursuri personalizate și experiențe de învățare excelente. Avem instructori experimentați și mașini dotate cu tehnologii de siguranță de ultimă generație. Indiferent de nivelul tău de experiență, obiectivele tale de învățare sau de permisul de conducere dorit, suntem aici să te ghidăm și să te ajutăm să devii un șofer sigur și responsabil. Înscrie-te acum la cursurile noastre interactive și antrenante pentru a parcurge cel mai scurt drum spre un condus în siguranță!',
+    desc_en:
+      "Learn to drive safely with our dynamic driving school in Târgu Mureș. Our team of passionate professionals provides personalized courses and excellent learning experiences. We have experienced instructors and cars equipped with state-of-the-art safety technologies. Regardless of your experience level, learning objectives, or desired driver's license, we are here to guide you and help you become a safe and responsible driver. Enroll now in our interactive and engaging courses to take the shortest path to safe driving!",
+    keywords_ro:
+      'Scoala Auto CLD, CLD Auto Drive Consult SRL, Targu Mureș, conducere, cursuri de conducere, instructori auto, permis de conducere, categoria B, categoria B1, cutie automata, categoria C, categoria E',
+    keywords_en:
+      "CLD Driving School, CLD Auto Drive Consult SRL, Targu Mureș, driving, driving courses, driving instructors, driver's license, category B, category B1, automatic transmission, category C, category E",
+    name: 'CLD Auto Drive Consult SRL',
+    type: 'website',
+  },
 };
