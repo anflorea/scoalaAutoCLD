@@ -18,48 +18,48 @@ const Home = ({ handleNavClick }) => {
         >
           <img
             className="topGraphicElement"
-            alt=""
+            alt="Scoala Auto CLD"
             src={'images/home/TopLeftOrange.svg'}
           />
           <img
             className="botGraphicElement"
-            alt=""
+            alt="Scoala Auto CLD"
             src={'images/home/BottomRightOrange.svg'}
           />
-           <img
-          className="dotsGraphic"
-          alt=""
-          src={'images/home/Graphic3.svg'}
+          <img
+            className="dotsGraphic"
+            alt="Scoala Auto CLD"
+            src={'images/home/Graphic3.svg'}
           />
           <img
             className="roundPicture pic1position"
-            alt=""
+            alt="Permis de conducere Categoria B/B1"
             src={'images/home/picture1.png'}
           />
           <img
             className="roundPicture pic2position"
-            alt=""
+            alt="Permis de conducere categoria B cutie automata"
             src={'images/home/picture2.png'}
           />
           <img
             className="roundPicture pic3position"
-            alt=""
+            alt="Permis de conducere categoria C/CE, soferi profesionisti"
             src={'images/home/picture3.png'}
           />
           <img
-          className="plusGraphic"
-          alt=""
-          src={'images/home/Graphic4.svg'}
+            className="plusGraphic"
+            alt="Scoala auto CLD"
+            src={'images/home/Graphic4.svg'}
           />
           <img
-          className="plusGraphic2"
-          alt=""
-          src={'images/home/Graphic4.svg'}
+            className="plusGraphic2"
+            alt="Scoala auto CLD"
+            src={'images/home/Graphic4.svg'}
           />
           <img
-          className="plusGraphic3"
-          alt=""
-          src={'images/home/Graphic4.svg'}
+            className="plusGraphic3"
+            alt="Scoala Auto CLD"
+            src={'images/home/Graphic4.svg'}
           />
         </div>
 

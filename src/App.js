@@ -16,6 +16,11 @@ import PreLoader from '~/components/Preloader';
 import { Tooltip } from '~/components/Tooltip';
 import Register from '~/components/Register';
 import { FlagsProvider, useFeatures } from 'flagged';
+import { HelmetProvider } from 'react-helmet-async';
+import SEO from '~/config/utils/SEO';
+import { Strings } from '~/config/Strings';
+
+const helmetContext = {};
 
 function App() {
   const handleNavClick = (section) => {
@@ -103,16 +108,19 @@ function App() {
   };
 
   return (
-    <FlagsProvider
-      features={{
-        classicHeader: true,
-        darkTheme: false,
-        testimonialsSection: true,
-        registerSection: false,
-      }}
-    >
-      <AppContent />
-    </FlagsProvider>
+    <HelmetProvider context={helmetContext}>
+      <FlagsProvider
+        features={{
+          classicHeader: true,
+          darkTheme: false,
+          testimonialsSection: true,
+          registerSection: true,
+        }}
+      >
+        <SEO tags={Strings.SEO} />
+        <AppContent />
+      </FlagsProvider>
+    </HelmetProvider>
   );
 }
 

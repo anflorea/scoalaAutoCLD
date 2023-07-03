@@ -25,40 +25,53 @@ const Curriculum = () => {
       ...Strings.curriculum.classes.catB,
       projectInfo:
         'Autovehiculul a carui masă totala maxima autorizata nu depaseste 3.500 Kg si al carui numar de locuri pe scaun, in afara conducatorului, nu este mai mare de 8.',
-      thumbImage: 'images/projects/CatB.png',
-      // sliderImages: ['images/projects/CatB.png', 'images/projects/CatB.png'],
+      thumbImage: 'images/cars/CatB_thumb.jpg',
+      sliderImages: [
+        'images/cars/CatB_1.jpg',
+        'images/cars/CatB_2.jpg',
+        'images/cars/CatB_3.jpg',
+        'images/cars/CatB_4.jpg',
+        'images/cars/CatB_5.jpg',
+        'images/cars/CatB_6.jpg',
+        'images/cars/CatB_7.jpg',
+        'images/cars/CatB_8.jpg',
+        'images/cars/CatB_9.jpg',
+      ],
       categories: [filters.B.replace(/\s+/g, '')],
     },
     {
       ...Strings.curriculum.classes.AutomaticCatB,
       projectInfo:
         'Autovehiculul a carui masa totala maxima autorizata nu depaseste 3.500 Kg si al carui numar de locuri pe scaun, in afara conducatorului, nu este mai mare de 8, iar transmisia este cu cutie automată. Ulterior promovării examenului, deținătorul permisului având dreptul de a conduce doar autovehicule cu cutie automată.',
-      thumbImage: 'images/projects/CutieAutomata.png',
-      // sliderImages: [
-      //   'images/projects/CutieAutomata.png',
-      //   'images/projects/CutieAutomata.png',
-      // ],
+      thumbImage: 'images/cars/CatBAut_thumb.jpg',
+      sliderImages: [
+        'images/cars/CatBAut_1.jpg',
+        'images/cars/CatBAut_2.jpg',
+        'images/cars/CatBAut_3.jpg',
+        'images/cars/CatBAut_4.jpg',
+      ],
       categories: [filters.B.replace(/\s+/g, '')],
     },
     {
       ...Strings.curriculum.classes.catB1,
       projectInfo:
         'Cvadriciclurile și triciclurile, autovehiculele cu trei sau patru roți, care au masă proprie de peste 400 kg, însă nu mai mare de 550 kg. Aceste mașini sunt echipate cu motor cu ardere internă, a carui capacitate cilindrică este mai mare de 45 cmc sau cu orice alt motor care oferăo putere echivalentă ori cu viteză prin construcție mai mare de 50 km/h.',
-      thumbImage: 'images/projects/CatB1.png',
-      // sliderImages: [
-      //   'images/projects/CatB1.png',
-      //   'images/projects/CatB1.png',
-      // ],
+      thumbImage: 'images/cars/CatB1_thumb.jpg',
+      sliderImages: [
+        'images/cars/CatB1_1.jpg',
+        'images/cars/CatB1_2.jpg',
+        'images/cars/CatB1_3.jpg',
+      ],
       categories: [filters.B.replace(/\s+/g, '')],
     },
     {
       ...Strings.curriculum.classes.catC,
       projectInfo:
         'Autovehiculul a carui masă totala maxima autorizata este mai mare de 3500 Kg si care este proiectat pentru transportul a maximum 8 pasageri.',
-      thumbImage: 'images/projects/SoferiProfesionisti.png',
+      thumbImage: 'images/cars/CatC_thumb.jpg',
       // sliderImages: [
-      //   'images/projects/SoferiProfesionisti.png',
-      //   'images/projects/SoferiProfesionisti.png',
+      //   'images/cars/SoferiProfesionisti.png',
+      //   'images/cars/SoferiProfesionisti.png',
       // ],
       categories: [filters.PROFESSIONAL.replace(/\s+/g, '')],
     },
@@ -66,11 +79,8 @@ const Curriculum = () => {
       ...Strings.curriculum.classes.catE,
       projectInfo:
         'Ansamblu format dintr-un autovehicul tragator din categoria C si o remorcă a carei masa totala maxima autorizata este mai mare de 750 Kg.',
-      thumbImage: 'images/projects/SoferiProfesionisti2.png',
-      // sliderImages: [
-      //   'images/projects/SoferiProfesionisti2.png',
-      //   'images/projects/SoferiProfesionisti2.png',
-      // ],
+      thumbImage: 'images/cars/CatCE_thumb.jpg',
+      sliderImages: ['images/cars/CatCE_1.jpg'],
       categories: [filters.PROFESSIONAL.replace(/\s+/g, '')],
     },
   ];
@@ -183,7 +193,7 @@ const Curriculum = () => {
                           }}
                           className="img-fluid d-block portfolio-image"
                           src={project.thumbImage}
-                          alt=""
+                          alt="Categorie permis conducere"
                         />
                         <div className="portfolio-overlay">
                           <a
