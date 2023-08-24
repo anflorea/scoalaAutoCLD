@@ -51,6 +51,7 @@ const ClassicHeader = ({ handleNavClick }) => {
               className="logo"
               to="home"
               title="scoala-auto-cld"
+              href="#"
               onClick={(e) => {
                 e.preventDefault();
                 setIsNavModalClose(true);
@@ -100,6 +101,7 @@ const ClassicHeader = ({ handleNavClick }) => {
                     duration={500}
                     style={{ cursor: 'pointer' }}
                     spy
+                    href="#"
                     activeClass="active"
                     className="nav-link"
                     to="home"
@@ -117,6 +119,7 @@ const ClassicHeader = ({ handleNavClick }) => {
                     duration={500}
                     style={{ cursor: 'pointer' }}
                     spy
+                    href="#"
                     activeClass="active"
                     className="nav-link"
                     to="about"
@@ -134,6 +137,7 @@ const ClassicHeader = ({ handleNavClick }) => {
                     duration={500}
                     style={{ cursor: 'pointer' }}
                     spy
+                    href="#"
                     activeClass="active"
                     className="nav-link"
                     to="services"
@@ -151,6 +155,7 @@ const ClassicHeader = ({ handleNavClick }) => {
                     duration={500}
                     style={{ cursor: 'pointer' }}
                     spy
+                    href="#"
                     activeClass="active"
                     className="nav-link"
                     to="necessaryDocuments"
@@ -168,6 +173,7 @@ const ClassicHeader = ({ handleNavClick }) => {
                     duration={500}
                     style={{ cursor: 'pointer' }}
                     spy
+                    href="#"
                     activeClass="active"
                     className="nav-link"
                     to="portfolio"
@@ -186,6 +192,7 @@ const ClassicHeader = ({ handleNavClick }) => {
                       duration={500}
                       style={{ cursor: 'pointer' }}
                       spy
+                      href="#"
                       activeClass="active"
                       className="nav-link"
                       to="testimonial"
@@ -205,6 +212,7 @@ const ClassicHeader = ({ handleNavClick }) => {
                       duration={500}
                       style={{ cursor: 'pointer' }}
                       spy
+                      href="#"
                       activeClass="active"
                       className="nav-link"
                       to="register"
@@ -223,6 +231,7 @@ const ClassicHeader = ({ handleNavClick }) => {
                     duration={500}
                     style={{ cursor: 'pointer' }}
                     spy
+                    href="#"
                     activeClass="active"
                     className="nav-link"
                     to="contact"
