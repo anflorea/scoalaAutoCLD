@@ -16,11 +16,66 @@ const Curriculum = () => {
   const [selectedProjectDetails, setSelectedProjectDetails] = useState();
 
   const filters = {
+    A: Strings.curriculum.menu.categories.catA,
     B: Strings.curriculum.menu.categories.catB,
+    TRAILORS: Strings.curriculum.menu.categories.trailors,
     PROFESSIONAL: Strings.curriculum.menu.categories.professionalDrivers,
   };
 
   const projectsData = [
+    {
+      ...Strings.curriculum.classes.catA,
+      projectInfo:
+        'Cu permisul de conducere categoria A poti conduce motociclete cu sau fara atas si tricicluri cu motor cu puterea de peste 15 kW.',
+      thumbImage: 'images/cars/CatA_thumb.jpg',
+      sliderImages: [
+        'images/cars/CatA_1.jpg',
+        'images/cars/CatA_2.jpg',
+      ],
+      categories: [filters.A.replace(/\s+/g, '')],
+    },
+    {
+      ...Strings.curriculum.classes.catA1,
+      projectInfo:
+        'Motociclete din categoria A1 fara atas, cu o putere a motorului de maximum 11 kw si cu un raport putere/greutate de cel mult 0,1 kw/kg, care poate atinge o viteza de cel putin 90 km/h;',
+      thumbImage: 'images/cars/CatA1_thumb.jpg',
+      // sliderImages: [
+      //   'images/cars/CatA_1.jpg',
+      // ],
+      categories: [filters.A.replace(/\s+/g, '')],
+    },
+    {
+      ...Strings.curriculum.classes.catA2,
+      projectInfo:
+        'Motociclete categoria A2 cu puterea motorului maxima de 35 kw, cu un raport putere/greutate care nu depaseste 0,2 kw/kg. si care nu sunt derivate dintr-un vehicul avand mai mult de dublul puterii sale. ',
+      thumbImage: 'images/cars/CatA2_thumb.jpg',
+      sliderImages: [
+        'images/cars/CatA2_1.jpg',
+        'images/cars/CatA2_2.jpg',
+      ],
+      categories: [filters.A.replace(/\s+/g, '')],
+    },
+    {
+      ...Strings.curriculum.classes.catAM,
+      projectInfo:
+        'Cu permis AM poti conduce vehicule categoria AM - scuter / moped, cu doua, trei sau patru roti, a carui viteza maxima prin constructie este mai mare de 25 km/h dar nu depaseste 45 km/h. Vehicul care este echipat cu un motor cu ardere interna, cu aprindere prin scanteie, cu o capacitate cilindrica ce nu depaseste 50 cm3 sau cu un alt motor cu ardere interna ori, dupa caz, electric, a carui putere nominala continua maxima nu depaseste 4 kW, iar masa proprie a vehiculului nu depaseste 350 kg, neincluzand masa bateriilor in cazul vehiculului electric. Este asimilat mopedului cvadriciclul usor sau triciclul cu motor care pastreaza caracteristicile acestuia.',
+      thumbImage: 'images/cars/CatAM_thumb.jpg',
+      // sliderImages: [
+      //   'images/cars/CatB_1.jpg',
+      // ],
+      categories: [filters.A.replace(/\s+/g, '')],
+    },
+    {
+      ...Strings.curriculum.classes.catA125,
+      projectInfo:
+        'Cursul A 125 ofera posibilitatea posesorilor de permis categoria B de a conduce o motocicleta  de maxim 125 cc dotata cu transmisie automata. Cursul include 10 ore de conducere si nu necesita examen.',
+      thumbImage: 'images/cars/CatA125_thumb.jpg',
+      sliderImages: [
+        'images/cars/CatA125_1.jpg',
+        'images/cars/CatA125_2.jpg',
+      ],
+      categories: [filters.A.replace(/\s+/g, '')],
+    },
     {
       ...Strings.curriculum.classes.catB,
       projectInfo:
@@ -38,6 +93,26 @@ const Curriculum = () => {
         'images/cars/CatB_9.jpg',
       ],
       categories: [filters.B.replace(/\s+/g, '')],
+    },
+    {
+      ...Strings.curriculum.classes.catBE,
+      projectInfo:
+        'Ansamblul format dintr-un vehicul din categoria B si o remorca sau semiremorca - Ansamblul de vehicule a caror masa totala maxima autorizata depaseste 4.250 kg format dintr-un autovehicul tragator din categoria B si o remorca sau semiremorca a carei masa totala maxima autorizata nu depaseste 3.500 kg.',
+      thumbImage: 'images/cars/CatBE_thumb.jpg',
+      // sliderImages: [
+      //   'images/cars/CatB_1.jpg',
+      // ],
+      categories: [filters.TRAILORS.replace(/\s+/g, '')],
+    },
+    {
+      ...Strings.curriculum.classes.catB96,
+      projectInfo:
+        'Acest permis este necesar pentru a conduce un ansamblu de vehicule format dintr-un autovehicul tragator din categoria B si o remorca, a carui masa maxima autorizata este mai mare de 3500 kg, dar nu depaseste 4250 kg. ',
+      thumbImage: 'images/cars/CatB96_thumb.jpg',
+      // sliderImages: [
+      //   'images/cars/CatB_1.jpg',
+      // ],
+      categories: [filters.TRAILORS.replace(/\s+/g, '')],
     },
     {
       ...Strings.curriculum.classes.AutomaticCatB,
@@ -81,7 +156,7 @@ const Curriculum = () => {
         'Ansamblu format dintr-un autovehicul tragator din categoria C si o remorcă a carei masa totala maxima autorizata este mai mare de 750 Kg.',
       thumbImage: 'images/cars/CatCE_thumb.jpg',
       sliderImages: ['images/cars/CatCE_1.jpg'],
-      categories: [filters.PROFESSIONAL.replace(/\s+/g, '')],
+      categories: [filters.PROFESSIONAL.replace(/\s+/g, ''), filters.TRAILORS.replace(/\s+/g, '')],
     },
   ];
 
@@ -192,6 +267,7 @@ const Curriculum = () => {
                             setimagesLoaded(imagesLoaded + 1);
                           }}
                           className="img-fluid d-block portfolio-image"
+                          style={{ aspectRatio: 3 / 2 }}
                           src={project.thumbImage}
                           alt="Categorie permis conducere"
                         />

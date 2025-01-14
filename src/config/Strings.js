@@ -56,11 +56,57 @@ export const Strings = {
     menu: {
       categories: {
         all: 'Toate',
+        catA: 'Categoria A',
         catB: 'Categoria B',
+        trailors: 'Remorci',
         professionalDrivers: 'Șoferi Profesioniști',
       },
     },
     classes: {
+      catA: {
+        title: 'Categoria A',
+        detailsHeaders: [
+          'Durata cursului:',
+          'Pregătire Teoretică:',
+          'Pregătire Practică:',
+        ],
+        details: ['minim 4 săptămani', '30 de ore', '30 de ore'],
+      },
+      catA1: {
+        title: 'Categoria A1',
+        detailsHeaders: [
+          'Durata cursului:',
+          'Pregătire Teoretică:',
+          'Pregătire Practică:',
+        ],
+        details: ['minim 4 săptămani', '30 de ore', '30 de ore'],
+      },
+      catA2: {
+        title: 'Categoria A2',
+        detailsHeaders: [
+          'Durata cursului:',
+          'Pregătire Teoretică:',
+          'Pregătire Practică:',
+        ],
+        details: ['minim 4 săptămani', '30 de ore', '30 de ore'],
+      },
+      catAM: {
+        title: 'Categoria AM',
+        detailsHeaders: [
+          'Durata cursului:',
+          'Pregătire Teoretică:',
+          'Pregătire Practică:',
+        ],
+        details: ['minim 4 săptămani', '30 de ore', '30 de ore'],
+      },
+      catA125: {
+        title: 'Categoria A 125',
+        detailsHeaders: [
+          'Durata cursului:',
+          'Pregătire Practică:',
+        ],
+        details: ['2 saptamani', '10 ore'],
+      },
       catB: {
         title: 'Categoria B',
         detailsHeaders: [
@@ -69,6 +115,24 @@ export const Strings = {
           'Pregătire Practică:',
         ],
         details: ['minim 4 săptămani', '30 de ore', '30 de ore'],
+      },
+      catBE: {
+        title: 'Categoria BE',
+        detailsHeaders: [
+          'Durata cursului:',
+          'Pregătire Teoretică:',
+          'Pregătire Practică:',
+        ],
+        details: ['2 saptamani', '10 ore', '10 ore'],
+      },
+      catB96: {
+        title: 'Categoria B96',
+        detailsHeaders: [
+          'Durata cursului:',
+          'Pregătire Teoretică:',
+          'Pregătire Practică:',
+        ],
+        details: ['2 saptamani', '10 ore', '10 ore'],
       },
       AutomaticCatB: {
         title: 'Categoria B \n Cutie Automata',
@@ -98,7 +162,7 @@ export const Strings = {
         details: ['5 săptămani', '50 de ore', '30 de ore'],
       },
       catE: {
-        title: 'Categoria E',
+        title: 'Categoria CE',
         detailsHeaders: [
           'Durata cursului:',
           'Pregătire Teoretică:',

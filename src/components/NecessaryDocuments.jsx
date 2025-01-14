@@ -13,11 +13,16 @@ const NecessaryDocuments = () => {
     {
       title: 'Vârsta minimă înscriere:',
       list: [
-        'Categoria B Manuală: 17 ani și 9 luni',
-        'Categoria B Automată: 17 ani și 9 luni',
-        'Categoria B1: 15 ani și 9 luni',
+        'Categoria A: 20 sau cu 3 luni inainte ani daca cursantul detin permis categoria A2 de cel putin 2 ani, altfel 24 ani sau cu 3 luni inainte',
+        'Categoria A2: 18 ani sau cu 3 luni inainte',
+        'Categoria A1: 16 ani sau cu 3 luni inainte',
+        'Categoria B Manuală: 18 ani sau cu 3 luni inainte',
+        'Categoria B Automată: 18 ani sau cu 3 luni inainte',
+        'Categoria B1: 16 ani sau cu 3 luni inainte',
+        'Categoriile BE si B96: 18 ani',
         'Categoria C: 18 ani',
         'Categoria CE: 18 ani',
+        'Categoria Tr: 18 ani',
       ],
     },
     {
